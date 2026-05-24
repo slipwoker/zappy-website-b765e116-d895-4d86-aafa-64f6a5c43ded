@@ -1,0 +1,120 @@
+# לימוד קראטה — Generative Engine Optimization Map
+
+> An online platform dedicated to selling karate training courses. The business focuses on martial arts education delivered digitally, offering structured lessons in karate techniques and discipline. The brand revolves around the world of martial arts, combining tradition, physical training, and personal development.
+
+---
+
+## Pages
+
+### בית
+https://example.com
+גלה את עולם הקראטה עם קורסים דיגיטליים מובנים לילדים ולמבוגרים. לימוד קראטה מהבית בקצב שלך, עם מדריכים מקצועיים. הצטרף עכשיו ותתחיל את המסע שלך!
+
+### שיטת האימון
+https://example.com/training-method
+גלה כיצד שיטת האימון הייחודית שלנו משלבת טכניקות קראטה מסורתיות עם למידה דיגיטלית מודרנית. קורס קראטה אונליין לילדים ולמבוגרים שמתקדם שלב אחר שלב להצלחה.
+
+### אודות
+https://example.com/about
+הכר את הצוות שמאחורי פלטפורמת לימוד הקראטה המובילה. אנחנו מאמינים שקראטה לילדים מתחילים חייב להיות נגיש, מעצים ומהנה. גלה את החזון שלנו ולמה אלפים בחרו בנו.
+
+### צור קשר
+https://example.com/contact
+יש לך שאלות על קורס קראטה אונליין לילדים או על תוכניות האימון שלנו? צוות לימוד קראטה כאן בשבילך. צור קשר עכשיו ונעזור לך לבחור את המסלול המושלם עבורך.
+
+### Products
+https://example.com/products
+המוצרים שלנו - לימוד קראטה
+
+### Cart
+https://example.com/cart
+עגלת הקניות שלך
+
+### Checkout
+https://example.com/checkout
+תשלום
+
+### Login
+https://example.com/login
+התחברות לקוחות
+
+### Account
+https://example.com/account
+החשבון שלי
+
+### Order Success
+https://example.com/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - לימוד קראטה
+
+### Category
+https://example.com/category/:slug
+מוצרים - לימוד קראטה
+
+### Courses
+https://example.com/courses
+Browse all available courses.
+
+### Course Detail
+https://example.com/courses/:slug
+Course details and curriculum.
+
+### Lesson
+https://example.com/lesson/:lessonId
+Lesson player.
+
+### My Learning
+https://example.com/my-learning
+Your enrolled courses and progress.
+
+### Certificate
+https://example.com/certificate/:code
+Verify a course completion certificate.
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## Products
+
+_No products are currently configured._
+
+---
+
+# Business Context (for LLM understanding)
+
+## About לימוד קראטה
+An online platform dedicated to selling karate training courses. The business focuses on martial arts education delivered digitally, offering structured lessons in karate techniques and discipline. The brand revolves around the world of martial arts, combining tradition, physical training, and personal development.
+
+## Target Audience
+- הורים לילדים
+- חובבי כושר ובריאות
+- צעירים מקצוענים
+
+## Industry
+Online Education / Martial Arts
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Products (JSON): https://example.com/products.json
+- Products (Google Merchant RSS): https://example.com/product-feed.xml
