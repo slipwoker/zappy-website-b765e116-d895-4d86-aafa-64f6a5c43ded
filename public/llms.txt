@@ -24,7 +24,7 @@ https://example.com/contact
 
 ### Products
 https://example.com/products
-המוצרים שלנו - לימוד קראטה
+הקורסים שלנו - לימוד קראטה
 
 ### Cart
 https://example.com/cart
@@ -52,7 +52,7 @@ https://example.com/product/:slug
 
 ### Category
 https://example.com/category/:slug
-מוצרים - לימוד קראטה
+קורסים - לימוד קראטה
 
 ### Courses
 https://example.com/courses

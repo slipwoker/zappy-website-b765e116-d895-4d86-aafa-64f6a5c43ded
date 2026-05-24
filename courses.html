@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Course</title>
-    <meta name="description" content="Course details and curriculum.">
+    <title>Courses</title>
+    <meta name="description" content="Browse all available courses.">
     <meta name="keywords" content="">
     
     <!-- Favicons -->
@@ -218,11 +218,11 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="Course">
-    <meta property="og:description" content="Course details and curriculum.">
+    <meta property="og:title" content="Courses">
+    <meta property="og:description" content="Browse all available courses.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Course">
-    <meta name="twitter:description" content="Course details and curriculum.">
+    <meta name="twitter:title" content="Courses">
+    <meta name="twitter:description" content="Browse all available courses.">
     
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -315,28 +315,16 @@
     </style>
 </head>
 <body>
-<!-- ZAPPY_COURSES_STOREFRONT_V1:course-detail -->
+<!-- ZAPPY_COURSES_STOREFRONT_V1:courses-catalog -->
 
-<section class="course-detail-section" data-zappy-course-detail>
+<section class="courses-catalog-section">
   <div class="container">
-    <div class="course-detail-header">
-      <div class="course-detail-meta">
-        <h1 data-zappy-course-title>Loading…</h1>
-        <p data-zappy-course-tagline></p>
-        <div class="course-detail-instructor" data-zappy-course-instructor></div>
-      </div>
-      <div class="course-detail-hero">
-        <img data-zappy-course-image alt="" />
-        <div class="course-detail-cta">
-          <span class="course-detail-price" data-zappy-course-price></span>
-          <button class="course-detail-enroll" data-zappy-course-enroll type="button" data-i18n="courses.detail.enroll">Enroll</button>
-          <a class="course-detail-resume" data-zappy-course-resume hidden data-i18n="courses.detail.resume">Resume learning</a>
-        </div>
-      </div>
-    </div>
-    <div class="course-detail-body">
-      <article class="course-detail-description" data-zappy-course-description></article>
-      <aside class="course-detail-curriculum" data-zappy-course-curriculum></aside>
+    <header class="courses-catalog-header">
+      <h1 data-i18n="courses.catalog.title">Courses</h1>
+      <p data-i18n="courses.catalog.subtitle">Browse our full course library.</p>
+    </header>
+    <div id="courses-grid" class="courses-grid" data-zappy-courses-grid>
+      <p data-i18n="courses.catalog.loading">Loading courses…</p>
     </div>
   </div>
 </section>
