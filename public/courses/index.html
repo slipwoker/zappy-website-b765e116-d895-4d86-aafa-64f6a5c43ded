@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>My Learning</title>
-    <meta name="description" content="Your enrolled courses and progress.">
+    <title>Courses</title>
+    <meta name="description" content="Browse all available courses.">
     <meta name="keywords" content="">
     
     <!-- Favicons -->
@@ -218,11 +218,11 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="My Learning">
-    <meta property="og:description" content="Your enrolled courses and progress.">
+    <meta property="og:title" content="Courses">
+    <meta property="og:description" content="Browse all available courses.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Learning">
-    <meta name="twitter:description" content="Your enrolled courses and progress.">
+    <meta name="twitter:title" content="Courses">
+    <meta name="twitter:description" content="Browse all available courses.">
     
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -315,7 +315,7 @@
     </style>
 </head>
 <body>
-<!-- ZAPPY_COURSES_STOREFRONT_V1:my-learning -->
+<!-- ZAPPY_COURSES_STOREFRONT_V1:courses-catalog -->
 <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -364,18 +364,15 @@
 </nav>
 <main id="main" class="courses-page-main">
 
-<section class="my-learning-section">
+<section class="courses-catalog-section">
   <div class="container">
-    <header class="my-learning-header">
-      <h1 data-ecom-text="ecom_coursesMyLearningTitle">My Learning</h1>
-      <p data-ecom-text="ecom_coursesMyLearningSubtitle">Continue where you left off.</p>
+    <header class="courses-catalog-header">
+      <h1 data-ecom-text="ecom_coursesCatalogTitle">Courses</h1>
+      <p data-ecom-text="ecom_coursesCatalogSubtitle">Browse our full course library.</p>
     </header>
-    <div id="my-learning-grid" class="my-learning-grid" data-zappy-my-learning-grid>
-      <p data-ecom-text="ecom_coursesMyLearningLoading">Loading your courses…</p>
+    <div id="courses-grid" class="courses-grid" data-zappy-courses-grid>
+      <p data-ecom-text="ecom_loadingCourses">Loading courses…</p>
     </div>
-    <p class="my-learning-empty" hidden data-zappy-my-learning-empty data-ecom-text="ecom_coursesMyLearningEmpty">
-      You haven't enrolled in any courses yet.
-    </p>
   </div>
 </section>
 </main>
