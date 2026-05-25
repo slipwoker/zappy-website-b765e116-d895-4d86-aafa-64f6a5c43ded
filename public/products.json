@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-25T11:29:40.003Z",
+  "generated_at": "2026-05-25T11:32:32.919Z",
   "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
   "count": 3,
@@ -18,12 +18,14 @@
       "base_price": 0,
       "sale_price": null,
       "currency": "ILS",
-      "images": [],
+      "images": [
+        "https://limud-karate.zappy5.app/assets/course-ba800ef3-3fc8-442b-86ab-9d04aafcc08f-trailer-thumb.jpg"
+      ],
       "in_stock": true,
       "stock_status": "in_stock",
       "url": "https://limud-karate.zappy5.app/product/chgvrh-tshvbh-lymvd-mashy-qpwnzv",
       "categories": [],
-      "updated_at": "2026-05-25T11:29:08.504Z"
+      "updated_at": "2026-05-25T11:32:00.876Z"
     },
     {
       "id": "7a735b5d-b59b-4d02-84d5-e0b75d4bd45b",
