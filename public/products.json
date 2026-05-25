@@ -1,10 +1,30 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-25T08:56:39.008Z",
+  "generated_at": "2026-05-25T11:29:40.003Z",
   "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
-  "count": 2,
+  "count": 3,
   "products": [
+    {
+      "id": "ba800ef3-3fc8-442b-86ab-9d04aafcc08f",
+      "slug": "chgvrh-tshvbh-lymvd-mashy-qpwnzv",
+      "name": "חגורה צהובה - לימוד מעשי",
+      "name_translations": {},
+      "description": "",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 0,
+      "base_price": 0,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://limud-karate.zappy5.app/product/chgvrh-tshvbh-lymvd-mashy-qpwnzv",
+      "categories": [],
+      "updated_at": "2026-05-25T11:29:08.504Z"
+    },
     {
       "id": "7a735b5d-b59b-4d02-84d5-e0b75d4bd45b",
       "slug": "amnvt-hlchymh-2drpou",
