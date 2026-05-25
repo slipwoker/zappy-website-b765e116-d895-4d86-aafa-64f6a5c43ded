@@ -92,7 +92,20 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-_No products are currently configured._
+**Total active products: 2**
+
+### אמנות הלחימה
+https://example.com/product/amnvt-hlchymh-nz3viw
+- Price: 10.00 ILS (sale, was 15.00 ILS)
+- Availability: In stock
+- Description: אמנויות לחימה הן הבסיס ללימוד הקראטה
+
+### חגורה ירוקה - עקרונות יסוד
+https://example.com/product/chgvrh-yrvkh-akrvnvt-ysvd-z02e0x
+- Price: 20.00 ILS
+- Availability: In stock
+- Description: קראטה מבוסס על עקרונות יסוד שמטרתם לפתח לא רק יכולת לחימה, אלא גם אופי, משמעת ושליטה עצמית
+- Image: https://example.com/assets/course-d1094759-e574-4d41-92d3-add65514e26f-trailer-thumb.jpg
 
 ---
 
