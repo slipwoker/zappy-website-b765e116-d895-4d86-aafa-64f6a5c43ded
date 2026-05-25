@@ -95,10 +95,11 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 2**
 
 ### אמנות הלחימה
-https://limud-karate.zappy5.app/product/amnvt-hlchymh-7dpzj3
+https://limud-karate.zappy5.app/product/amnvt-hlchymh-2drpou
 - Price: 10.00 ILS (sale, was 15.00 ILS)
 - Availability: In stock
 - Description: אמנויות לחימה הן הבסיס ללימוד הקראטה
+- Image: https://limud-karate.zappy5.app/assets/course-7a735b5d-b59b-4d02-84d5-e0b75d4bd45b-trailer-thumb.jpg
 
 ### חגורה ירוקה - עקרונות יסוד
 https://limud-karate.zappy5.app/product/chgvrh-yrvkh-akrvnvt-ysvd-m7rzjo

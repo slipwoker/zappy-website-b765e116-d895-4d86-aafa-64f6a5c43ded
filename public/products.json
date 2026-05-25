@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-25T08:22:24.567Z",
+  "generated_at": "2026-05-25T08:41:48.487Z",
   "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
   "count": 2,
   "products": [
     {
       "id": "7a735b5d-b59b-4d02-84d5-e0b75d4bd45b",
-      "slug": "amnvt-hlchymh-7dpzj3",
+      "slug": "amnvt-hlchymh-2drpou",
       "name": "אמנות הלחימה",
       "name_translations": {},
       "description": "אמנויות לחימה הן תחום המשלב בין כושר גופני, משמעת עצמית, ביטחון אישי ושליטה מנטלית. מעבר ללימוד טכניקות של הגנה והתקפה, הן מחנכות להתמדה, כבוד לאחרים ושליטה ברגשות גם במצבי לחץ. קיימים סוגים רבים של אמנויות לחימה, כמו קראטה, ג׳ודו, טאקוונדו וג׳יו־ג׳יטסו, ולכל אחת מהן יש סגנון, ערכים ושיטות אימון ייחודיות. רבים בוחרים לעסוק בהן לא רק כדי לדעת להגן על עצמם, אלא גם כדי לחזק את הגוף, לשפר ריכוז ולפתח ביטחון עצמי.",
@@ -18,12 +18,14 @@
       "base_price": 15,
       "sale_price": 10,
       "currency": "ILS",
-      "images": [],
+      "images": [
+        "https://limud-karate.zappy5.app/assets/course-7a735b5d-b59b-4d02-84d5-e0b75d4bd45b-trailer-thumb.jpg"
+      ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://limud-karate.zappy5.app/product/amnvt-hlchymh-7dpzj3",
+      "url": "https://limud-karate.zappy5.app/product/amnvt-hlchymh-2drpou",
       "categories": [],
-      "updated_at": "2026-05-25T07:46:03.718Z"
+      "updated_at": "2026-05-25T08:41:10.918Z"
     },
     {
       "id": "d1094759-e574-4d41-92d3-add65514e26f",
