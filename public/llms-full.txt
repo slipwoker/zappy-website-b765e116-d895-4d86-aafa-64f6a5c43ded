@@ -2,13 +2,13 @@
 
 An online platform dedicated to selling karate training courses. The business focuses on martial arts education delivered digitally, offering structured lessons in karate techniques and discipline. The brand revolves around the world of martial arts, combining tradition, physical training, and personal development.
 
-Source: https://example.com
+Source: https://limud-karate.zappy5.app
 
 ---
 
 ## התחל ללמוד קראטה עוד היום — לימוד קראטה
 
-URL: https://example.com
+URL: https://limud-karate.zappy5.app
 Description: גלה את עולם הקראטה עם קורסים דיגיטליים מובנים לילדים ולמבוגרים. לימוד קראטה מהבית בקצב שלך, עם מדריכים מקצועיים. הצטרף עכשיו ותתחיל את המסע שלך!
 
 התחל ללמוד קראטה עוד היום — לימוד קראטה
@@ -538,7 +538,7 @@ Description: גלה את עולם הקראטה עם קורסים דיגיטלי�
 
 ## שיטת אימון שמביאה תוצאות אמיתיות — לימוד קראטה
 
-URL: https://example.com/training-method
+URL: https://limud-karate.zappy5.app/training-method
 Description: גלה כיצד שיטת האימון הייחודית שלנו משלבת טכניקות קראטה מסורתיות עם למידה דיגיטלית מודרנית. קורס קראטה אונליין לילדים ולמבוגרים שמתקדם שלב אחר שלב להצלחה.
 
 שיטת אימון שמביאה תוצאות אמיתיות — לימוד קראטה
@@ -1124,7 +1124,7 @@ Description: גלה כיצד שיטת האימון הייחודית שלנו מ�
 
 ## הסיפור שמאחורי הדרך — לימוד קראטה
 
-URL: https://example.com/about
+URL: https://limud-karate.zappy5.app/about
 Description: הכר את הצוות שמאחורי פלטפורמת לימוד הקראטה המובילה. אנחנו מאמינים שקראטה לילדים מתחילים חייב להיות נגיש, מעצים ומהנה. גלה את החזון שלנו ולמה אלפים בחרו בנו.
 
 הסיפור שמאחורי הדרך — לימוד קראטה
@@ -1576,7 +1576,7 @@ Description: הכר את הצוות שמאחורי פלטפורמת לימוד �
 
 ## דבר איתנו ותצא לדרך — לימוד קראטה
 
-URL: https://example.com/contact
+URL: https://limud-karate.zappy5.app/contact
 Description: יש לך שאלות על קורס קראטה אונליין לילדים או על תוכניות האימון שלנו? צוות לימוד קראטה כאן בשבילך. צור קשר עכשיו ונעזור לך לבחור את המסלול המושלם עבורך.
 
 דבר איתנו ותצא לדרך — לימוד קראטה
@@ -1971,7 +1971,7 @@ Description: יש לך שאלות על קורס קראטה אונליין ליל
 
 ## קורסים
 
-URL: https://example.com/products
+URL: https://limud-karate.zappy5.app/products
 Description: הקורסים שלנו - לימוד קראטה
 
 קורסים - לימוד קראטה
@@ -2162,7 +2162,7 @@ Description: הקורסים שלנו - לימוד קראטה
 
 ## עגלת קניות
 
-URL: https://example.com/cart
+URL: https://limud-karate.zappy5.app/cart
 Description: עגלת הקניות שלך
 
 עגלת קניות - לימוד קראטה
@@ -2329,7 +2329,7 @@ Description: עגלת הקניות שלך
 
 ## תשלום
 
-URL: https://example.com/checkout
+URL: https://limud-karate.zappy5.app/checkout
 Description: תשלום
 
 תשלום - לימוד קראטה
@@ -2679,7 +2679,7 @@ Description: תשלום
 
 ## התחברות
 
-URL: https://example.com/login
+URL: https://limud-karate.zappy5.app/login
 Description: התחברות לקוחות
 
 התחברות - לימוד קראטה
@@ -2853,7 +2853,7 @@ Description: התחברות לקוחות
 
 ## החשבון שלי
 
-URL: https://example.com/account
+URL: https://limud-karate.zappy5.app/account
 Description: החשבון שלי
 
 החשבון שלי - לימוד קראטה
@@ -3182,7 +3182,7 @@ Description: החשבון שלי
 
 ## ההזמנה התקבלה!
 
-URL: https://example.com/order-success
+URL: https://limud-karate.zappy5.app/order-success
 Description: תודה על ההזמנה
 
 ההזמנה התקבלה! - לימוד קראטה
@@ -3373,7 +3373,7 @@ Description: תודה על ההזמנה
 
 ## מדיניות החזרות
 
-URL: https://example.com/return-policy
+URL: https://limud-karate.zappy5.app/return-policy
 Description: מדיניות החזרת מוצרים - זכויותיכם להחזרה והחלפה בהתאם לחוק
 
 מדיניות החזרות - לימוד קראטה
@@ -3593,7 +3593,7 @@ Description: מדיניות החזרת מוצרים - זכויותיכם להח�
 
 ## פרטי המוצר
 
-URL: https://example.com/product/:slug
+URL: https://limud-karate.zappy5.app/product/:slug
 Description: פרטי המוצר - לימוד קראטה
 
 פרטי המוצר - לימוד קראטה
@@ -3762,7 +3762,7 @@ Description: פרטי המוצר - לימוד קראטה
 
 ## קורסים
 
-URL: https://example.com/category/:slug
+URL: https://limud-karate.zappy5.app/category/:slug
 Description: קורסים - לימוד קראטה
 
 קורסים - לימוד קראטה
@@ -3955,7 +3955,7 @@ Description: קורסים - לימוד קראטה
 
 ## מדיניות פרטיות
 
-URL: https://example.com/privacy
+URL: https://limud-karate.zappy5.app/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -4196,7 +4196,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://example.com/accessibility
+URL: https://limud-karate.zappy5.app/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -4446,7 +4446,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://example.com/terms
+URL: https://limud-karate.zappy5.app/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
@@ -4715,7 +4715,7 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 
 ## Courses
 
-URL: https://example.com/courses
+URL: https://limud-karate.zappy5.app/courses
 Description: Browse all available courses.
 
 - קורסים כל הקורסים
@@ -4791,7 +4791,7 @@ Loading courses…
 
 ## Course
 
-URL: https://example.com/courses/:slug
+URL: https://limud-karate.zappy5.app/courses/:slug
 Description: Course details and curriculum.
 
 - קורסים כל הקורסים
@@ -4879,7 +4879,7 @@ Resume learning
 
 ## Lesson
 
-URL: https://example.com/lesson/:lessonId
+URL: https://limud-karate.zappy5.app/lesson/:lessonId
 Description: Lesson player.
 
 - קורסים כל הקורסים
@@ -4966,7 +4966,7 @@ Next
 
 ## My Learning
 
-URL: https://example.com/my-learning
+URL: https://limud-karate.zappy5.app/my-learning
 Description: Your enrolled courses and progress.
 
 - קורסים כל הקורסים
@@ -5045,7 +5045,7 @@ You haven't enrolled in any courses yet.
 
 ## Certificate Verification
 
-URL: https://example.com/certificate/:code
+URL: https://limud-karate.zappy5.app/certificate/:code
 Description: Verify a course completion certificate.
 
 - קורסים כל הקורסים
@@ -5119,7 +5119,7 @@ Verifying…
 ## Product Catalog
 
 ### אמנות הלחימה
-URL: https://example.com/product/amnvt-hlchymh-nz3viw
+URL: https://limud-karate.zappy5.app/product/amnvt-hlchymh-7dpzj3
 Price: 10.00 ILS (sale, was 15.00 ILS)
 Availability: In stock
 
@@ -5128,7 +5128,7 @@ Availability: In stock
 ---
 
 ### חגורה ירוקה - עקרונות יסוד
-URL: https://example.com/product/chgvrh-yrvkh-akrvnvt-ysvd-z02e0x
+URL: https://limud-karate.zappy5.app/product/chgvrh-yrvkh-akrvnvt-ysvd-m7rzjo
 Price: 20.00 ILS
 Availability: In stock
 

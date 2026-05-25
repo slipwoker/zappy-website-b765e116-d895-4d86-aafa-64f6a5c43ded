@@ -2,14 +2,14 @@
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
   <channel>
     <title>לימוד קראטה</title>
-    <link>https://example.com</link>
+    <link>https://limud-karate.zappy5.app</link>
     <description>Product feed for לימוד קראטה</description>
-    <lastBuildDate>Mon, 25 May 2026 07:11:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 08:07:51 GMT</lastBuildDate>
     <item>
       <g:id>7a735b5d-b59b-4d02-84d5-e0b75d4bd45b</g:id>
       <g:title>אמנות הלחימה</g:title>
       <g:description>אמנויות לחימה הן הבסיס ללימוד הקראטה</g:description>
-      <g:link>https://example.com/product/amnvt-hlchymh-nz3viw</g:link>
+      <g:link>https://limud-karate.zappy5.app/product/amnvt-hlchymh-7dpzj3</g:link>
       <g:availability>in_stock</g:availability>
       <g:price>15.00 ILS</g:price>
       <g:sale_price>10.00 ILS</g:sale_price>
@@ -21,8 +21,8 @@
       <g:id>d1094759-e574-4d41-92d3-add65514e26f</g:id>
       <g:title>חגורה ירוקה - עקרונות יסוד</g:title>
       <g:description>קראטה מבוסס על עקרונות יסוד שמטרתם לפתח לא רק יכולת לחימה, אלא גם אופי, משמעת ושליטה עצמית</g:description>
-      <g:link>https://example.com/product/chgvrh-yrvkh-akrvnvt-ysvd-z02e0x</g:link>
-      <g:image_link>https://example.com/assets/course-d1094759-e574-4d41-92d3-add65514e26f-trailer-thumb.jpg</g:image_link>
+      <g:link>https://limud-karate.zappy5.app/product/chgvrh-yrvkh-akrvnvt-ysvd-m7rzjo</g:link>
+      <g:image_link>https://limud-karate.zappy5.app/assets/course-d1094759-e574-4d41-92d3-add65514e26f-trailer-thumb.jpg</g:image_link>
       <g:availability>in_stock</g:availability>
       <g:price>20.00 ILS</g:price>
       <g:condition>new</g:condition>

@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-25T07:11:34.617Z",
-  "base_url": "https://example.com",
+  "generated_at": "2026-05-25T08:07:51.897Z",
+  "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
   "count": 2,
   "products": [
     {
       "id": "7a735b5d-b59b-4d02-84d5-e0b75d4bd45b",
-      "slug": "amnvt-hlchymh-nz3viw",
+      "slug": "amnvt-hlchymh-7dpzj3",
       "name": "אמנות הלחימה",
       "name_translations": {},
       "description": "אמנויות לחימה הן תחום המשלב בין כושר גופני, משמעת עצמית, ביטחון אישי ושליטה מנטלית. מעבר ללימוד טכניקות של הגנה והתקפה, הן מחנכות להתמדה, כבוד לאחרים ושליטה ברגשות גם במצבי לחץ. קיימים סוגים רבים של אמנויות לחימה, כמו קראטה, ג׳ודו, טאקוונדו וג׳יו־ג׳יטסו, ולכל אחת מהן יש סגנון, ערכים ושיטות אימון ייחודיות. רבים בוחרים לעסוק בהן לא רק כדי לדעת להגן על עצמם, אלא גם כדי לחזק את הגוף, לשפר ריכוז ולפתח ביטחון עצמי.",
@@ -21,13 +21,13 @@
       "images": [],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/amnvt-hlchymh-nz3viw",
+      "url": "https://limud-karate.zappy5.app/product/amnvt-hlchymh-7dpzj3",
       "categories": [],
-      "updated_at": "2026-05-25T06:29:33.688Z"
+      "updated_at": "2026-05-25T07:46:03.718Z"
     },
     {
       "id": "d1094759-e574-4d41-92d3-add65514e26f",
-      "slug": "chgvrh-yrvkh-akrvnvt-ysvd-z02e0x",
+      "slug": "chgvrh-yrvkh-akrvnvt-ysvd-m7rzjo",
       "name": "חגורה ירוקה - עקרונות יסוד",
       "name_translations": {},
       "description": "קראטה מבוסס על עקרונות יסוד שמטרתם לפתח לא רק יכולת לחימה, אלא גם אופי, משמעת ושליטה עצמית. בין העקרונות המרכזיים נמצאים כבוד למורה ולמתאמנים, ריכוז מלא בכל תנועה, דיוק בטכניקה, שליטה בנשימה ושימוש נכון בגוף כולו כדי לייצר כוח יעיל ולא רק כוח פיזי גולמי. בנוסף, הקראטה מדגיש התמדה, איפוק ואחריות, מתוך תפיסה שהמטרה האמיתית היא לא לחפש עימות אלא לדעת להגן על עצמך ולפעול בביטחון ובשלווה. כך הופך הקראטה לדרך חיים שמחזקת גם את הגוף וגם את הנפש.",
@@ -39,13 +39,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/course-d1094759-e574-4d41-92d3-add65514e26f-trailer-thumb.jpg"
+        "https://limud-karate.zappy5.app/assets/course-d1094759-e574-4d41-92d3-add65514e26f-trailer-thumb.jpg"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/chgvrh-yrvkh-akrvnvt-ysvd-z02e0x",
+      "url": "https://limud-karate.zappy5.app/product/chgvrh-yrvkh-akrvnvt-ysvd-m7rzjo",
       "categories": [],
-      "updated_at": "2026-05-25T06:31:53.040Z"
+      "updated_at": "2026-05-25T07:47:24.064Z"
     }
   ]
 }

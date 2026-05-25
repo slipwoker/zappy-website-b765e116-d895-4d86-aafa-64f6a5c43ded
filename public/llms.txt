@@ -7,85 +7,85 @@
 ## Pages
 
 ### בית
-https://example.com
+https://limud-karate.zappy5.app
 גלה את עולם הקראטה עם קורסים דיגיטליים מובנים לילדים ולמבוגרים. לימוד קראטה מהבית בקצב שלך, עם מדריכים מקצועיים. הצטרף עכשיו ותתחיל את המסע שלך!
 
 ### שיטת האימון
-https://example.com/training-method
+https://limud-karate.zappy5.app/training-method
 גלה כיצד שיטת האימון הייחודית שלנו משלבת טכניקות קראטה מסורתיות עם למידה דיגיטלית מודרנית. קורס קראטה אונליין לילדים ולמבוגרים שמתקדם שלב אחר שלב להצלחה.
 
 ### אודות
-https://example.com/about
+https://limud-karate.zappy5.app/about
 הכר את הצוות שמאחורי פלטפורמת לימוד הקראטה המובילה. אנחנו מאמינים שקראטה לילדים מתחילים חייב להיות נגיש, מעצים ומהנה. גלה את החזון שלנו ולמה אלפים בחרו בנו.
 
 ### צור קשר
-https://example.com/contact
+https://limud-karate.zappy5.app/contact
 יש לך שאלות על קורס קראטה אונליין לילדים או על תוכניות האימון שלנו? צוות לימוד קראטה כאן בשבילך. צור קשר עכשיו ונעזור לך לבחור את המסלול המושלם עבורך.
 
 ### Products
-https://example.com/products
+https://limud-karate.zappy5.app/products
 הקורסים שלנו - לימוד קראטה
 
 ### Cart
-https://example.com/cart
+https://limud-karate.zappy5.app/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://example.com/checkout
+https://limud-karate.zappy5.app/checkout
 תשלום
 
 ### Login
-https://example.com/login
+https://limud-karate.zappy5.app/login
 התחברות לקוחות
 
 ### Account
-https://example.com/account
+https://limud-karate.zappy5.app/account
 החשבון שלי
 
 ### Order Success
-https://example.com/order-success
+https://limud-karate.zappy5.app/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://example.com/product/:slug
+https://limud-karate.zappy5.app/product/:slug
 פרטי המוצר - לימוד קראטה
 
 ### Category
-https://example.com/category/:slug
+https://limud-karate.zappy5.app/category/:slug
 קורסים - לימוד קראטה
 
 ### Courses
-https://example.com/courses
+https://limud-karate.zappy5.app/courses
 Browse all available courses.
 
 ### Course Detail
-https://example.com/courses/:slug
+https://limud-karate.zappy5.app/courses/:slug
 Course details and curriculum.
 
 ### Lesson
-https://example.com/lesson/:lessonId
+https://limud-karate.zappy5.app/lesson/:lessonId
 Lesson player.
 
 ### My Learning
-https://example.com/my-learning
+https://limud-karate.zappy5.app/my-learning
 Your enrolled courses and progress.
 
 ### Certificate
-https://example.com/certificate/:code
+https://limud-karate.zappy5.app/certificate/:code
 Verify a course completion certificate.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://limud-karate.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://limud-karate.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://limud-karate.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -95,17 +95,17 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 2**
 
 ### אמנות הלחימה
-https://example.com/product/amnvt-hlchymh-nz3viw
+https://limud-karate.zappy5.app/product/amnvt-hlchymh-7dpzj3
 - Price: 10.00 ILS (sale, was 15.00 ILS)
 - Availability: In stock
 - Description: אמנויות לחימה הן הבסיס ללימוד הקראטה
 
 ### חגורה ירוקה - עקרונות יסוד
-https://example.com/product/chgvrh-yrvkh-akrvnvt-ysvd-z02e0x
+https://limud-karate.zappy5.app/product/chgvrh-yrvkh-akrvnvt-ysvd-m7rzjo
 - Price: 20.00 ILS
 - Availability: In stock
 - Description: קראטה מבוסס על עקרונות יסוד שמטרתם לפתח לא רק יכולת לחימה, אלא גם אופי, משמעת ושליטה עצמית
-- Image: https://example.com/assets/course-d1094759-e574-4d41-92d3-add65514e26f-trailer-thumb.jpg
+- Image: https://limud-karate.zappy5.app/assets/course-d1094759-e574-4d41-92d3-add65514e26f-trailer-thumb.jpg
 
 ---
 
@@ -126,8 +126,8 @@ Online Education / Martial Arts
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://example.com/sitemap.xml
-- Robots: https://example.com/robots.txt
-- Flattened page text (for LLMs): https://example.com/llms-full.txt
-- Products (JSON): https://example.com/products.json
-- Products (Google Merchant RSS): https://example.com/product-feed.xml
+- Sitemap (XML): https://limud-karate.zappy5.app/sitemap.xml
+- Robots: https://limud-karate.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://limud-karate.zappy5.app/llms-full.txt
+- Products (JSON): https://limud-karate.zappy5.app/products.json
+- Products (Google Merchant RSS): https://limud-karate.zappy5.app/product-feed.xml
