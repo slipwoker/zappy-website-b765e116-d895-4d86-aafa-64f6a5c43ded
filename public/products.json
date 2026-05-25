@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-25T14:14:41.111Z",
+  "generated_at": "2026-05-25T14:15:19.057Z",
   "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
   "count": 3,
   "products": [
     {
       "id": "ba800ef3-3fc8-442b-86ab-9d04aafcc08f",
-      "slug": "chgvrh-tshvbh-lymvd-mashy-m396w6",
+      "slug": "chgvrh-tshvbh-lymvd-mashy-uclw8u",
       "name": "חגורה צהובה - לימוד מעשי",
       "name_translations": {},
       "description": "בשלב של חגורה צהובה מתאמני קראטה ממשיכים לבנות בסיס חזק של טכניקה ושליטה בגוף. בדרך כלל לומדים עמידות נכונות, תנועות ידיים ורגליים בסיסיות, חסימות, אגרופים ובעיטות בצורה מדויקת ומסודרת יותר מאשר בתחילת הדרך. בנוסף עובדים על קואורדינציה, שיווי משקל, משמעת, ריכוז והבנה טובה יותר של עבודה מול בן זוג. חגורה צהובה מסמלת התקדמות מהשלב ההתחלתי אל שלב שבו התלמיד כבר מתחיל להפגין ביטחון, דיוק ושליטה טובים יותר בתנועות הקראטה.",
@@ -23,9 +23,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://limud-karate.zappy5.app/product/chgvrh-tshvbh-lymvd-mashy-m396w6",
+      "url": "https://limud-karate.zappy5.app/product/chgvrh-tshvbh-lymvd-mashy-uclw8u",
       "categories": [],
-      "updated_at": "2026-05-25T14:14:03.722Z"
+      "updated_at": "2026-05-25T14:14:41.072Z"
     },
     {
       "id": "7a735b5d-b59b-4d02-84d5-e0b75d4bd45b",
