@@ -1388,8 +1388,6 @@ window.onload = function() {
     }
 })();
 
-;
-
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -6806,9 +6804,9 @@ async function fetchAdditionalJsSettings(force) {
           if (firstItem) {
             var firstLink = firstItem.querySelector('a');
             var href = firstLink ? firstLink.getAttribute('href') : '';
-            var hrefPath = (href || '').split('?')[0].split('#')[0].replace(//$/, '');
+            var hrefPath = (href || '').split('?')[0].split('#')[0].replace(/\/$/, '');
             if (hrefPath === '/products' || hrefPath === '/courses'
-                || //(?:[a-z]{2}/)?(?:products|courses)$/.test(hrefPath)) {
+                || /\/(?:[a-z]{2}\/)?(?:products|courses)$/.test(hrefPath)) {
               firstItem.style.display = 'none';
             }
           }
@@ -7365,7 +7363,7 @@ function isCatalogRootHref(href) {
   var path = href.split('?')[0].split('#')[0];
   if (path.length > 1 && path.endsWith('/')) path = path.slice(0, -1);
   return path === '/products' || path === '/courses'
-    || //(?:[a-z]{2}/)?(?:products|courses)$/.test(path);
+    || /\/(?:[a-z]{2}\/)?(?:products|courses)$/.test(path);
 }
 
 function getNavCategoryLinksContainer() {
