@@ -50,13 +50,13 @@ https://limud-karate.zappy5.app/order-success
 https://limud-karate.zappy5.app/product/:slug
 פרטי המוצר - לימוד קראטה
 
-### Category
-https://limud-karate.zappy5.app/category/:slug
-קורסים - לימוד קראטה
-
 ### Courses
 https://limud-karate.zappy5.app/courses
 Browse all available courses.
+
+### Course Category
+https://limud-karate.zappy5.app/category/:slug
+Browse courses in this category.
 
 ### Course Detail
 https://limud-karate.zappy5.app/courses/:slug
