@@ -10940,7 +10940,7 @@ async function loadRelatedProducts(currentProduct, t) {
     api('/api/courses/student/my-learning')
       .then(function(r) { if (r.status === 401) { redirectToLogin('/my-learning'); throw 0; } return r.json(); })
       .then(function(payload) {
-        var enrollments = (payload && payload.enrollments) || [];
+        var enrollments = (payload && (payload.enrollments || payload.data)) || [];
         var empty = document.querySelector('[data-zappy-my-learning-empty]');
         if (!enrollments.length) {
           grid.innerHTML = '';
@@ -10948,10 +10948,13 @@ async function loadRelatedProducts(currentProduct, t) {
           return;
         }
         grid.innerHTML = enrollments.map(function(e) {
-          var pct = Math.round((e.progress_pct || 0));
-          return '<a class="my-learning-card" href="' + escapeAttr(pageUrl('/courses/' + encodeURIComponent(e.course_slug || e.product_id))) + '">'
-            + (e.image ? '<img src="' + e.image + '" alt="" />' : '')
-            + '<h3>' + escapeHtml(e.course_name || '') + '</h3>'
+          var pct = Math.round((e.progress_pct != null ? e.progress_pct : e.percent) || 0);
+          var courseSlug = e.course_slug || e.product_slug || e.slug || e.productId || e.product_id || '';
+          var courseName = e.course_name || e.productName || e.product_name || '';
+          var image = e.image || e.product_image || e.imageUrl || '';
+          return '<a class="my-learning-card" href="' + escapeAttr(pageUrl('/courses/' + encodeURIComponent(courseSlug))) + '">'
+            + (image ? '<img src="' + escapeAttr(image) + '" alt="" />' : '')
+            + '<h3>' + escapeHtml(courseName) + '</h3>'
             + '<div class="progress-bar"><span style="width:' + pct + '%"></span></div>'
             + '<span class="progress-label">' + pct + '%</span>'
             + '</a>';
