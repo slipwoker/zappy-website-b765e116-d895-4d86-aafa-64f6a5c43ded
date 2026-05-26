@@ -4730,7 +4730,7 @@ Description: Course details and curriculum.
 
 
 
-Add to Cart
+Enroll
 Resume learning
 
 
