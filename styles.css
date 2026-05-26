@@ -15603,6 +15603,16 @@ main.courses-page-main,
   margin-top:auto; padding-top:.75rem; font-weight:700; font-size:1.0625rem; opacity:1;
 }
 .course-card img, .my-learning-card img { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:.25rem; margin-bottom:.75rem; }
+.courses-toast {
+  position:fixed; bottom:1.25rem; left:50%; transform:translateX(-50%);
+  background:var(--text-dark); color:var(var(--bg-light, #fff));
+  padding:.75rem 1rem; border-radius:.5rem; font-size:.875rem;
+  z-index:10050; opacity:0; transition:opacity .25s ease;
+  box-shadow:0 8px 24px rgba(0,0,0,.18); max-width:min(92vw, 420px);
+  display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; justify-content:center;
+}
+.courses-toast--visible { opacity:1; }
+.courses-toast a { color:inherit; font-weight:600; text-decoration:underline; }
 .my-learning-card { padding:1rem; }
 /* Course detail — ~30px breathing room below navbar before hero media */
 .courses-page-main:has(.course-detail-section) {
