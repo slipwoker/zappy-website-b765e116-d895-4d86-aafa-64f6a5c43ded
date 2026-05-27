@@ -15651,22 +15651,44 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   html[dir="rtl"] .nav-menu.open > li.zappy-products-dropdown > a{padding-right: 16px !important;padding-left: 56px !important;}
 }
 
+/* WIDGET-DISPLAY-START */
 .whatsapp-float{right: 20px !important;left: auto !important;}
 html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
-
-#mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+#mic-access-tool-general-button,
+html[dir="rtl"] .mic-access-tool-general-button,
 html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
 html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
 html[dir="rtl"] ._access-icon{left: 20px !important;right: auto !important;}
-html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+html[dir="ltr"] #mic-access-tool-general-button,
+html[dir="ltr"] .mic-access-tool-general-button,
 html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
 html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
 html[dir="ltr"] ._access-icon,
-html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+html:not([dir]) #mic-access-tool-general-button,
+html:not([dir]) .mic-access-tool-general-button,
 html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
 html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
 html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
-
+@media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
+@media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
+@media (max-width: 768px) {
+  #mic-access-tool-general-button, .mic-access-tool-general-button,
+  #mic-init-access-tool .mic-access-tool-general-button,
+  #mic-init-access-tool #mic-access-tool-general-button,
+  ._access-icon { display: flex !important; }
+  #mic-access-tool-box, .mic-access-tool-box,
+  #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"],
+  ._access-menu { visibility: hidden; opacity: 0; pointer-events: auto !important; }
+}
+@media (min-width: 769px) {
+  #mic-access-tool-general-button, .mic-access-tool-general-button,
+  #mic-init-access-tool .mic-access-tool-general-button,
+  #mic-init-access-tool #mic-access-tool-general-button,
+  ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+  #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"],
+  ._access-menu { }
+}
+/* WIDGET-DISPLAY-END */
 /* LTR: keep image on left for solution-reverse sections */
 html[dir="ltr"] .solution-item.solution-reverse .solution-image { order: -1 !important; }
 html[dir="ltr"] .solution-item.solution-reverse .solution-content { order: 1 !important; }
