@@ -118,9 +118,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
+}html[dir="rtl"]{
   font-size: 16px !important;
   direction: rtl;
   scroll-behavior: smooth;
@@ -515,8 +513,8 @@ hr {
 }
 
 .text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
+.text-right { text-align: start; }
+.text-left { text-align: end; }
 .text-primary { color: var(--primary) !important; }
 .text-secondary { color: var(--secondary) !important; }
 .text-accent { color: var(--accent) !important; }
@@ -595,10 +593,7 @@ hr {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-html[dir="rtl"] .whatsapp-float {
-  right: 20px;
-  left: auto;
-}
+.whatsapp-float{right: 20px;left: auto;}
 
 html[dir="ltr"] .whatsapp-float,
 html:not([dir]) .whatsapp-float {
@@ -724,21 +719,7 @@ html:not([dir]) .whatsapp-float {
   --text-muted: #6B645C;
   --border-light: #D9CBB8;
   --border-dark: #3A342E;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
-  background: var(--nav-bg);
-  background-image: linear-gradient(to bottom, rgba(28, 26, 23, 0.72) 0%, rgba(28, 26, 23, 0.0) 100%);
-  backdrop-filter: none;
-  width: 100%;
-  direction: rtl;
-  transition: background 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+}.navbar{position: fixed;top: 0;right: 0;left: 0;z-index: 1000;background: var(--nav-bg);background-image: linear-gradient(to bottom, rgba(28, 26, 23, 0.72) 0%, rgba(28, 26, 23, 0.0) 100%);backdrop-filter: none;width: 100%;transition: background 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);}html[dir="rtl"] .navbar{direction: rtl;}
 
 .navbar.scrolled {
   background-image: linear-gradient(to bottom, rgba(28, 26, 23, 0.97) 0%, rgba(28, 26, 23, 0.97) 100%);
@@ -774,19 +755,7 @@ html:not([dir]) .whatsapp-float {
   height: auto;
   width: auto;
   display: block;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 0;
-  flex: 1;
-  justify-content: center;
-  direction: rtl;
-}
+}.nav-menu{display: flex;align-items: center;list-style: none;margin: 0;padding: 0;gap: 0;flex: 1;justify-content: center;}html[dir="rtl"] .nav-menu{direction: rtl;}
 
 .nav-item {
   position: relative;
@@ -984,21 +953,7 @@ html:not([dir]) .whatsapp-float {
   --text-muted: #6B645C;
   --border-light: #D9CBB8;
   --border-dark: #3A342E;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
-  background: var(--nav-bg);
-  background-image: linear-gradient(to bottom, rgba(28, 26, 23, 0.72) 0%, rgba(28, 26, 23, 0.0) 100%);
-  backdrop-filter: none;
-  width: 100%;
-  direction: rtl;
-  transition: background 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+}.navbar{position: fixed;top: 0;right: 0;left: 0;z-index: 1000;background: var(--nav-bg);background-image: linear-gradient(to bottom, rgba(28, 26, 23, 0.72) 0%, rgba(28, 26, 23, 0.0) 100%);backdrop-filter: none;width: 100%;transition: background 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);}html[dir="rtl"] .navbar{direction: rtl;}
 
 .navbar.scrolled {
   background-image: linear-gradient(to bottom, rgba(28, 26, 23, 0.97) 0%, rgba(28, 26, 23, 0.97) 100%);
@@ -1034,19 +989,7 @@ html:not([dir]) .whatsapp-float {
   height: auto;
   width: auto;
   display: block;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 0;
-  flex: 1;
-  justify-content: center;
-  direction: rtl;
-}
+}.nav-menu{display: flex;align-items: center;list-style: none;margin: 0;padding: 0;gap: 0;flex: 1;justify-content: center;}html[dir="rtl"] .nav-menu{direction: rtl;}
 
 .nav-item {
   position: relative;
@@ -1416,46 +1359,28 @@ html[lang="fr"] .nav-cta-container {
 /* ============================================
    RTL DESKTOP LAYOUT (Hebrew, Arabic)
    ============================================ */
-html[dir="rtl"] .nav-container,
+.nav-container,
 html[lang="he"] .nav-container,
-html[lang="ar"] .nav-container {
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
+html[lang="ar"] .nav-container{flex-direction: row-reverse;justify-content: space-between;}
 
 /* CTA on the left in RTL */
-html[dir="rtl"] .nav-cta-container,
+.nav-cta-container,
 html[lang="he"] .nav-cta-container,
-html[lang="ar"] .nav-cta-container {
-  order: -1;
-  margin: 0;
-}
+html[lang="ar"] .nav-cta-container{order: -1;margin: 0;}
 
 /* Wrapper groups menu and logo together on the right */
-html[dir="rtl"] .nav-right-group,
+.nav-right-group,
 html[lang="he"] .nav-right-group,
-html[lang="ar"] .nav-right-group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  order: 1;
-  flex: 1;
-  min-width: 0;
-  flex-direction: row-reverse;
-}
+html[lang="ar"] .nav-right-group{display: flex;align-items: center;gap: 1rem;order: 1;flex: 1;min-width: 0;flex-direction: row-reverse;}
 
 /* Within wrapper: Logo on far right, menu to its left */
-html[dir="rtl"] .nav-right-group .nav-brand,
+.nav-right-group .nav-brand,
 html[lang="he"] .nav-right-group .nav-brand,
-html[lang="ar"] .nav-right-group .nav-brand {
-  order: 2;
-}
+html[lang="ar"] .nav-right-group .nav-brand{order: 2;}
 
-html[dir="rtl"] .nav-right-group .nav-menu,
+.nav-right-group .nav-menu,
 html[lang="he"] .nav-right-group .nav-menu,
-html[lang="ar"] .nav-right-group .nav-menu {
-  order: 1;
-}
+html[lang="ar"] .nav-right-group .nav-menu{order: 1;}
 
 /* ============================================
    DROPDOWN MENUS (Desktop)
@@ -1514,12 +1439,9 @@ html[lang="ar"] .nav-right-group .nav-menu {
   margin: 0;
 }
 
-html[dir="rtl"] .dropdown-menu,
+.dropdown-menu,
 html[lang="he"] .dropdown-menu,
-html[lang="ar"] .dropdown-menu {
-  right: 0;
-  left: auto;
-}
+html[lang="ar"] .dropdown-menu{right: 0;left: auto;}
 
 html[dir="ltr"] .dropdown-menu,
 html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
@@ -1715,20 +1637,12 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
      which breaks AI centering hacks (top:50% + margin-top:-Npx).
      Use explicit left/right + transform for robust vertical centering. */
   .nav-brand,
-  html[dir="rtl"] .nav-brand,
+  .nav-brand,
   html[lang="he"] .nav-brand,
   html[lang="ar"] .nav-brand,
-  html[dir="rtl"] .nav-right-group .nav-brand,
+  .nav-right-group .nav-brand,
   html[lang="he"] .nav-right-group .nav-brand,
-  html[lang="ar"] .nav-right-group .nav-brand {
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    text-align: center;
-    order: 0 !important;
-  }
+  html[lang="ar"] .nav-right-group .nav-brand{position: absolute !important;left: 50% !important;top: 50% !important;transform: translate(-50%, -50%) !important;margin: 0 !important;text-align: center;order: 0 !important;}
   
   /* Mobile logo size: fixed at 35px/110px — do not adjust, especially for e-commerce/catalog sites */
   .logo {
@@ -1842,11 +1756,9 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
     font-size: 0.9em;
   }
   
-  html[dir="rtl"] .dropdown-menu li a,
+  .dropdown-menu li a,
   html[lang="he"] .dropdown-menu li a,
-  html[lang="ar"] .dropdown-menu li a {
-    padding: 12px 50px 12px 30px !important;
-  }
+  html[lang="ar"] .dropdown-menu li a{padding: 12px 50px 12px 30px !important;}
 
   /* Mobile submenu links: use nav panel text color instead of desktop submenu color.
      Desktop submenu uses light bg + dark text, but mobile submenu is inline (transparent)
@@ -1952,32 +1864,21 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
    Uses !important to override any inline styles
    ============================================ */
 @media (max-width: 768px) {
-  html[dir="rtl"] .mobile-toggle,
+  .mobile-toggle,
   html[lang="he"] .mobile-toggle,
-  html[lang="ar"] .mobile-toggle {
-    left: auto !important;
-    right: 12px !important;
-  }
+  html[lang="ar"] .mobile-toggle{left: auto !important;right: 12px !important;}
   
-  html[dir="rtl"] .phone-header-btn,
+  .phone-header-btn,
   html[lang="he"] .phone-header-btn,
-  html[lang="ar"] .phone-header-btn {
-    left: 12px !important;
-    right: auto !important;
-  }
+  html[lang="ar"] .phone-header-btn{left: 12px !important;right: auto !important;}
   
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    right: 0 !important;
-    left: auto !important;
-  }
+  html[lang="ar"] .nav-menu{right: 0 !important;left: auto !important;}
   
-  html[dir="rtl"] .nav-menu a,
+  .nav-menu a,
   html[lang="he"] .nav-menu a,
-  html[lang="ar"] .nav-menu a {
-    text-align: right !important;
-  }
+  html[lang="ar"] .nav-menu a{text-align: start !important;}
   
   /* Hide desktop language switcher on mobile - hamburger menu handles it */
   /* High specificity to override stored CSS */
@@ -2056,8 +1957,8 @@ nav.navbar {
      this rule wins the cascade via equal-or-higher specificity. */
   #navMenu,
   .nav-menu,
-  html[dir="rtl"] .nav-menu,
-  html[dir="rtl"] .navbar .nav-menu,
+  .nav-menu,
+  .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
   html[dir="rtl"] .nav-container .nav-menu,
@@ -2067,11 +1968,7 @@ nav.navbar {
   [dir="rtl"] .nav-container .nav-menu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    position: fixed !important;
-    top: var(--total-header-height, var(--zappy-navbar-bottom, 70px)) !important;
-    right: var(--ios-viewport-gap, 0px) !important;
-  }
+  html[lang="ar"] .nav-menu{position: fixed !important;top: var(--total-header-height, var(--zappy-navbar-bottom, 70px)) !important;right: var(--ios-viewport-gap, 0px) !important;}
 }
 
 /* Constrained nav-container - content limited to 1200px and centered */
@@ -2088,73 +1985,51 @@ nav.navbar {
 
 /* RTL layout for cloned sites (without nav-right-group) */
 /* Base RTL styles - apply to all screens */
-html[dir="rtl"] .nav-container,
+.nav-container,
 html[lang="he"] .nav-container,
-html[lang="ar"] .nav-container {
-  justify-content: space-between !important;
-}
+html[lang="ar"] .nav-container{justify-content: space-between !important;}
 
 /* Logo stays on right in RTL - DESKTOP ONLY */
 /* On mobile, logo should be centered (handled by mobile media query) */
 @media (min-width: 769px) {
-  html[dir="rtl"] .nav-brand,
-  html[dir="rtl"] .logo-link,
+  .nav-brand,
+  .logo-link,
   html[lang="he"] .nav-brand,
   html[lang="he"] .logo-link,
   html[lang="ar"] .nav-brand,
-  html[lang="ar"] .logo-link {
-    order: 2 !important;
-    margin-left: 1.5rem !important;
-  }
+  html[lang="ar"] .logo-link{order: 2 !important;margin-left: 1.5rem !important;}
 }
 
 /* Base RTL nav-menu styles - display:flex but NOT flex-direction (that's desktop-only) */
-html[dir="rtl"] .nav-menu,
+.nav-menu,
 html[lang="he"] .nav-menu,
-html[lang="ar"] .nav-menu {
-  order: 1 !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
+html[lang="ar"] .nav-menu{order: 1 !important;margin-right: 0 !important;margin-left: 0 !important;}
 
 /* CTA button pushed to far left in RTL */
-html[dir="rtl"] .cta-button,
-html[dir="rtl"] a.cta-button,
+.cta-button,
+a.cta-button,
 html[dir="rtl"] .nav-cta-btn,
 html[lang="he"] .cta-button,
 html[lang="he"] a.cta-button,
 html[lang="he"] .nav-cta-btn,
 html[lang="ar"] .cta-button,
 html[lang="ar"] a.cta-button,
-html[lang="ar"] .nav-cta-btn {
-  order: 0 !important;
-  margin-right: auto !important;
-  margin-left: 0 !important;
-}
+html[lang="ar"] .nav-cta-btn{order: 0 !important;margin-right: auto !important;margin-left: 0 !important;}
 
 /* DESKTOP ONLY: Horizontal flex layout for RTL navbar - prevents breaking mobile vertical menu */
 @media (min-width: 769px) {
-  html[dir="rtl"] .nav-container,
+  .nav-container,
   html[lang="he"] .nav-container,
-  html[lang="ar"] .nav-container {
-    flex-direction: row-reverse !important;
-  }
+  html[lang="ar"] .nav-container{flex-direction: row-reverse !important;}
   
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-    /* flex:1 ensures menu fills space between brand and CTA so items
+  html[lang="ar"] .nav-menu{display: flex !important;flex-direction: row !important;align-items: center !important;gap: 1.5rem !important;/* flex:1 ensures menu fills space between brand and CTA so items
        stay adjacent to the logo instead of centering when the
        .nav-right-group wrapper is absent (cloned sites, etc.).
        justify-content: flex-start pushes items toward the logo
        (in RTL, flex-start = right side, adjacent to the brand). */
-    flex: 1 !important;
-    justify-content: flex-start !important;
-  }
+    flex: 1 !important;justify-content: flex-start !important;}
 }
 
 /* ============================================
@@ -2162,10 +2037,9 @@ html[lang="ar"] .nav-cta-btn {
    ============================================ */
 
 /* Post-generation fix: Remove main element margin-top and padding-top */
-main { margin-top: 0 !important; padding-top: 0 !important; }
-
-/* Footer Styles */
-.site-footer { --primary: #B42318; --secondary: #1F2937; --accent: #D4A017; --bg-light: #F2E7D5; --bg-dark: #1C1A17; --text-dark: #1C1A17; --text-light: #F2E7D5; --text-muted: #6B645C; --border-light: #D9CBB8; --border-dark: #3A342E; background-color: var(--bg-dark); color: var(--text-light); font-family: 'Rubik', sans-serif; direction: rtl; position: relative; overflow: hidden; } .site-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%); } .footer-container { max-width: 1200px; margin: 0 auto; padding: 3.5rem 2rem 0; } .footer-top { display: grid; grid-template-columns: 2fr 1fr 1.8fr 1.4fr; gap: 2.5rem; padding-bottom: 2.5rem; } .footer-col { display: flex; flex-direction: column; gap: 1rem; } .footer-brand .logo { display: block; height: 40px; width: 150px; object-fit: contain; background: rgba(242,231,213,0.08); border-radius: 4px; padding: 4px; } .footer-tagline { font-size: 1rem; font-weight: 700; color: var(--accent); line-height: 1.5; margin: 0.25rem 0 0; letter-spacing: 0.02em; } .footer-blurb { font-size: 0.82rem; color: rgba(242,231,213,0.65); line-height: 1.75; margin: 0; } .footer-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(180,35,24,0.18); border: 1px solid rgba(180,35,24,0.4); color: rgba(242,231,213,0.85); font-size: 0.75rem; padding: 0.35rem 0.75rem; border-radius: 3px; width: fit-content; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); } .footer-badge i { color: var(--primary); font-size: 0.7rem; } .footer-heading { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 0 0 0.5rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-dark); position: relative; } .footer-heading::after { content: ''; position: absolute; bottom: -1px; right: 0; width: 2rem; height: 2px; background: var(--primary); border-radius: 2px; } .footer-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; } .footer-nav li a { color: rgba(242,231,213,0.75); text-decoration: none; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 3px; padding: 0.1rem 0; } .footer-nav li a::before { content: '›'; color: var(--primary); font-size: 1rem; line-height: 1; transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); } .footer-nav li a:hover { color: var(--text-light); padding-right: 0.3rem; } .footer-nav li a:hover::before { transform: translateX(-3px); } .footer-contact { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; } .footer-contact li { display: flex; align-items: flex-start; gap: 0.65rem; } .contact-icon { color: var(--accent); font-size: 0.82rem; margin-top: 0.15rem; flex-shrink: 0; width: 1.1rem; text-align: center; } .contact-text { font-size: 0.83rem; color: rgba(242,231,213,0.72); line-height: 1.5; } .contact-text a { color: rgba(242,231,213,0.72); text-decoration: none; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 3px; } .contact-text a:hover { color: var(--text-light); text-decoration: underline; } .footer-hours { margin-top: 0.5rem; background: rgba(255,255,255,0.04); border: 1px solid var(--border-dark); border-radius: 4px; padding: 0.85rem 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.08); } .footer-hours-title { font-size: 0.72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.6rem; display: flex; align-items: center; gap: 0.4rem; } .footer-hours-title i { font-size: 0.68rem; } .hours-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; } .hours-list li { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; } .hours-list .day { color: rgba(242,231,213,0.65); } .hours-list .time { color: rgba(242,231,213,0.9); font-weight: 600; } .hours-list .closed { color: var(--primary); font-weight: 600; } .footer-social { display: flex; gap: 0.65rem; flex-wrap: wrap; } .social-link { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: rgba(255,255,255,0.07); border: 1px solid var(--border-dark); border-radius: 3px; color: rgba(242,231,213,0.8); font-size: 0.9rem; text-decoration: none; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-shadow: 0 2px 12px rgba(0,0,0,0.08); } .social-link:hover { background: var(--primary); border-color: var(--primary); color: var(--text-light); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(180,35,24,0.35); } .footer-support-badge { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: rgba(242,231,213,0.65); padding: 0.3rem 0; } .footer-support-badge i { color: var(--accent); font-size: 0.78rem; width: 1rem; text-align: center; } .footer-divider { border: none; border-top: 1px solid var(--border-dark); margin: 0; position: relative; } .footer-divider::after { content: ''; position: absolute; top: -1px; right: 50%; transform: translateX(50%); width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--primary), transparent); } .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.25rem 0 1.5rem; } .footer-copyright { font-size: 0.78rem; color: rgba(242,231,213,0.5); } .footer-legal { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; } .footer-legal a { font-size: 0.76rem; color: rgba(242,231,213,0.55); text-decoration: none; border-radius: 3px; padding: 0.1rem 0.2rem; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); } .footer-legal a:hover { color: var(--text-light); } .legal-sep { color: rgba(242,231,213,0.25); font-size: 0.7rem; } .zappy-attribution { color: rgba(212,160,23,0.6) !important; font-size: 0.72rem !important; } .zappy-attribution:hover { color: var(--accent) !important; } @media (max-width: 1024px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; } } @media (max-width: 767px) { .footer-top { grid-template-columns: 1fr; gap: 2rem; } .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.75rem; } .footer-legal { gap: 0.5rem; } .footer-container { padding: 2.5rem 1.25rem 0; } .footer-social { gap: 0.5rem; } }
+main { margin-top: 0 !important; padding-top: 0 !important; }/* Footer Styles */
+.site-footer{--primary: #B42318;--secondary: #1F2937;--accent: #D4A017;--bg-light: #F2E7D5;--bg-dark: #1C1A17;--text-dark: #1C1A17;--text-light: #F2E7D5;--text-muted: #6B645C;--border-light: #D9CBB8;--border-dark: #3A342E;background-color: var(--bg-dark);color: var(--text-light);font-family: 'Rubik', sans-serif;position: relative;overflow: hidden;}html[dir="rtl"] /* Footer Styles */
+.site-footer{direction: rtl;} .site-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%); } .footer-container { max-width: 1200px; margin: 0 auto; padding: 3.5rem 2rem 0; } .footer-top { display: grid; grid-template-columns: 2fr 1fr 1.8fr 1.4fr; gap: 2.5rem; padding-bottom: 2.5rem; } .footer-col { display: flex; flex-direction: column; gap: 1rem; } .footer-brand .logo { display: block; height: 40px; width: 150px; object-fit: contain; background: rgba(242,231,213,0.08); border-radius: 4px; padding: 4px; } .footer-tagline { font-size: 1rem; font-weight: 700; color: var(--accent); line-height: 1.5; margin: 0.25rem 0 0; letter-spacing: 0.02em; } .footer-blurb { font-size: 0.82rem; color: rgba(242,231,213,0.65); line-height: 1.75; margin: 0; } .footer-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(180,35,24,0.18); border: 1px solid rgba(180,35,24,0.4); color: rgba(242,231,213,0.85); font-size: 0.75rem; padding: 0.35rem 0.75rem; border-radius: 3px; width: fit-content; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); } .footer-badge i { color: var(--primary); font-size: 0.7rem; } .footer-heading { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 0 0 0.5rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-dark); position: relative; } .footer-heading::after { content: ''; position: absolute; bottom: -1px; right: 0; width: 2rem; height: 2px; background: var(--primary); border-radius: 2px; } .footer-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; } .footer-nav li a { color: rgba(242,231,213,0.75); text-decoration: none; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 3px; padding: 0.1rem 0; } .footer-nav li a::before { content: '›'; color: var(--primary); font-size: 1rem; line-height: 1; transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); } .footer-nav li a:hover { color: var(--text-light); padding-right: 0.3rem; } .footer-nav li a:hover::before { transform: translateX(-3px); } .footer-contact { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; } .footer-contact li { display: flex; align-items: flex-start; gap: 0.65rem; } .contact-icon { color: var(--accent); font-size: 0.82rem; margin-top: 0.15rem; flex-shrink: 0; width: 1.1rem; text-align: center; } .contact-text { font-size: 0.83rem; color: rgba(242,231,213,0.72); line-height: 1.5; } .contact-text a { color: rgba(242,231,213,0.72); text-decoration: none; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 3px; } .contact-text a:hover { color: var(--text-light); text-decoration: underline; } .footer-hours { margin-top: 0.5rem; background: rgba(255,255,255,0.04); border: 1px solid var(--border-dark); border-radius: 4px; padding: 0.85rem 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.08); } .footer-hours-title { font-size: 0.72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.6rem; display: flex; align-items: center; gap: 0.4rem; } .footer-hours-title i { font-size: 0.68rem; } .hours-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; } .hours-list li { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; } .hours-list .day { color: rgba(242,231,213,0.65); } .hours-list .time { color: rgba(242,231,213,0.9); font-weight: 600; } .hours-list .closed { color: var(--primary); font-weight: 600; } .footer-social { display: flex; gap: 0.65rem; flex-wrap: wrap; } .social-link { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: rgba(255,255,255,0.07); border: 1px solid var(--border-dark); border-radius: 3px; color: rgba(242,231,213,0.8); font-size: 0.9rem; text-decoration: none; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-shadow: 0 2px 12px rgba(0,0,0,0.08); } .social-link:hover { background: var(--primary); border-color: var(--primary); color: var(--text-light); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(180,35,24,0.35); } .footer-support-badge { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: rgba(242,231,213,0.65); padding: 0.3rem 0; } .footer-support-badge i { color: var(--accent); font-size: 0.78rem; width: 1rem; text-align: center; } .footer-divider { border: none; border-top: 1px solid var(--border-dark); margin: 0; position: relative; } .footer-divider::after { content: ''; position: absolute; top: -1px; right: 50%; transform: translateX(50%); width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--primary), transparent); } .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.25rem 0 1.5rem; } .footer-copyright { font-size: 0.78rem; color: rgba(242,231,213,0.5); } .footer-legal { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; } .footer-legal a { font-size: 0.76rem; color: rgba(242,231,213,0.55); text-decoration: none; border-radius: 3px; padding: 0.1rem 0.2rem; transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); } .footer-legal a:hover { color: var(--text-light); } .legal-sep { color: rgba(242,231,213,0.25); font-size: 0.7rem; } .zappy-attribution { color: rgba(212,160,23,0.6) !important; font-size: 0.72rem !important; } .zappy-attribution:hover { color: var(--accent) !important; } @media (max-width: 1024px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; } } @media (max-width: 767px) { .footer-top { grid-template-columns: 1fr; gap: 2rem; } .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.75rem; } .footer-legal { gap: 0.5rem; } .footer-container { padding: 2.5rem 1.25rem 0; } .footer-social { gap: 0.5rem; } }
 
 /* V2 Decorative Helpers — quote marks */
 :root { --decorative-quote-color: var(--accent, #b48b59); --decorative-quote-font: var(--accent-font, var(--font-display, serif)); }
@@ -2189,8 +2063,8 @@ blockquote::after, .quote::after, [data-quote]::after {
   vertical-align: -0.6em;
   display: inline-block;
 }
-html[dir="rtl"] blockquote::before, html[dir="rtl"] .quote::before, html[dir="rtl"] [data-quote]::before { content: "\201D"; }
-html[dir="rtl"] blockquote::after, html[dir="rtl"] .quote::after, html[dir="rtl"] [data-quote]::after { content: "\201C"; }
+blockquote::before, .quote::before, html[dir="rtl"] [data-quote]::before{content: "\201D";}
+blockquote::after, .quote::after, html[dir="rtl"] [data-quote]::after{content: "\201C";}
 
 /* V2 Decorative Helpers — section divider flourish */
 hr.section-flourish, .section-flourish, [data-section-divider] {
@@ -2254,15 +2128,12 @@ hr.section-flourish, .section-flourish, [data-section-divider] {
 /* Footer contact alignment fix */
 .footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
 /* RTL footer contact: icon on the right (start) side, text on the left */
-html[dir="rtl"] .footer-contact li,
-html[dir="rtl"] .site-footer .footer-contact li,
-html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li {
-  flex-direction: row !important;
-  justify-content: flex-start !important;
-}
-html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
-html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
-html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
+.footer-contact li,
+.site-footer .footer-contact li,
+html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li{flex-direction: row !important;justify-content: flex-start !important;}
+.footer-contact .contact-icon{order: 0 !important;}
+.footer-contact .contact-text{order: 1 !important;}
+.footer-contact li > a{flex-direction: row !important;}
 /* hero */
 .index-hero-section {
   position: relative;
@@ -2378,7 +2249,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-hero-section .index-hero-content {
   max-width: 520px;
   width: 100%;
-  text-align: right;
+  text-align: start;
 }
 
 /* ── Eyebrow Label ── */
@@ -2601,21 +2472,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 @media (max-width: 768px) {
   .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 28px !important; }
-}
-
-/* ZAPPY_POSTGEN_GUARD_HERO_TYPO:בית-hero (index-hero) — stripped 2 jarring hero headline effect(s) */
+}/* ZAPPY_POSTGEN_GUARD_HERO_TYPO:בית-hero (index-hero) — stripped 2 jarring hero headline effect(s) */
 
 /* benefits */
-.index-benefits-section {
-  position: relative;
-  overflow: visible;
-  background-color: #F2EDE4;
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 24px 110px;
-  direction: rtl;
-  font-family: 'Rubik', sans-serif;
-}
+.index-benefits-section{position: relative;overflow: visible;background-color: #F2EDE4;background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 24px 110px;font-family: 'Rubik', sans-serif;}html[dir="rtl"] /* ZAPPY_POSTGEN_GUARD_HERO_TYPO:בית-hero (index-hero) — stripped 2 jarring hero headline effect(s) */
+
+/* benefits */
+.index-benefits-section{direction: rtl;}
 
 /* Parchment grain texture overlay */
 .index-benefits-section .index-benefits-texture {
@@ -2680,16 +2543,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   margin: 0 auto;
   border-radius: 2px;
-}
-
-/* ── GRID ── */
-.index-benefits-section .index-benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  align-items: start;
-  direction: rtl;
-}
+}/* ── GRID ── */
+.index-benefits-section .index-benefits-grid{display: grid;grid-template-columns: repeat(3, 1fr);gap: 32px;align-items: start;}html[dir="rtl"] /* ── GRID ── */
+.index-benefits-section .index-benefits-grid{direction: rtl;}
 
 /* ── CARDS ── */
 .index-benefits-section .index-benefits-card {
@@ -2906,21 +2762,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     bottom: 46px;
     width: 200px;
   }
-}
-
-/* story */
-.index-story-section {
-  position: relative;
-  overflow: visible;
-  background-color: #1C1A17;
-  background-image:
+}/* story */
+.index-story-section{position: relative;overflow: visible;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 80% 20%, rgba(212,160,23,0.06) 0%, transparent 55%),
     radial-gradient(ellipse at 10% 80%, rgba(180,35,24,0.08) 0%, transparent 50%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: 120px 0 90px;
-  direction: rtl;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: 120px 0 90px;}html[dir="rtl"] /* story */
+.index-story-section{direction: rtl;}
 
 /* Kanji watermark */
 .index-story-section .story-kanji-watermark {
@@ -2949,28 +2796,16 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: linear-gradient(to inline-start, transparent 0%, rgba(212,160,23,0.5) 40%, rgba(212,160,23,0.2) 100%);
   pointer-events: none;
   z-index: 1;
-}
-
-/* Container */
-.index-story-section .story-container {
-  position: relative;
-  z-index: 10;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 480px;
-  gap: 80px;
-  align-items: center;
-  direction: rtl;
-}
+}/* Container */
+.index-story-section .story-container{position: relative;z-index: 10;max-width: 1200px;margin: 0 auto;padding: 0 40px;display: grid;grid-template-columns: 1fr 480px;gap: 80px;align-items: center;}html[dir="rtl"] /* Container */
+.index-story-section .story-container{direction: rtl;}
 
 /* Content column */
 .index-story-section .story-content {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  text-align: right;
+  text-align: start;
 }
 
 .index-story-section .story-label {
@@ -2980,7 +2815,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--accent);
-  text-align: right;
+  text-align: start;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -3001,7 +2836,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 700;
   line-height: 1.25;
   color: var(--text-light);
-  text-align: right;
+  text-align: start;
   margin: 0;
   letter-spacing: -0.5px;
 }
@@ -3011,7 +2846,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 1rem;
   line-height: 1.8;
   color: rgba(242,231,213,0.8);
-  text-align: right;
+  text-align: start;
   margin: 0;
   max-width: 520px;
 }
@@ -3031,7 +2866,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   flex-direction: row;
   align-items: flex-start;
   gap: 14px;
-  text-align: right;
+  text-align: start;
 }
 
 .index-story-section .story-value-marker {
@@ -3048,7 +2883,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 4px;
-  text-align: right;
+  text-align: start;
 }
 
 .index-story-section .story-value-text strong {
@@ -3256,20 +3091,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .index-story-section .story-heading {
     font-size: 1.75rem;
   }
-}
-
-/* testimonials */
-.index-testimonials-section {
-  position: relative;
-  overflow: visible;
-  direction: rtl;
-  background-color: #F2E7D5;
-  background-image:
+}/* testimonials */
+.index-testimonials-section{position: relative;overflow: visible;background-color: #F2E7D5;background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"),
-    linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 24px 100px;
-}
+    linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 24px 100px;}html[dir="rtl"] /* testimonials */
+.index-testimonials-section{direction: rtl;}
 
 /* Kanji watermark decoration */
 .index-testimonials-section .testimonials-kanji-watermark {
@@ -3346,16 +3172,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
   margin: 0 auto;
   border-radius: 2px;
-}
-
-/* Grid */
-.index-testimonials-section .testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  margin-bottom: 64px;
-  direction: rtl;
-}
+}/* Grid */
+.index-testimonials-section .testimonials-grid{display: grid;grid-template-columns: 1fr;gap: 32px;margin-bottom: 64px;}html[dir="rtl"] /* Grid */
+.index-testimonials-section .testimonials-grid{direction: rtl;}
 
 @media (min-width: 768px) {
   .index-testimonials-section .testimonials-grid {
@@ -3426,7 +3245,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--text-dark);
   line-height: 1.8;
   margin: 0;
-  text-align: right;
+  text-align: start;
 }
 
 /* Stars */
@@ -3476,7 +3295,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 4px;
-  text-align: right;
+  text-align: start;
 }
 
 .index-testimonials-section .author-name {
@@ -3495,22 +3314,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--text-muted);
   text-transform: uppercase;
   display: block;
-}
-
-/* Trust strip */
-.index-testimonials-section .testimonials-trust-strip {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  padding: 32px 40px;
-  background: rgba(255,255,255,0.6);
-  border: 1px solid var(--border-light);
-  border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  direction: rtl;
-}
+}/* Trust strip */
+.index-testimonials-section .testimonials-trust-strip{display: flex;flex-direction: row;align-items: center;justify-content: center;gap: 0;padding: 32px 40px;background: rgba(255,255,255,0.6);border: 1px solid var(--border-light);border-radius: 4px;box-shadow: 0 2px 12px rgba(0,0,0,0.06);}html[dir="rtl"] /* Trust strip */
+.index-testimonials-section .testimonials-trust-strip{direction: rtl;}
 
 .index-testimonials-section .trust-item {
   display: flex;
@@ -3603,21 +3409,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .index-testimonials-section .trust-divider {
     height: 36px;
   }
-}
-
-/* cta */
-.index-cta-section {
-  position: relative;
-  background-color: #1C1A17;
-  background-image:
+}/* cta */
+.index-cta-section{position: relative;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 50% 100%, rgba(180,35,24,0.08) 0%, transparent 65%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: 120px 24px;
-  overflow: visible;
-  direction: rtl;
-  text-align: center;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: 120px 24px;overflow: visible;text-align: center;}html[dir="rtl"] /* cta */
+.index-cta-section{direction: rtl;}
 
 /* Brushstroke texture near bottom */
 .index-cta-section .index-cta-brushstroke {
@@ -3753,25 +3549,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   box-shadow: 0 8px 30px rgba(180,35,24,0.55);
   transform: translateY(-2px);
   color: var(--text-light);
-}
-
-/* Secondary text link CTA */
-.index-cta-section .index-cta-btn-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--accent);
-  font-family: 'Rubik', sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(212,160,23,0.35);
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  white-space: nowrap;
-  direction: rtl;
-}
+}/* Secondary text link CTA */
+.index-cta-section .index-cta-btn-link{display: inline-flex;align-items: center;gap: 6px;color: var(--accent);font-family: 'Rubik', sans-serif;font-size: 0.9375rem;font-weight: 500;text-decoration: none;letter-spacing: 0.02em;padding: 8px 0;border-bottom: 1px solid rgba(212,160,23,0.35);transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);white-space: nowrap;}html[dir="rtl"] /* Secondary text link CTA */
+.index-cta-section .index-cta-btn-link{direction: rtl;}
 
 .index-cta-section .index-cta-btn-link svg {
   color: var(--accent);
@@ -3809,19 +3589,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     text-align: center;
     padding: 16px 24px;
   }
-}
-
-/* intro */
-.training-method-intro-section {
-  position: relative;
-  background-color: #F2EDE4;
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 24px 100px;
-  overflow: visible;
-  direction: rtl;
-  font-family: 'Rubik', sans-serif;
-}
+}/* intro */
+.training-method-intro-section{position: relative;background-color: #F2EDE4;background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 24px 100px;overflow: visible;font-family: 'Rubik', sans-serif;}html[dir="rtl"] /* intro */
+.training-method-intro-section{direction: rtl;}
 
 /* Kanji watermark decoration */
 .training-method-intro-section .tmi-kanji-watermark {
@@ -3856,18 +3626,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   margin-bottom: 56px;
 }
 
-@media (min-width: 768px) {
-  .training-method-intro-section .tmi-intro-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-    direction: rtl;
-  }
+@media (min-width: 768px) {.training-method-intro-section .tmi-intro-grid{grid-template-columns: 1fr 1fr;gap: 80px;align-items: start;}html[dir="rtl"] .training-method-intro-section .tmi-intro-grid{direction: rtl;}
 }
 
 /* Headline column (START = right in RTL) */
 .training-method-intro-section .tmi-headline-col {
-  text-align: right;
+  text-align: start;
 }
 
 .training-method-intro-section .tmi-label-tag {
@@ -3903,7 +3667,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 /* Text column (END = left in RTL) */
 .training-method-intro-section .tmi-text-col {
-  text-align: right;
+  text-align: start;
   padding-top: 8px;
 }
 
@@ -3944,30 +3708,16 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     transparent 100%
   );
   opacity: 0.6;
-}
-
-/* ── THREE-POINT SUMMARY ROW ── */
-.training-method-intro-section .tmi-summary-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  direction: rtl;
-}
+}/* ── THREE-POINT SUMMARY ROW ── */
+.training-method-intro-section .tmi-summary-row{display: grid;grid-template-columns: 1fr;gap: 32px;}html[dir="rtl"] /* ── THREE-POINT SUMMARY ROW ── */
+.training-method-intro-section .tmi-summary-row{direction: rtl;}
 
 @media (min-width: 768px) {
   .training-method-intro-section .tmi-summary-row {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
-}
-
-.training-method-intro-section .tmi-summary-item {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 16px;
-  align-items: start;
-  direction: rtl;
-}
+}.training-method-intro-section .tmi-summary-item{display: grid;grid-template-columns: 44px 1fr;gap: 16px;align-items: start;}html[dir="rtl"] .training-method-intro-section .tmi-summary-item{direction: rtl;}
 
 .training-method-intro-section .tmi-summary-icon {
   width: 44px;
@@ -3988,7 +3738,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .training-method-intro-section .tmi-summary-content {
-  text-align: right;
+  text-align: start;
 }
 
 .training-method-intro-section .tmi-summary-title {
@@ -4046,22 +3796,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     grid-template-columns: 40px 1fr;
     gap: 12px;
   }
-}
-
-/* process */
-.training-method-process-section {
-  position: relative;
-  overflow: visible;
-  background-color: #1C1A17;
-  background-image:
+}/* process */
+.training-method-process-section{position: relative;overflow: visible;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 80% 20%, rgba(180, 35, 24, 0.08) 0%, transparent 55%),
     radial-gradient(ellipse at 10% 80%, rgba(212, 160, 23, 0.05) 0%, transparent 50%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: var(--spacing-section, 120px) 0 90px;
-  direction: rtl;
-  font-family: 'Rubik', sans-serif;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: var(--spacing-section, 120px) 0 90px;font-family: 'Rubik', sans-serif;}html[dir="rtl"] /* process */
+.training-method-process-section{direction: rtl;}
 
 /* Grain texture overlay */
 .training-method-process-section .tmp-grain-overlay {
@@ -4120,16 +3860,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--text-muted);
   margin: 0;
   text-align: center;
-}
-
-/* Main layout: steps + image */
-.training-method-process-section .tmp-layout {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 64px;
-  align-items: start;
-  direction: rtl;
-}
+}/* Main layout: steps + image */
+.training-method-process-section .tmp-layout{display: grid;grid-template-columns: 1fr 380px;gap: 64px;align-items: start;}html[dir="rtl"] /* Main layout: steps + image */
+.training-method-process-section .tmp-layout{direction: rtl;}
 
 /* Steps column */
 .training-method-process-section .tmp-steps {
@@ -4401,19 +4134,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     height: 20px;
     margin-inline-start: 42px;
   }
-}
-/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:שיטת האימון-process — stripped 1 order declaration(s) conflicting with RTL grid */
+}/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:שיטת האימון-process — stripped 1 order declaration(s) conflicting with RTL grid */
 
 /* curriculum */
-.training-method-curriculum-section {
-  position: relative;
-  overflow: visible;
-  background-color: #F2E7D5;
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 0 100px;
-  direction: rtl;
-}
+.training-method-curriculum-section{position: relative;overflow: visible;background-color: #F2E7D5;background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 0 100px;}html[dir="rtl"] /* ZAPPY_POSTGEN_GUARD_RTL_ORDER:שיטת האימון-process — stripped 1 order declaration(s) conflicting with RTL grid */
+
+/* curriculum */
+.training-method-curriculum-section{direction: rtl;}
 
 /* Fabric texture overlay */
 .training-method-curriculum-section .tmcs-texture-overlay {
@@ -4470,16 +4197,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-}
-
-/* ── Asymmetrical Grid ── */
-.training-method-curriculum-section .tmcs-grid {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 32px;
-  direction: rtl;
-  align-items: start;
-}
+}/* ── Asymmetrical Grid ── */
+.training-method-curriculum-section .tmcs-grid{display: grid;grid-template-columns: 1fr 420px;gap: 32px;align-items: start;}html[dir="rtl"] /* ── Asymmetrical Grid ── */
+.training-method-curriculum-section .tmcs-grid{direction: rtl;}
 
 /* ── Shared Block Styles ── */
 .training-method-curriculum-section .tmcs-block {
@@ -4757,21 +4477,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .training-method-curriculum-section .tmcs-kanji-mark {
     font-size: 5rem;
   }
-}
-
-/* showcase */
-.training-method-showcase-section {
-  position: relative;
-  overflow: visible;
-  background-color: #1C1A17;
-  background-image:
+}/* showcase */
+.training-method-showcase-section{position: relative;overflow: visible;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 80% 20%, rgba(212,160,23,0.06) 0%, transparent 55%),
     radial-gradient(ellipse at 10% 80%, rgba(180,35,24,0.07) 0%, transparent 50%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: 120px 0 90px;
-  direction: rtl;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: 120px 0 90px;}html[dir="rtl"] /* showcase */
+.training-method-showcase-section{direction: rtl;}
 
 /* Background texture */
 .training-method-showcase-section .tms-bg-texture {
@@ -4780,21 +4491,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.018"%3E%3Crect x="0" y="0" width="1" height="40"/%3E%3Crect x="0" y="0" width="40" height="1"/%3E%3C/g%3E%3C/svg%3E');
   pointer-events: none;
   z-index: 0;
-}
-
-/* Container */
-.training-method-showcase-section .tms-container {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  direction: rtl;
-}
+}/* Container */
+.training-method-showcase-section .tms-container{position: relative;z-index: 1;max-width: 1200px;margin: 0 auto;padding: 0 32px;display: grid;grid-template-columns: 1fr 1fr;gap: 64px;align-items: center;}html[dir="rtl"] /* Container */
+.training-method-showcase-section .tms-container{direction: rtl;}
 
 /* ===== IMAGE COLUMN ===== */
 .training-method-showcase-section .tms-image-column {
@@ -5080,17 +4779,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .training-method-showcase-section .tms-gold-frame {
     inset: -6px -6px 6px 6px;
   }
-}
-
-/* faq */
-.training-method-faq-section {
-  background-color: #F2E7D5;
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 24px;
-  position: relative;
-  direction: rtl;
-}
+}/* faq */
+.training-method-faq-section{background-color: #F2E7D5;background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 24px;position: relative;}html[dir="rtl"] /* faq */
+.training-method-faq-section{direction: rtl;}
 
 .training-method-faq-section .faq-container {
   max-width: 760px;
@@ -5186,7 +4877,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--text-dark);
   margin: 0 0 14px 0;
   padding-inline-end: 20px;
-  text-align: right;
+  text-align: start;
 }
 
 .training-method-faq-section .faq-answer {
@@ -5196,7 +4887,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--text-muted);
   margin: 0;
   padding-inline-end: 20px;
-  text-align: right;
+  text-align: start;
 }
 
 /* ── RESPONSIVE ── */
@@ -5249,18 +4940,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     opacity: 0.55;
     transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-}
-
-/* profile */
-.about-profile-section {
-  position: relative;
-  background-color: #F2E7D5;
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 40px 100px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* profile */
+.about-profile-section{position: relative;background-color: #F2E7D5;background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 40px 100px;overflow: visible;}html[dir="rtl"] /* profile */
+.about-profile-section{direction: rtl;}
 
 /* Kanji watermark decoration */
 .about-profile-section .about-profile-kanji-watermark {
@@ -5285,16 +4967,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   margin: 0 auto;
   position: relative;
   z-index: 1;
-}
-
-/* Two-column grid: text on RIGHT (start), image on LEFT (end) */
-.about-profile-section .about-profile-grid {
-  display: grid;
-  grid-template-columns: 1fr 480px;
-  gap: 80px;
-  align-items: center;
-  direction: rtl;
-}
+}/* Two-column grid: text on RIGHT (start), image on LEFT (end) */
+.about-profile-section .about-profile-grid{display: grid;grid-template-columns: 1fr 480px;gap: 80px;align-items: center;}html[dir="rtl"] /* Two-column grid: text on RIGHT (start), image on LEFT (end) */
+.about-profile-section .about-profile-grid{direction: rtl;}
 
 /* ── TEXT BLOCK ── */
 .about-profile-section .about-profile-text {
@@ -5474,13 +5149,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     opacity: 0.035;
     top: 2%;
     inset-inline-end: 2%;
-  }
-
-  .about-profile-section .about-profile-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    direction: rtl;
-  }
+  }.about-profile-section .about-profile-grid{grid-template-columns: 1fr;gap: 40px;}html[dir="rtl"] .about-profile-section .about-profile-grid{direction: rtl;}
 
   /* On mobile, image comes FIRST (above text) */
   .about-profile-section .about-profile-image-block {
@@ -5527,21 +5196,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
     text-align: center;
     padding: 14px 24px;
   }
-}
-
-/* values */
-.about-values-section {
-  position: relative;
-  overflow: visible;
-  background-color: #1C1A17;
-  background-image:
+}/* values */
+.about-values-section{position: relative;overflow: visible;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 80% 20%, rgba(180,35,24,0.08) 0%, transparent 55%),
     radial-gradient(ellipse at 10% 80%, rgba(212,160,23,0.05) 0%, transparent 50%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: 120px 24px 90px;
-  direction: rtl;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: 120px 24px 90px;}html[dir="rtl"] /* values */
+.about-values-section{direction: rtl;}
 
 /* Texture overlay */
 .about-values-section .about-values-texture {
@@ -5621,19 +5281,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--text-muted);
   text-align: center;
   margin: 0;
-}
-
-/* Values Grid — 4 columns on large screens */
-.about-values-section .about-values-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background-color: rgba(242,231,213,0.07);
-  border: 1px solid rgba(242,231,213,0.07);
-  border-radius: 4px;
-  overflow: hidden;
-  direction: rtl;
-}
+}/* Values Grid — 4 columns on large screens */
+.about-values-section .about-values-grid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 1px;background-color: rgba(242,231,213,0.07);border: 1px solid rgba(242,231,213,0.07);border-radius: 4px;overflow: hidden;}html[dir="rtl"] /* Values Grid — 4 columns on large screens */
+.about-values-section .about-values-grid{direction: rtl;}
 
 /* Panel */
 .about-values-section .about-values-panel {
@@ -5804,18 +5454,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .about-values-section .about-values-kanji-watermark {
     display: none;
   }
-}
-
-/* gallery */
-.about-gallery-section {
-  position: relative;
-  overflow: visible;
-  background-color: #F2EDE4;
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 0 70px;
-  direction: rtl;
-}
+}/* gallery */
+.about-gallery-section{position: relative;overflow: visible;background-color: #F2EDE4;background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 0 70px;}html[dir="rtl"] /* gallery */
+.about-gallery-section{direction: rtl;}
 
 /* Subtle paper grain texture overlay */
 .about-gallery-section::before {
@@ -5859,17 +5500,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.8;
   text-align: center;
   max-width: none !important;
-}
-
-/* ── Collage Grid ── */
-.about-gallery-section .about-gallery-collage {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 24px;
-  direction: rtl;
-}
+}/* ── Collage Grid ── */
+.about-gallery-section .about-gallery-collage{position: relative;display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: auto auto;gap: 24px;}html[dir="rtl"] /* ── Collage Grid ── */
+.about-gallery-section .about-gallery-collage{direction: rtl;}
 
 /* Decorative backplate — peeks from beneath dominant image on END-bottom edge */
 .about-gallery-section .about-gallery-backplate {
@@ -6103,21 +5736,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .about-gallery-section .about-gallery-backplate {
     display: none;
   }
-}
-
-/* reviews */
-.about-reviews-section {
-  position: relative;
-  background-color: #1C1A17;
-  background-image:
+}/* reviews */
+.about-reviews-section{position: relative;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 80% 10%, rgba(212, 160, 23, 0.06) 0%, transparent 55%),
     radial-gradient(ellipse at 10% 90%, rgba(180, 35, 24, 0.07) 0%, transparent 50%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: var(--spacing-section, 120px) 24px;
-  overflow: visible;
-  direction: rtl;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: var(--spacing-section, 120px) 24px;overflow: visible;}html[dir="rtl"] /* reviews */
+.about-reviews-section{direction: rtl;}
 
 /* Brush texture overlay */
 .about-reviews-section .about-reviews-texture {
@@ -6356,18 +5980,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .about-reviews-section .about-reviews-story-title {
     transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-}
-
-/* contact-intro */
-.contact-contact-intro-section {
-  background-color: var(--bg-light);
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 24px 80px;
-  position: relative;
-  overflow: visible;
-  direction: rtl;
-}
+}/* contact-intro */
+.contact-contact-intro-section{background-color: var(--bg-light);background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 24px 80px;position: relative;overflow: visible;}html[dir="rtl"] /* contact-intro */
+.contact-contact-intro-section{direction: rtl;}
 
 /* Subtle paper-grain texture overlay */
 .contact-contact-intro-section::before {
@@ -6378,27 +5993,16 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   opacity: 0.06;
   pointer-events: none;
   z-index: 0;
-}
-
-/* ── CONTAINER ── */
-.contact-contact-intro-section .contact-intro-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  direction: rtl;
-}
+}/* ── CONTAINER ── */
+.contact-contact-intro-section .contact-intro-container{max-width: 1200px;margin: 0 auto;display: grid;grid-template-columns: 1fr 1fr;gap: 80px;align-items: center;position: relative;z-index: 1;}html[dir="rtl"] /* ── CONTAINER ── */
+.contact-contact-intro-section .contact-intro-container{direction: rtl;}
 
 /* ── TEXT COLUMN ── */
 .contact-contact-intro-section .contact-intro-text {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  text-align: right;
+  text-align: start;
 }
 
 .contact-contact-intro-section .contact-intro-label {
@@ -6438,15 +6042,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.contact-contact-intro-section .reassurance-item {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  gap: 14px;
-  align-items: start;
-  direction: rtl;
-}
+}.contact-contact-intro-section .reassurance-item{display: grid;grid-template-columns: 20px 1fr;gap: 14px;align-items: start;}html[dir="rtl"] .contact-contact-intro-section .reassurance-item{direction: rtl;}
 
 .contact-contact-intro-section .reassurance-icon {
   display: flex;
@@ -6461,7 +6057,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 2px;
-  text-align: right;
+  text-align: start;
 }
 
 .contact-contact-intro-section .reassurance-text strong {
@@ -6661,22 +6257,16 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .contact-contact-intro-section .contact-intro-img-wrapper {
     margin-bottom: 20px;
   }
-}
-/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:צור קשר-contact-intro — stripped 1 order declaration(s) conflicting with RTL grid */
+}/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:צור קשר-contact-intro — stripped 1 order declaration(s) conflicting with RTL grid */
 
 /* contact-form */
-.contact-contact-form-section {
-  position: relative;
-  overflow: visible;
-  direction: rtl;
-  background-color: #1C1A17;
-  background-image:
+.contact-contact-form-section{position: relative;overflow: visible;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 15% 20%, rgba(180,35,24,0.08) 0%, transparent 55%),
     radial-gradient(ellipse at 85% 80%, rgba(212,160,23,0.06) 0%, transparent 50%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: 120px 24px 140px;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: 120px 24px 140px;}html[dir="rtl"] /* ZAPPY_POSTGEN_GUARD_RTL_ORDER:צור קשר-contact-intro — stripped 1 order declaration(s) conflicting with RTL grid */
+
+/* contact-form */
+.contact-contact-form-section{direction: rtl;}
 
 /* ── Texture overlay ── */
 .contact-contact-form-section .ccf-texture {
@@ -6825,26 +6415,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   letter-spacing: 0.5px;
   color: var(--text-light);
   text-align: start;
-}
-
-/* ── Inputs ── */
-.contact-contact-form-section .ccf-input {
-  width: 100%;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border-dark);
-  border-radius: 3px;
-  padding: 14px 16px;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--text-light);
-  direction: rtl;
-  text-align: start;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-sizing: border-box;
-  outline: none;
-  appearance: none;
-}
+}/* ── Inputs ── */
+.contact-contact-form-section .ccf-input{width: 100%;background: rgba(255,255,255,0.04);border: 1px solid var(--border-dark);border-radius: 3px;padding: 14px 16px;font-family: 'Rubik', sans-serif;font-size: 1rem;line-height: 1.5;color: var(--text-light);text-align: start;transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);box-sizing: border-box;outline: none;appearance: none;}html[dir="rtl"] /* ── Inputs ── */
+.contact-contact-form-section .ccf-input{direction: rtl;}
 
 .contact-contact-form-section .ccf-input::placeholder {
   color: var(--text-muted);
@@ -6982,17 +6555,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 1rem;
   color: var(--accent);
   flex-shrink: 0;
-}
-
-.contact-contact-form-section .ccf-info-link {
-  font-family: 'Rubik', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  direction: ltr;
-}
+}.contact-contact-form-section .ccf-info-link{font-family: 'Rubik', sans-serif;font-size: 0.875rem;font-weight: 500;color: var(--text-muted);text-decoration: none;transition: color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);}html[dir="ltr"] .contact-contact-form-section .ccf-info-link{direction: ltr;}
 
 .contact-contact-form-section .ccf-info-link:hover {
   color: var(--text-light);
@@ -7081,18 +6644,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .contact-contact-form-section .ccf-submit-wrapper {
     justify-content: stretch;
   }
-}
-
-/* details */
-.contact-details-section {
-  background-color: #F2EDE4;
-  background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);
-  color: var(--text-dark);
-  padding: 120px 24px 100px;
-  position: relative;
-  overflow: visible;
-  direction: rtl;
-}
+}/* details */
+.contact-details-section{background-color: #F2EDE4;background-image: linear-gradient(180deg, #F2EDE4 0%, #EAE3D8 100%);color: var(--text-dark);padding: 120px 24px 100px;position: relative;overflow: visible;}html[dir="rtl"] /* details */
+.contact-details-section{direction: rtl;}
 
 .contact-details-section .contact-details-container {
   max-width: 1200px;
@@ -7132,15 +6686,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   margin: 0 auto;
   opacity: 0.75;
-}
-
-/* ── Grid ── */
-.contact-details-section .contact-details-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  direction: rtl;
-}
+}/* ── Grid ── */
+.contact-details-section .contact-details-grid{display: grid;grid-template-columns: repeat(3, 1fr);gap: 32px;}html[dir="rtl"] /* ── Grid ── */
+.contact-details-section .contact-details-grid{direction: rtl;}
 
 /* ── Block Card ── */
 .contact-details-section .contact-details-block {
@@ -7205,7 +6753,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.4;
   color: var(--text-dark);
   margin: 0 0 12px;
-  text-align: right;
+  text-align: start;
 }
 
 .contact-details-section .contact-block-accent {
@@ -7223,7 +6771,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.7;
   color: var(--text-muted);
   margin: 0 0 24px;
-  text-align: right;
+  text-align: start;
 }
 
 .contact-details-section .contact-block-text strong {
@@ -7248,7 +6796,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  text-align: right;
+  text-align: start;
 }
 
 .contact-details-section .contact-block-list li i {
@@ -7306,22 +6854,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .contact-details-section .contact-block-title {
     font-size: 1.2rem;
   }
-}
-
-/* closing-cta */
-.contact-closing-cta-section {
-  position: relative;
-  overflow: hidden;
-  background-color: #1C1A17;
-  background-image:
+}/* closing-cta */
+.contact-closing-cta-section{position: relative;overflow: hidden;background-color: #1C1A17;background-image:
     radial-gradient(ellipse at 50% 0%, rgba(180,35,24,0.10) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 100%, rgba(212,160,23,0.07) 0%, transparent 55%),
-    linear-gradient(180deg, #1C1A17 0%, #111111 100%);
-  color: var(--text-light);
-  padding: 120px 24px 100px;
-  text-align: center;
-  direction: rtl;
-}
+    linear-gradient(180deg, #1C1A17 0%, #111111 100%);color: var(--text-light);padding: 120px 24px 100px;text-align: center;}html[dir="rtl"] /* closing-cta */
+.contact-closing-cta-section{direction: rtl;}
 
 /* Paper grain texture overlay */
 .contact-closing-cta-section .cta-texture-overlay {
@@ -7511,10 +7049,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
 
 /* RTL footer contact: icon on the right (start) side, text on the left */
-html[dir="rtl"] .footer-contact li, html[dir="rtl"] .site-footer .footer-contact li, html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li { flex-direction: row !important; justify-content: flex-start !important; }
-html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
-html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
-html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
+.footer-contact li, .site-footer .footer-contact li, html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li{flex-direction: row !important;justify-content: flex-start !important;}
+.footer-contact .contact-icon{order: 0 !important;}
+.footer-contact .contact-text{order: 1 !important;}
+.footer-contact li > a{flex-direction: row !important;}
 
 /* ============================================
    MOBILE RESPONSIVE FIXES (Auto-generated)
@@ -11139,7 +10677,7 @@ a, button {
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 8px;
   padding: 18px 80px 40px;
-  text-align: left;
+  text-align: end;
 }
 [dir="rtl"] .order-success-card { text-align: right; }
 .order-success-card .order-success-icon {
@@ -11627,7 +11165,7 @@ a, button {
 }
 .order-confirmation-message p { margin: 8px 0; color: var(--text-dark); }
 .order-details-section {
-  text-align: right;
+  text-align: start;
   background: var(--bg-light, #fff);
   padding: 24px;
   border-radius: 12px;
@@ -12184,19 +11722,7 @@ a, button {
   transition: transform 0.3s ease;
   box-shadow: -4px 0 20px rgba(0,0,0,0.15);
   box-sizing: border-box;
-}
-#cart-drawer.cart-drawer.ltr {
-  right: 0 !important;
-  left: auto !important;
-  transform: translateX(100%);
-  direction: ltr;
-}
-#cart-drawer.cart-drawer.rtl {
-  left: 0 !important;
-  right: auto !important;
-  transform: translateX(-100%);
-  direction: rtl;
-}
+}#cart-drawer.cart-drawer.ltr{right: 0 !important;left: auto !important;transform: translateX(100%);}html[dir="ltr"] #cart-drawer.cart-drawer.ltr{direction: ltr;}#cart-drawer.cart-drawer.rtl{left: 0 !important;right: auto !important;transform: translateX(-100%);}html[dir="rtl"] #cart-drawer.cart-drawer.rtl{direction: rtl;}
 @supports (height: 100dvh) { .cart-drawer { height: 100dvh; } }
 .cart-drawer.active {
   transform: translateX(0);
@@ -12666,12 +12192,10 @@ a, button {
    ───────────────────────────────────────────────────────────────────────────── */
 
 /* RTL order: input (right) → search → X (left). Force row for RTL sites. */
-html[dir="rtl"] .mobile-search-panel .search-wrapper,
+.mobile-search-panel .search-wrapper,
 html[lang="he"] .mobile-search-panel .search-wrapper,
 html[lang="ar"] .mobile-search-panel .search-wrapper,
-[dir="rtl"] .mobile-search-panel .search-wrapper {
-  flex-direction: row !important;
-}
+[dir="rtl"] .mobile-search-panel .search-wrapper{flex-direction: row !important;}
 
 /* Pill-shaped search input */
 .mobile-search-panel #mobile-search-input,
@@ -13070,13 +12594,10 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     justify-content: center !important;
     box-sizing: border-box !important;
   }
-  html[dir="rtl"] .navbar .nav-ecommerce-icons.nav-icons-left .cart-link.nav-cart .cart-count,
+  .navbar .nav-ecommerce-icons.nav-icons-left .cart-link.nav-cart .cart-count,
   html[lang="he"] .navbar .nav-ecommerce-icons.nav-icons-left .cart-link.nav-cart .cart-count,
   html[lang="ar"] .navbar .nav-ecommerce-icons.nav-icons-left .cart-link.nav-cart .cart-count,
-  [dir="rtl"] .navbar .nav-ecommerce-icons.nav-icons-left .cart-link.nav-cart .cart-count {
-    inset-inline-start: -6px !important;
-    inset-inline-end: auto !important;
-  }
+  [dir="rtl"] .navbar .nav-ecommerce-icons.nav-icons-left .cart-link.nav-cart .cart-count{inset-inline-start: -6px !important;inset-inline-end: auto !important;}
 
   /* Desktop search: pill container with focus animation */
   .navbar .nav-search-box {
@@ -13305,19 +12826,8 @@ body.zappy-checkout-page footer.site-footer:not(:has(.footer-bottom)) {
     display: block !important;
     visibility: visible !important;
   }
-}
-.catalog-menu-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 24px;
-  overflow: visible;
-  flex-direction: row; /* With direction:rtl, flex-direction:row naturally flows right-to-left */
-  justify-content: center !important;
-  width: 100% !important;
-}
+}.catalog-menu-container{max-width: 1440px;margin: 0 auto;display: flex;align-items: center;gap: 8px;padding: 10px 24px;overflow: visible;flex-direction: row;/* With direction:rtl, flex-direction:row naturally flows right-to-left */
+  justify-content: center !important;width: 100% !important;}
 .catalog-menu-list {
   display: flex;
   align-items: center;
@@ -13787,11 +13297,8 @@ main,
   }
   
   /* Cart count badge RTL positioning */
-  html[dir='rtl'] .cart-count,
-  [dir='rtl'] .cart-count {
-    left: -6px !important;
-    right: auto !important;
-  }
+  .cart-count,
+  [dir='rtl'] .cart-count{left: -6px !important;right: auto !important;}
   
   html:not([dir='rtl']) .cart-count {
     right: -6px !important;
@@ -14449,6 +13956,797 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
+
+/* ============================================
+   DIRECTION OVERRIDE STYLES
+   Only set direction property, NOT text-align
+   This preserves centered elements
+   ============================================ */
+
+/* Base direction for LTR */
+html[dir="ltr"], html[dir="ltr"] body {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] main,
+html[dir="ltr"] article,
+html[dir="ltr"] section,
+html[dir="ltr"] .content,
+html[dir="ltr"] .container,
+html[dir="ltr"] .wrapper {
+  direction: ltr !important;
+}
+
+/* ONLY apply text-align to legal page content that needs LTR alignment */
+html[dir="ltr"] .legal-content,
+html[dir="ltr"] .terms-content,
+html[dir="ltr"] .privacy-content,
+html[dir="ltr"] .legal-content p,
+html[dir="ltr"] .terms-content p,
+html[dir="ltr"] .privacy-content p,
+html[dir="ltr"] .legal-content li,
+html[dir="ltr"] .terms-content li,
+html[dir="ltr"] .privacy-content li {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* ZAPPY-LTR-TEXTALIGN-OVERRIDES:BEGIN */
+/* ============================================
+   LTR TEXT-ALIGN OVERRIDES FOR RTL-BAKED CONTENT
+   See block comment at top of multiLanguageService.js for full rationale.
+   Patterns covered:
+   - *-card-content / *-card-text  → e-commerce + collections card bodies
+   - *-content-column              → split / two-column section bodies
+   - contact form grid/card blocks → contact form two-column sections
+   - *-info-item / .suggestion-item → contact-form widgets
+   - .order-success-card           → checkout success card
+   - .privacy-consent-label        → contact-form consent checkbox row
+   - .text-left                    → AI sometimes literally writes
+                                     ".text-left { text-align: start }" in
+                                     Hebrew sites — flip it so the class
+                                     name matches its behaviour.
+   Uses text-align: start (resolves to left in LTR, right in RTL via the
+   CSS spec) for the structural patterns; .text-left is forced literally
+   to left because its name is a contract.
+   ============================================ */
+html[dir="ltr"] [class*="-card-content"],
+html[dir="ltr"] [class*="-card-text"],
+html[dir="ltr"] [class*="-content-column"],
+html[dir="ltr"] .suggestion-item,
+html[dir="ltr"] .contact-info-item,
+html[dir="ltr"] .order-success-card {
+  text-align: start !important;
+}
+
+html[dir="ltr"] .text-left {
+  text-align: left !important;
+}
+
+/* Contact form columns/cards are often baked with direction: rtl. In LTR this
+   reverses the grid column placement and moves punctuation to the wrong side
+   of headings (e.g. "?What should you tell us"). */
+html[dir="ltr"] .contact-form-grid,
+html[dir="ltr"] .contact-form-container,
+html[dir="ltr"] .form-card,
+html[dir="ltr"] .reassurance-card,
+html[dir="ltr"] .suggestion-list {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+html[dir="ltr"] .suggestion-item,
+html[dir="ltr"] .contact-info-item {
+  direction: ltr !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+/* Consent labels are often baked with direction: rtl so the checkbox renders
+   on the right. In LTR the checkbox is the first DOM child and should render
+   on the left, before the translated agreement text. */
+html[dir="ltr"] .privacy-consent-label {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Form inputs the AI baked with both `direction: rtl` AND `text-align:
+   right` on contact pages — for LTR visitors the cursor + placeholder must
+   read left-to-right, otherwise typing an English email puts the @ on the
+   wrong side of the input. */
+html[dir="ltr"] .contact-contact-form-section .form-group input,
+html[dir="ltr"] .contact-contact-form-section .form-group textarea {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Solution / service sections baked with direction: rtl — in LTR the text
+   reads backwards (period on the left, right-aligned paragraphs). */
+html[dir="ltr"] .solution-content,
+html[dir="ltr"] .solution-item,
+html[dir="ltr"] .service-detail-content,
+html[dir="ltr"] .service-detail,
+html[dir="ltr"] .solutions-showcase,
+html[dir="ltr"] [class*="solutions-grid"],
+html[dir="ltr"] [class*="solution-description"],
+html[dir="ltr"] [class*="solution-text"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+/* ZAPPY-LTR-TEXTALIGN-OVERRIDES:END */
+
+/* Base direction for RTL */
+html[dir="rtl"], html[dir="rtl"] body {
+  direction: rtl !important;
+}
+
+html[dir="rtl"] main,
+html[dir="rtl"] article,
+html[dir="rtl"] section,
+html[dir="rtl"] .content,
+html[dir="rtl"] .container,
+html[dir="rtl"] .wrapper {
+  direction: rtl !important;
+}
+
+/* ONLY apply text-align to legal page content that needs RTL alignment */
+.legal-content,
+html[dir="rtl"] .terms-content,
+html[dir="rtl"] .privacy-content,
+html[dir="rtl"] .legal-content p,
+html[dir="rtl"] .terms-content p,
+html[dir="rtl"] .privacy-content p,
+html[dir="rtl"] .legal-content li,
+html[dir="rtl"] .terms-content li,
+html[dir="rtl"] .privacy-content li{text-align: right !important;}html[dir="rtl"] .legal-content,
+html[dir="rtl"] .terms-content,
+html[dir="rtl"] .privacy-content,
+html[dir="rtl"] .legal-content p,
+html[dir="rtl"] .terms-content p,
+html[dir="rtl"] .privacy-content p,
+html[dir="rtl"] .legal-content li,
+html[dir="rtl"] .terms-content li,
+html[dir="rtl"] .privacy-content li{direction: rtl !important;}
+
+/* ============================================
+   V2 NAVIGATION FIX
+   CRITICAL: For V2 sites created in RTL (Hebrew), the nav elements
+   inherit direction:rtl from the body. This reverses how flex order
+   is interpreted. For LTR pages, we MUST set direction:ltr on nav
+   containers to make the flex order work correctly.
+   
+   This section is ONLY included for V2 sites (detected by nav-right-group
+   or nav-cta-container classes) to avoid affecting V1 site layouts.
+   ============================================ */
+
+/* Fix V2 navbar layout for LTR pages */
+/* Direction must apply to all screen sizes, but flex-direction: row is desktop-only */
+/* Scoped to .navbar (see equivalent block in generateStaticPageLayoutFixCSS
+   for the breadcrumb / catalog-menu collateral damage rationale). */
+html[dir="ltr"] header.navbar,
+html[dir="ltr"] nav.navbar,
+html[dir="ltr"] .navbar,
+html[dir="ltr"] .nav-container {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] .nav-right-group {
+  direction: ltr !important;
+  order: -1 !important;
+}
+
+html[dir="ltr"] .nav-cta-container {
+  direction: ltr !important;
+  order: 1 !important;
+  margin-left: auto !important;
+}
+
+html[dir="ltr"] .nav-menu,
+html[dir="ltr"] #navMenu {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] .nav-brand {
+  direction: ltr !important;
+  order: -1 !important;
+}
+
+/* DESKTOP ONLY: Horizontal flex layout for navbar elements */
+/* Scoped to .navbar — see equivalent block above for full rationale. */
+@media (min-width: 769px) {
+  html[dir="ltr"] header.navbar,
+  html[dir="ltr"] nav.navbar,
+  html[dir="ltr"] .navbar,
+  html[dir="ltr"] .nav-container {
+    flex-direction: row !important;
+  }
+  
+  html[dir="ltr"] .nav-right-group,
+  html[dir="ltr"] .nav-cta-container {
+    flex-direction: row !important;
+  }
+  
+  html[dir="ltr"] .nav-menu,
+  html[dir="ltr"] #navMenu {
+    flex-direction: row !important;
+  }
+
+  /* V2 ecommerce sites set justify-content: space-between on nav-right-group,
+     which distributes logo, menu, and icons evenly across the full width.
+     In LTR mode, this pushes the menu away from the logo into the center.
+     Override to flex-start so menu items sit immediately after the logo,
+     and push the ecommerce icons to the right with margin-left: auto. */
+  html[dir="ltr"] .nav-right-group {
+    justify-content: flex-start !important;
+  }
+  html[dir="ltr"] .nav-right-group .nav-ecommerce-icons {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  /* E-commerce layout WITH nav-right-group wrapper:
+     The base RTL CSS uses flex-direction: row-reverse with order values
+     (brand:2, menu:1, icons:0). In LTR we flip to row and must re-assign
+     order so items flow: brand, menu, icons (left to right). The menu wraps
+     overflow links downward while its first row stays aligned with the logo. */
+  html[dir="ltr"] .nav-right-group > .nav-brand {
+    order: -1 !important;
+  }
+  html[dir="ltr"] .nav-right-group > .nav-menu,
+  html[dir="ltr"] .nav-right-group > #navMenu {
+    order: 0 !important;
+    margin-inline-start: 0 !important;
+    margin-inline-end: 24px !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-height: 44px !important;
+    overflow: visible !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    align-content: flex-start !important;
+    row-gap: 4px !important;
+  }
+  html[dir="ltr"] .nav-right-group > .nav-menu > li,
+  html[dir="ltr"] .nav-right-group > #navMenu > li {
+    flex: 0 0 auto !important;
+  }
+  html[dir="ltr"] .nav-right-group > .nav-ecommerce-icons {
+    order: 2 !important;
+    margin-inline-start: auto !important;
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+  }
+  html[dir="ltr"] .nav-right-group > .nav-ecommerce-icons.nav-icons-left {
+    order: 2 !important;
+    margin-inline-start: auto !important;
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+  }
+
+  /* E-commerce flat nav layout (no nav-right-group wrapper):
+     brand → menu → icons. Mirrors the runtime CSS from
+     ensureRuntimeCssInjected so layout is correct even before JS loads. */
+  html[dir="ltr"] .nav-container > .nav-brand {
+    order: -1 !important;
+  }
+  html[dir="ltr"] .nav-container > .nav-menu,
+  html[dir="ltr"] .nav-container > #navMenu {
+    order: 1 !important;
+    margin-inline-start: 0 !important;
+    margin-inline-end: 24px !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-height: 44px !important;
+    overflow: visible !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    align-content: flex-start !important;
+    row-gap: 4px !important;
+  }
+  html[dir="ltr"] .nav-container > .nav-menu > li,
+  html[dir="ltr"] .nav-container > #navMenu > li {
+    flex: 0 0 auto !important;
+  }
+  html[dir="ltr"] .nav-container > .lang-switcher,
+  html[dir="ltr"] .nav-container > .nav-ecommerce-icons {
+    order: 2 !important;
+    margin-inline-start: auto !important;
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+  }
+  html[dir="ltr"] .nav-container > .nav-ecommerce-icons.nav-icons-left {
+    margin-inline-start: auto !important;
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+  }
+  .nav-right-group > .nav-menu,
+  html[dir="rtl"] .nav-right-group > #navMenu,
+  html[dir="rtl"] .nav-container > .nav-menu,
+  html[dir="rtl"] .nav-container > #navMenu{flex: 1 1 0 !important;min-width: 0 !important;max-height: 44px !important;overflow: visible !important;flex-wrap: wrap !important;align-items: center !important;align-content: flex-start !important;row-gap: 4px !important;}
+  .nav-right-group > .nav-menu > li,
+  html[dir="rtl"] .nav-right-group > #navMenu > li,
+  html[dir="rtl"] .nav-container > .nav-menu > li,
+  html[dir="rtl"] .nav-container > #navMenu > li{flex: 0 0 auto !important;}
+  .nav-right-group > .nav-ecommerce-icons,
+  html[dir="rtl"] .nav-right-group > .nav-ecommerce-icons.nav-icons-left,
+  html[dir="rtl"] .nav-container > .nav-ecommerce-icons,
+  html[dir="rtl"] .nav-container > .nav-ecommerce-icons.nav-icons-left{flex: 0 0 auto !important;min-width: max-content !important;}
+}
+
+/* Search box button position fix for LTR pages.
+   RTL-generated sites bake the search button with "left: Xpx" (correct for RTL).
+   In LTR, the button must be on the right side to avoid overlapping the input text. */
+html[dir="ltr"] .nav-search-box {
+  direction: ltr !important;
+}
+html[dir="ltr"] .nav-search-btn {
+  position: absolute !important;
+  left: auto !important;
+  right: 4px !important;
+}
+html[dir="ltr"] .nav-search-input {
+  direction: ltr !important;
+  text-align: left !important;
+  padding-left: 14px !important;
+  padding-right: 40px !important;
+}
+html[dir="ltr"] .nav-search-results {
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* Language Switcher Container - Fixed Position */
+.zappy-lang-switcher-container {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* RTL: Move to left side */
+.zappy-lang-switcher-container{right: auto;left: 12px;}
+
+/* Language Switcher Styles */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Language switcher positioning - minimal, only gap spacing */
+/* NOTE: Removed margin-left:auto rules that broke V2 layouts */
+/* V2 layouts handle positioning via flexbox, we just add small gap */
+header .lang-switcher,
+nav .lang-switcher,
+.navbar .lang-switcher {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.lang-switcher-current {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.lang-switcher-current:hover {
+  opacity: 0.7;
+}
+
+/* ===========================================
+   LANGUAGE DROPDOWN POSITIONING
+   CRITICAL: position: absolute !important overrides any
+   mobile responsive CSS that resets absolute positioning
+   to relative. The dropdown MUST be absolutely positioned
+   relative to its parent .lang-switcher.
+   
+   HIGH SPECIFICITY SELECTORS needed to override:
+   [style*="position: absolute"]:not(...) { position: relative !important }
+   That selector has specificity ~0,4,0 so we need 0,5,0+ to win
+   =========================================== */
+.lang-switcher-dropdown,
+.lang-switcher .lang-switcher-dropdown,
+div.lang-switcher-dropdown,
+.nav-cta-container .lang-switcher .lang-switcher-dropdown,
+.navbar .nav-cta-container .lang-switcher-dropdown {
+  position: absolute !important;
+  top: 100% !important;
+  /* Default LTR: align dropdown's left edge to switcher's left edge */
+  left: 0;
+  right: auto;
+  margin-top: 6px;
+  min-width: 150px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  z-index: 1002 !important;
+}
+
+/* Ultra-high specificity override for problematic mobile responsive CSS */
+/* The problematic rule [style*="position: absolute"]:not():not():not() has specificity 0,4,0 */
+/* We need 0,5,0+ to win, so we add extra class/attribute selectors */
+.lang-switcher .lang-switcher-dropdown[style*="position: absolute"],
+.lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
+.nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
+.navbar .nav-cta-container .lang-switcher-dropdown[style],
+div.lang-switcher > div.lang-switcher-dropdown[style] {
+  position: absolute !important;
+  top: 100% !important;
+  /* Default LTR: align to left */
+  left: 0;
+  right: auto;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333 !important;
+  transition: background 0.15s ease;
+}
+
+.lang-switcher-dropdown .lang-option,
+.lang-switcher-dropdown .lang-option *,
+.navbar .lang-switcher-dropdown .lang-option,
+.navbar .lang-switcher-dropdown .lang-option *,
+.navbar .lang-option,
+.navbar .lang-option * {
+  color: #333 !important;
+}
+
+.lang-option{text-align: right;}
+
+/* RTL: align dropdown's right edge to switcher's right edge */
+.lang-switcher-dropdown,
+html[lang="he"] .lang-switcher-dropdown,
+html[lang="ar"] .lang-switcher-dropdown{right: 0;left: auto;}
+
+.lang-option:hover {
+  background: #f5f5f5;
+}
+
+.lang-switcher-dropdown .lang-option:hover,
+.lang-switcher-dropdown .lang-option:hover *,
+.navbar .lang-switcher-dropdown .lang-option:hover,
+.navbar .lang-switcher-dropdown .lang-option:hover *,
+.navbar .lang-option:hover,
+.navbar .lang-option:hover * {
+  color: #111 !important;
+}
+.lang-switcher-dropdown .lang-option:hover,
+.navbar .lang-switcher-dropdown .lang-option:hover,
+.navbar .lang-option:hover {
+  background: #f5f5f5 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  /* Hide desktop lang-switcher on mobile - hamburger menu handles it */
+  /* High specificity needed to override stored CSS: .nav-cta-container .lang-switcher { display: flex !important } */
+  .lang-switcher,
+  .nav-cta-container .lang-switcher,
+  .nav-container .lang-switcher,
+  .navbar .lang-switcher,
+  .navbar .nav-cta-container .lang-switcher,
+  .nav-icons-left .lang-switcher,
+  .nav-ecommerce-icons .lang-switcher {
+    display: none !important;
+  }
+  
+  .zappy-lang-switcher-container {
+    display: none !important;
+  }
+
+  
+  /* ===========================================
+     MOBILE LANGUAGE SUBMENU (inside hamburger)
+     =========================================== */
+  .mobile-lang-menu {
+    width: 100%;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+  
+  .mobile-lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    color: inherit;
+    text-align: left;
+  }
+  
+  .mobile-lang-toggle{text-align: right;}
+  
+  .mobile-lang-chevron {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  
+  .mobile-lang-chevron{margin-left: 0;margin-right: auto;}
+  
+  .mobile-lang-options {
+    display: none;
+    flex-direction: column;
+    padding: 0 0 8px 0;
+  }
+  
+  .mobile-lang-options.open {
+    display: flex !important;
+  }
+  
+  .mobile-lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 30px 12px 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  
+  .mobile-lang-option{text-align: right;padding: 12px 50px 12px 30px;}
+  
+  .mobile-lang-option:hover,
+  .mobile-lang-option:active {
+    opacity: 1;
+  }
+  
+  .mobile-lang-option img {
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+/* ===========================================
+   RTL MOBILE HORIZONTAL OVERFLOW FIX
+   Prevents left whitespace gap in RTL mobile
+   caused by elements extending past viewport
+   =========================================== */
+
+/* Prevent horizontal scroll on RTL pages */
+/* Using 'clip' instead of 'hidden' to avoid breaking position:sticky */
+/* 'hidden' causes overflow-y to compute as 'auto', creating a scroll container */
+,
+html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
+
+/* Ensure carousel containers clip overflow to prevent horizontal scroll */
+.zappy-carousel-container,
+.zappy-carousel-wrapper,
+.benefits-section,
+.testimonials-section,
+[class*="carousel"] {
+  overflow-x: hidden !important;
+}
+
+/* Ensure lang-switcher parent clips its positioned children */
+.lang-switcher {
+  overflow: visible; /* Keep visible for dropdown to show */
+}
+
+/* ===========================================
+   MOBILE NAV BUTTON POSITIONING
+   CSS handles positioning based on html[dir] attribute.
+   This allows dynamic RTL/LTR switching without inline styles.
+   
+   LTR (default): hamburger LEFT (20px), phone RIGHT (20px)
+   RTL: hamburger RIGHT (20px), phone LEFT (20px) - mirrored
+   =========================================== */
+@media (max-width: 768px) {
+  /* Base positioning and visibility for mobile nav buttons */
+  /* CRITICAL: display: flex overrides any desktop display: none rules */
+  .mobile-toggle,
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn {
+    display: flex !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1001 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+  
+  /* Phone button color - use accent color for visibility */
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn {
+    color: var(--accent, #f59e0b) !important;
+  }
+  
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+    fill: currentColor !important;
+  }
+  
+  /* LTR positioning (default) - hamburger LEFT, phone RIGHT */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .mobile-toggle,
+  html[dir="ltr"] .mobile-toggle {
+    left: 20px !important;
+    right: auto !important;
+  }
+  
+  html:not([data-zappy-site-type="ecommerce"]):not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .phone-header-btn,
+  html:not([data-zappy-site-type="ecommerce"])[dir="ltr"] .phone-header-btn {
+    right: 20px !important;
+    left: auto !important;
+  }
+  
+  /* LTR mobile menu slides from LEFT */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu,
+  html[dir="ltr"] .nav-menu {
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  /* ===========================================
+     MOBILE NAV MENU - VERTICAL LAYOUT FIX
+     CRITICAL: Override any desktop flex-direction: row rules
+     The mobile menu MUST stack vertically (column), not horizontally (row)
+     =========================================== */
+  html[dir="ltr"] .nav-menu,
+  html[dir="ltr"] .nav-menu.active,
+  html[dir="ltr"] #navMenu,
+  html[dir="ltr"] #navMenu.active,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu.active {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  /* RTL mobile menu - also vertical layout */
+  .nav-menu,
+  html[dir="rtl"] .nav-menu.active,
+  html[dir="rtl"] #navMenu,
+  html[dir="rtl"] #navMenu.active,
+  html[lang="he"] .nav-menu,
+  html[lang="he"] .nav-menu.active,
+  html[lang="ar"] .nav-menu,
+  html[lang="ar"] .nav-menu.active{flex-direction: column !important;align-items: stretch !important;}
+  
+  /* LTR mobile menu text alignment - left aligned */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu li,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu a,
+  html[dir="ltr"] .nav-menu li,
+  html[dir="ltr"] .nav-menu a {
+    text-align: left !important;
+  }
+  
+  /* ===========================================
+     LTR MOBILE NAV-CONTAINER LAYOUT FIX
+     V2 sites have nav-container with flex-direction: row-reverse
+     for RTL. For LTR, we need flex-direction: row and centered logo.
+     =========================================== */
+  html[dir="ltr"] .nav-container,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-container {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  
+  /* LTR: Center the logo/nav-brand in mobile navbar */
+  html[dir="ltr"] .nav-brand,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-brand {
+    order: 0 !important;
+    margin: 0 auto !important;
+  }
+  
+  /* RTL: Center the logo/nav-brand in mobile navbar */
+  .nav-brand,
+  html[lang="he"] .nav-brand,
+  html[lang="ar"] .nav-brand{order: 0 !important;margin: 0 auto !important;}
+  
+  /* RTL lang-switcher dropdown constraint */
+  .lang-switcher{position: relative;}
+  
+  .lang-switcher-dropdown{left: auto !important;right: 0 !important;max-width: calc(100vw - 20px);}
+  
+  /* ===========================================
+     RTL MOBILE NAV BUTTON POSITIONING
+     In RTL: hamburger RIGHT, phone LEFT (mirror of LTR)
+     =========================================== */
+  .mobile-toggle,
+  html[lang="he"] .mobile-toggle,
+  html[lang="ar"] .mobile-toggle{left: auto !important;right: 20px !important;}
+  
+  :not([data-zappy-site-type="ecommerce"]) .phone-header-btn,
+  html[lang="he"]:not([data-zappy-site-type="ecommerce"]) .phone-header-btn,
+  html[lang="ar"]:not([data-zappy-site-type="ecommerce"]) .phone-header-btn{left: 20px !important;right: auto !important;}
+
+  /* Explicitly hide phone button on e-commerce sites (cleaner than fighting with e-commerce CSS). */
+  html[data-zappy-site-type="ecommerce"] .phone-header-btn {
+    display: none !important;
+  }
+  
+  /* RTL mobile menu slides from RIGHT */
+  .nav-menu,
+  html[lang="he"] .nav-menu,
+  html[lang="ar"] .nav-menu{left: auto !important;right: 0 !important;}
+  
+  /* ===========================================
+     MOBILE LANGUAGE SWITCHER
+     Desktop lang-switcher is hidden on mobile.
+     Language selection is handled by the hamburger
+     menu submenu (.mobile-lang-menu) instead.
+     High specificity to override stored CSS.
+     =========================================== */
+  .lang-switcher,
+  .nav-cta-container .lang-switcher,
+  .nav-container .lang-switcher,
+  .navbar .lang-switcher,
+  .navbar .nav-cta-container .lang-switcher,
+  .nav-icons-left .lang-switcher,
+  .nav-ecommerce-icons .lang-switcher {
+    display: none !important;
+  }
+}
+
+/* Desktop: force-show the lang-switcher.
+   This counters a CSS-processing bug where the mobile display:none rules
+   can leak outside their @media block during minification/concatenation. */
+@media (min-width: 769px) {
+  .lang-switcher,
+  .nav-cta-container .lang-switcher,
+  .nav-container .lang-switcher,
+  .navbar .lang-switcher,
+  .navbar .nav-cta-container .lang-switcher,
+  .nav-icons-left .lang-switcher,
+  .nav-ecommerce-icons .lang-switcher {
+    display: inline-flex !important;
+  }
+}
+
+/* Ensure hover/focus opens the dropdown even when CSS is concatenated */
+.lang-switcher:hover .lang-switcher-dropdown,
+.lang-switcher:focus-within .lang-switcher-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+.lang-option:hover {
+  background: #f5f5f5;
+}
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -14519,12 +14817,11 @@ nav .sub-menu.zappy-empty-submenu,
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
-/* NOTE: Includes both html[dir="rtl"] AND [dir="rtl"] selectors as fallback */
+/* NOTE: Includes both AND [dir="rtl"] selectors as fallback */
 /* because some pages may be wrapped with <html lang="en"> (missing dir="rtl" on html) */
 /* but still have dir="rtl" on <body> or other ancestor elements */
 
-@media (max-width: 768px) {
-  /* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
+@media (max-width: 768px){/* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
   /* Using multiple parent selectors for higher specificity */
   html[dir="rtl"] .navbar .mobile-toggle,
   html[dir="rtl"] nav .mobile-toggle,
@@ -14538,12 +14835,10 @@ nav .sub-menu.zappy-empty-submenu,
   [dir="rtl"] .mobile-toggle,
   html[lang="he"] .mobile-toggle,
   html[lang="ar"] .mobile-toggle {
-    left: auto !important;
-    right: 15px !important;
-  }
+    left: auto !important;right: 15px !important;}
   
   /* RTL Phone Button - positioned on LEFT */
-  html[dir="rtl"] .navbar .phone-header-btn,
+  .navbar .phone-header-btn,
   html[dir="rtl"] nav .phone-header-btn,
   html[dir="rtl"] header .phone-header-btn,
   html[dir="rtl"] .nav-container .phone-header-btn,
@@ -14554,13 +14849,10 @@ nav .sub-menu.zappy-empty-submenu,
   [dir="rtl"] .nav-container .phone-header-btn,
   [dir="rtl"] .phone-header-btn,
   html[lang="he"] .phone-header-btn,
-  html[lang="ar"] .phone-header-btn {
-    left: 15px !important;
-    right: auto !important;
-  }
+  html[lang="ar"] .phone-header-btn{left: 15px !important;right: auto !important;}
   
   /* RTL Mobile Menu - slides from RIGHT */
-  html[dir="rtl"] .navbar .nav-menu,
+  .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
   html[dir="rtl"] .nav-container .nav-menu,
@@ -14571,22 +14863,17 @@ nav .sub-menu.zappy-empty-submenu,
   [dir="rtl"] .nav-container .nav-menu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    left: auto !important;
-    right: 0 !important;
-  }
+  html[lang="ar"] .nav-menu{left: auto !important;right: 0 !important;}
   
   /* RTL Mobile Menu Links - text align right */
-  html[dir="rtl"] .nav-menu a,
+  .nav-menu a,
   html[dir="rtl"] .nav-menu li,
   [dir="rtl"] .nav-menu a,
   [dir="rtl"] .nav-menu li,
   html[lang="he"] .nav-menu a,
   html[lang="he"] .nav-menu li,
   html[lang="ar"] .nav-menu a,
-  html[lang="ar"] .nav-menu li {
-    text-align: right !important;
-  }
+  html[lang="ar"] .nav-menu li{text-align: right !important;}
 }
 
 /* ========== END RTL MOBILE NAVBAR FIX ========== */
@@ -15211,6 +15498,11 @@ section[data-hero-type] {
   display: none !important;
 }
 
+/* ZAPPY_CONTACT_FORM_LAYOUT_FIX */
+form.contact-form, .contact-form { flex-direction: column !important; align-items: stretch !important; }
+form.contact-form > .contact-form-field, .contact-form > .contact-form-field { width: 100% !important; align-self: stretch !important; }
+form.contact-form .contact-input, form.contact-form .contact-textarea { width: 100% !important; box-sizing: border-box !important; }
+
 /* ZAPPY_NAVBAR_CTA_ALIGNMENT_FIX */
 .nav-cta-container .zappy-search-container,
 .zappy-search-container { align-self: center; }
@@ -15246,7 +15538,7 @@ section[data-hero-type] {
   }
   #navMenu,
   .nav-menu,
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[dir="rtl"] .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
@@ -15257,18 +15549,14 @@ section[data-hero-type] {
   [dir="rtl"] .nav-container .nav-menu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    /* Force position:fixed so the --ios-viewport-gap shift is measured
+  html[lang="ar"] .nav-menu{/* Force position:fixed so the --ios-viewport-gap shift is measured
        against the (visual) viewport, not whatever container the menu may
        have been reparented into by earlier v1/v2 patches.
        --zappy-navbar-bottom is set by the runtime JS companion and
        defaults to 70px — this lets us override the v2 `top: 100%` (which
        with position:fixed would resolve to the full viewport height and
        push the menu off-screen). */
-    position: fixed !important;
-    top: var(--zappy-navbar-bottom, 70px) !important;
-    right: var(--ios-viewport-gap, 0px) !important;
-  }
+    position: fixed !important;top: var(--zappy-navbar-bottom, 70px) !important;right: var(--ios-viewport-gap, 0px) !important;}
 }
 
 /* ZAPPY_CART_DRAWER_DIR_OVERRIDE */
@@ -15287,25 +15575,21 @@ body[dir="ltr"] .cart-drawer {
   transform: translateX(100%) !important;
   direction: ltr !important;
 }
-html[dir="rtl"] #cart-drawer.cart-drawer,
+#cart-drawer.cart-drawer,
 body[dir="rtl"] #cart-drawer.cart-drawer,
 html[dir="rtl"] .cart-drawer,
-body[dir="rtl"] .cart-drawer {
-  left: 0 !important;
-  right: auto !important;
-  transform: translateX(-100%) !important;
-  direction: rtl !important;
-}
+body[dir="rtl"] .cart-drawer{left: 0 !important;right: auto !important;transform: translateX(-100%) !important;}html[dir="rtl"] #cart-drawer.cart-drawer,
+body[dir="rtl"] #cart-drawer.cart-drawer,
+html[dir="rtl"] .cart-drawer,
+body[dir="rtl"] .cart-drawer{direction: rtl !important;}
 html[dir="ltr"] #cart-drawer.cart-drawer.active,
 body[dir="ltr"] #cart-drawer.cart-drawer.active,
 html[dir="ltr"] .cart-drawer.active,
 body[dir="ltr"] .cart-drawer.active,
-html[dir="rtl"] #cart-drawer.cart-drawer.active,
+#cart-drawer.cart-drawer.active,
 body[dir="rtl"] #cart-drawer.cart-drawer.active,
 html[dir="rtl"] .cart-drawer.active,
-body[dir="rtl"] .cart-drawer.active {
-  transform: translateX(0) !important;
-}
+body[dir="rtl"] .cart-drawer.active{transform: translateX(0) !important;}
 
 /* ZAPPY_PRODUCTS_DROPDOWN_LTR_INDENT */
 /* LTR mirror of the [dir="rtl"] indentation block. Equal-or-higher
@@ -15361,19 +15645,19 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   .nav-menu.open > li.zappy-products-dropdown > a {
     padding-right: 56px !important;
   }
-  html[dir="rtl"] .navbar .nav-menu.active > li.zappy-products-dropdown > a,
+  .navbar .nav-menu.active > li.zappy-products-dropdown > a,
   html[dir="rtl"] nav.navbar .nav-menu.active > li.zappy-products-dropdown > a,
   html[dir="rtl"] #navMenu.active > li.zappy-products-dropdown > a,
-  html[dir="rtl"] .nav-menu.open > li.zappy-products-dropdown > a {
-    padding-right: 16px !important;
-    padding-left: 56px !important;
-  }
+  html[dir="rtl"] .nav-menu.open > li.zappy-products-dropdown > a{padding-right: 16px !important;padding-left: 56px !important;}
 }
 
-html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+.whatsapp-float{right: 20px !important;left: auto !important;}
+html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+
+#mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
 html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
 html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
-html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+html[dir="rtl"] ._access-icon{left: 20px !important;right: auto !important;}
 html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
 html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
 html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
@@ -15405,24 +15689,12 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
      left from the center instead of being centered on it. */
   .navbar .nav-brand,
   nav.navbar .nav-brand,
-  html[dir="rtl"] .navbar .nav-brand,
+  .navbar .nav-brand,
   html[dir="rtl"] nav.navbar .nav-brand,
   html[lang="he"] .navbar .nav-brand,
   html[lang="he"] nav.navbar .nav-brand,
   html[lang="ar"] .navbar .nav-brand,
-  html[lang="ar"] nav.navbar .nav-brand {
-    position: absolute !important;
-    left: 50% !important;
-    right: auto !important;
-    top: 50% !important;
-    width: auto !important;
-    min-width: max-content !important;
-    max-width: calc(100% - 168px) !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
+  html[lang="ar"] nav.navbar .nav-brand{position: absolute !important;left: 50% !important;right: auto !important;top: 50% !important;width: auto !important;min-width: max-content !important;max-width: calc(100% - 168px) !important;transform: translate(-50%, -50%) !important;margin: 0 !important;text-align: center !important;justify-content: center !important;}
 
   .navbar .nav-brand .logo-link,
   nav.navbar .nav-brand .logo-link,
@@ -15605,7 +15877,7 @@ main.courses-page-main,
 .course-card img, .my-learning-card img { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:.25rem; margin-bottom:.75rem; }
 .courses-toast {
   position:fixed; bottom:1.25rem; left:50%; transform:translateX(-50%);
-  background:var(--text-dark); color:var(var(--bg-light, #fff));
+  background:var(--text-dark); color:var(--bg-light);
   padding:.75rem 1rem; border-radius:.5rem; font-size:.875rem;
   z-index:10050; opacity:0; transition:opacity .25s ease;
   box-shadow:0 8px 24px rgba(0,0,0,.18); max-width:min(92vw, 420px);
@@ -15736,6 +16008,12 @@ body:has(.courses-page-main) .courses-page-main:has(.course-detail-section) {
 .quiz-result { margin-top:1.5rem; padding:1rem; border-radius:.5rem; border:1px solid var(--border-light); background:var(--bg-light, #fff); color:var(--text-dark); }
 .quiz-score.passed { border-color:var(--success-color, var(--border-light)); }
 .quiz-score.failed { border-color:var(--error-color, var(--border-light)); }
+
+/* RTL footer contact: icon on the right (start) side, text on the left */
+.footer-contact li, html[dir="rtl"] .site-footer .footer-contact li, html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li{flex-direction: row !important;justify-content: flex-start !important;}
+.footer-contact .contact-icon{order: 0 !important;}
+.footer-contact .contact-text{order: 1 !important;}
+.footer-contact li > a{flex-direction: row !important;}
 
 /* Spec table BiDi fix: isolate cells so mixed LTR/RTL content renders correctly */
 .specs-table th, .specs-table td { unicode-bidi: plaintext !important; }

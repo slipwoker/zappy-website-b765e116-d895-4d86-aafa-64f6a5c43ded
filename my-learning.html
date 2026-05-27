@@ -223,7 +223,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="My Learning">
     <meta name="twitter:description" content="Your enrolled courses and progress.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://limud-karate.zappy5.app#organization","name":"לימוד קראטה","url":"https://limud-karate.zappy5.app","description":"An online platform dedicated to selling karate training courses. The business focuses on martial arts education delivered digitally, offering structured lessons in karate techniques and discipline. The brand revolves around the world of martial arts, combining tradition, physical training, and personal development."},{"@type":"WebSite","@id":"https://limud-karate.zappy5.app#website","url":"https://limud-karate.zappy5.app","name":"לימוד קראטה","publisher":{"@id":"https://limud-karate.zappy5.app#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://limud-karate.zappy5.app"},{"@type":"ListItem","position":2,"name":"My Learning","item":"https://limud-karate.zappy5.app/my-learning"}]}]}</script>
     
     <link rel="stylesheet" href="/styles.css">
     <script>window.ZAPPY_WEBSITE_ID = "b765e116-d895-4d86-aafa-64f6a5c43ded"; window.ZAPPY_API_BASE = "https://qaapi.zappy5.com";</script>
@@ -318,8 +317,8 @@
 </head>
 <body>
 <!-- ZAPPY_COURSES_STOREFRONT_V1:my-learning -->
-<nav class="navbar" dir="rtl">
-  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+<nav class="navbar">
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" data-i18n-aria-label="home_aria_label_128">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
@@ -328,7 +327,7 @@
     </svg>
   </button>
 
-  <button class="phone-header-btn" data-phone="" aria-label="Call">
+  <button class="phone-header-btn" data-phone="" aria-label="Call" data-i18n-aria-label="home_aria_label_129">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
@@ -336,28 +335,37 @@
 
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
-      <a href="/" class="logo-link"><img class="logo" src="/assets/site-----image-1.webp" alt="לימוד קראטה"></a>
+      <a href="/" class="logo-link"><img class="logo" src="/assets/site-----image-1.webp" alt="לימוד קראטה" data-i18n-alt="home_alt_112"></a>
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
-      <a href="/courses">
+      <a href="/courses" data-i18n="home_nav_103">
         קורסים
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
-        <li><a href="/courses">כל הקורסים</a></li>
+        <li><a href="/courses" data-i18n="home_nav_104">כל הקורסים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
     </li>
-  <li><a href="/">בית</a></li><li><a href="/training-method">שיטת האימון</a></li><li><a href="/about">אודות</a></li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="nav-search-box">
-    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש קורסים..." autocomplete="off">
-    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
+  <li><a href="/" data-i18n="home_nav_105">בית</a></li><li><a href="/training-method" data-i18n="home_nav_106">שיטת האימון</a></li><li><a href="/about" data-i18n="home_nav_107">אודות</a></li><li><a href="/contact" data-i18n="home_nav_108">צור קשר</a></li></ul>
+<div class="lang-switcher" data-no-icon-edit="true" data-icon-color="#F2E7D5" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
+  <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" data-no-icon-edit="true" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:inherit;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
+  </button>
+  <div class="lang-switcher-dropdown" role="menu" style="position:absolute;top:100%;right:0;margin-top:4px;min-width:140px;background:white;border:1px solid rgba(128,128,128,0.2);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1001;">
+    <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/us.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> English</button>
+  </div>
+</div>
+<script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות" data-i18n-title="home_title_124"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות" data-i18n-title="home_title_125"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש קורסים..." autocomplete="off" data-i18n-placeholder="home_placeholder_111">
+    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש" data-i18n-title="home_title_126">
       <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
     </button>
     <div class="nav-search-results" id="nav-search-results"></div>
-  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש" data-i18n-title="home_title_127"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div></div>
 
     
 
@@ -381,11 +389,935 @@
   </div>
 </section>
 </main>
-<footer class="site-footer" dir="rtl" aria-label="כותרת תחתונה של האתר"> <div class="footer-container"> <div class="footer-top"> <div class="footer-col footer-brand"> <img src="/assets/online-education-martial-arts-logo.webp" alt="לימוד קראטה" class="logo"> <p class="footer-tagline">שליטה. משמעת. מצוינות.<br>לימוד קראטה מקצועי — בכל מקום, בכל זמן.</p> <p class="footer-blurb">פלטפורמת הלמידה המובילה לאמנויות לחימה בישראל. אימונים מודרכים, שיטה מוכחת, ותוצאות אמיתיות — ישירות אליך הביתה.</p> <div class="footer-badge"><i class="fas fa-shield-alt"></i> תוכן מקצועי ומאושר</div> </div> <div class="footer-col footer-links"> <h3 class="footer-heading">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/">בית</a></li> <li><a href="/training-method">שיטת האימון</a></li> <li><a href="/about">אודות</a></li> <li><a href="/contact">צור קשר</a></li> </ul> </div> <div class="footer-col footer-contact-col"> <h3 class="footer-heading">יצירת קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text"><a href="mailto:[business_email]">[business_email]</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text"><a href="tel:[business_phone]">[business_phone]</a></span> </li> <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">[business_address]</span></a></li> </ul> <div class="footer-hours"> <h4 class="footer-hours-title"><i class="fas fa-clock"></i> שעות פעילות</h4> <ul class="hours-list"> <li><a href="/"><span class="day">ראשון — חמישי</span><span class="time">08:00 – 22:00</span></a></li> <li><a href="/"><span class="day">שישי</span><span class="time">08:00 – 14:00</span></a></li> <li><a href="/"><span class="day">שבת</span><span class="time closed">סגור</span></a></li> </ul> </div> </div> <div class="footer-col footer-social-col"> <h3 class="footer-heading">עקבו אחרינו</h3> <div class="footer-social">    </div> <div class="footer-support-badge"> <i class="fas fa-headset"></i> <span>תמיכה 24/7</span> </div> <div class="footer-support-badge"> <i class="fas fa-video"></i> <span>תוכן וידאו בלתי מוגבל</span> </div> <div class="footer-support-badge"> <i class="fas fa-certificate"></i> <span>תעודות מוכרות</span> </div> </div> </div> <div class="footer-divider"></div> <div class="footer-bottom"> <div class="footer-copyright">© 2026 לימוד קראטה. כל הזכויות שמורות.</div> <div class="footer-legal"> <a href="/privacy">מדיניות פרטיות</a> <span class="legal-sep" aria-hidden="true">|</span> <a href="/terms">תנאי שימוש</a><span class="separator">|</span>
-            <a href="/return-policy" aria-label="מדיניות החזרות">
+<footer class="site-footer" dir="rtl" aria-label="כותרת תחתונה של האתר" data-i18n-aria-label="home_aria_label_133"> <div class="footer-container"> <div class="footer-top"> <div class="footer-col footer-brand"> <img src="/assets/online-education-martial-arts-logo.webp" alt="לימוד קראטה" class="logo" data-i18n-alt="home_alt_122"> <p class="footer-tagline" data-i18n="home_p_27">שליטה. משמעת. מצוינות.<br>לימוד קראטה מקצועי — בכל מקום, בכל זמן.</p> <p class="footer-blurb" data-i18n="home_p_28">פלטפורמת הלמידה המובילה לאמנויות לחימה בישראל. אימונים מודרכים, שיטה מוכחת, ותוצאות אמיתיות — ישירות אליך הביתה.</p> <div class="footer-badge" data-i18n="home_div_98"><i class="fas fa-shield-alt"></i> תוכן מקצועי ומאושר</div> </div> <div class="footer-col footer-links"> <h3 class="footer-heading" data-i18n="home_h3_12">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/" data-i18n="home_link_61">בית</a></li> <li><a href="/training-method" data-i18n="home_link_62">שיטת האימון</a></li> <li><a href="/about" data-i18n="home_link_63">אודות</a></li> <li><a href="/contact" data-i18n="home_link_64">צור קשר</a></li> </ul> </div> <div class="footer-col footer-contact-col"> <h3 class="footer-heading" data-i18n="home_h3_13">יצירת קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text" data-i18n="home_span_42"><a href="mailto:[business_email]" data-i18n="home_link_65">[business_email]</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text" data-i18n="home_span_43"><a href="tel:[business_phone]" data-i18n="home_link_66">[business_phone]</a></span> </li> <li><a href="/" data-i18n="home_link_67"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">[business_address]</span></a></li> </ul> <div class="footer-hours"> <h4 class="footer-hours-title" data-i18n="home_h4_15"><i class="fas fa-clock"></i> שעות פעילות</h4> <ul class="hours-list"> <li><a href="/" data-i18n="home_link_68"><span class="day">ראשון — חמישי</span><span class="time">08:00 – 22:00</span></a></li> <li><a href="/" data-i18n="home_link_69"><span class="day">שישי</span><span class="time">08:00 – 14:00</span></a></li> <li><a href="/" data-i18n="home_link_70"><span class="day">שבת</span><span class="time closed">סגור</span></a></li> </ul> </div> </div> <div class="footer-col footer-social-col"> <h3 class="footer-heading" data-i18n="home_h3_14">עקבו אחרינו</h3> <div class="footer-social">    </div> <div class="footer-support-badge" data-i18n="home_div_99"> <i class="fas fa-headset"></i> <span>תמיכה 24/7</span> </div> <div class="footer-support-badge" data-i18n="home_div_100"> <i class="fas fa-video"></i> <span>תוכן וידאו בלתי מוגבל</span> </div> <div class="footer-support-badge" data-i18n="home_div_101"> <i class="fas fa-certificate"></i> <span>תעודות מוכרות</span> </div> </div> </div> <div class="footer-divider"></div> <div class="footer-bottom"> <div class="footer-copyright" data-i18n="home_div_102">© 2026 לימוד קראטה. כל הזכויות שמורות.</div> <div class="footer-legal"> <a href="/privacy" data-i18n="home_link_71">מדיניות פרטיות</a> <span class="legal-sep" aria-hidden="true">|</span> <a href="/terms" data-i18n="home_link_72">תנאי שימוש</a><span class="separator">|</span>
+            <a href="/return-policy" aria-label="מדיניות החזרות" data-i18n="home_link_73" data-i18n-aria-label="home_aria_label_134">
               מדיניות החזרות
-            </a> <span class="legal-sep" aria-hidden="true">|</span> <a href="/accessibility">נגישות</a> <span class="legal-sep" aria-hidden="true">|</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
-<a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </a> <span class="legal-sep" aria-hidden="true">|</span> <a href="/accessibility" data-i18n="home_link_74">נגישות</a> <span class="legal-sep" aria-hidden="true">|</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution" data-i18n="home_link_75">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
+<!-- i18next Multi-Language Support (Dynamic Loader) -->
+<script>
+(function() {
+  // Capture the HTML dir attribute before any runtime changes — this
+  // reflects the generation language's direction (e.g. 'rtl' for a site
+  // originally generated in Hebrew) regardless of what defaultLang is.
+  var __generatedDir = document.documentElement.getAttribute('dir') || 'ltr';
+
+  // Configuration (no translations embedded - fetched dynamically)
+  const websiteId = 'b765e116-d895-4d86-aafa-64f6a5c43ded';
+  const defaultLang = 'he';
+  const availableLanguages = ["he","en"];
+  const rtlLanguages = ["he"];
+  
+  // Language display info with SVG flag images for cross-platform compatibility
+  const languageInfo = {"he":{"name":"Hebrew","nativeName":"עברית","flag":"🇮🇱","flagIcon":"circle-flags:il","dir":"rtl","flagImg":"<img src=\"https://api.iconify.design/circle-flags/il.svg\" width=\"20\" height=\"20\" alt=\"\" style=\"display:inline-block;vertical-align:middle;border-radius:50%;\" />"},"en":{"name":"English","nativeName":"English","flag":"🇺🇸","flagIcon":"circle-flags:us","dir":"ltr","flagImg":"<img src=\"https://api.iconify.design/circle-flags/us.svg\" width=\"20\" height=\"20\" alt=\"\" style=\"display:inline-block;vertical-align:middle;border-radius:50%;\" />"}};
+  
+  // Detect the active language. URL is the source of truth: a /<lang>/... path
+  // or ?lang=<x> query unambiguously says which language the user is viewing,
+  // and stored preference must NOT win over it (or visiting /en/... while
+  // localStorage holds 'he' from a previous Hebrew session keeps the cart
+  // drawer / product detail / checkout strings rendering in Hebrew).
+  function detectLanguage() {
+    try {
+      var pathLang = (window.location.pathname.match(/^\/([a-z]{2})(?:\/|$)/i) || [])[1];
+      if (pathLang && availableLanguages.includes(pathLang.toLowerCase())) {
+        var resolvedPathLang = pathLang.toLowerCase();
+        try { localStorage.setItem('zappy_lang', resolvedPathLang); } catch (e) {}
+        return resolvedPathLang;
+      }
+      var queryLang = new URLSearchParams(window.location.search).get('lang');
+      if (queryLang && availableLanguages.includes(queryLang.toLowerCase())) {
+        var resolvedQueryLang = queryLang.toLowerCase();
+        try { localStorage.setItem('zappy_lang', resolvedQueryLang); } catch (e) {}
+        return resolvedQueryLang;
+      }
+    } catch (e) {}
+    const stored = localStorage.getItem('zappy_lang');
+    if (stored && availableLanguages.includes(stored)) return stored;
+    return defaultLang;
+  }
+
+  // See generateI18nextScript for the rationale; this is the loader-script
+  // mirror so preview and published builds behave identically.
+  function navigateToLanguage(targetLang) {
+    if (!targetLang || !availableLanguages.includes(targetLang)) return;
+    if (targetLang === zappyI18n.language) return;
+    try { localStorage.setItem('zappy_lang', targetLang); } catch (e) {}
+
+    var path = window.location.pathname || '/';
+
+    // PREVIEW MODE: see the matching block in generateI18nextScript above for
+    // the rationale. Inside the dashboard preview iframe the pathname is the
+    // API route itself (/api/website/preview*), so we toggle ?lang= instead
+    // of prepending /<lang>/ which would 404 with "Route not found".
+    if (path.indexOf('/api/website/preview') === 0) {
+      var previewUrl = new URL(window.location.href);
+      if (targetLang === defaultLang) {
+        previewUrl.searchParams.delete('lang');
+      } else {
+        previewUrl.searchParams.set('lang', targetLang);
+      }
+      window.location.assign(previewUrl.pathname + previewUrl.search + previewUrl.hash);
+      return;
+    }
+
+    var prefixMatch = path.match(/^\/([a-z]{2})(?=\/|$)/i);
+    if (prefixMatch && availableLanguages.includes(prefixMatch[1].toLowerCase())) {
+      path = path.slice(prefixMatch[0].length) || '/';
+    }
+
+    var newPath = (targetLang === defaultLang)
+      ? path
+      : ('/' + targetLang + (path === '/' ? '' : path));
+
+    window.location.assign(newPath + (window.location.search || '') + (window.location.hash || ''));
+  }
+
+  // Callbacks for language change events (e.g., e-commerce content refresh)
+  const languageChangeCallbacks = [];
+  
+  // Simple i18n implementation with async loading
+  const zappyI18n = {
+    language: detectLanguage(),
+    translations: {},
+    loading: false,
+    loaded: false,
+    
+    t: function(key) {
+      if (this.translations[key]) {
+        return this.translations[key];
+      }
+      return key;
+    },
+    
+    loadTranslations: function(lang) {
+      return new Promise((resolve, reject) => {
+        // Always use the preview API endpoint since this loader script is only used for preview
+        // Published sites use embedded translations (generateI18nextScript) instead
+        // Note: Preview routes are mounted under /api/website/
+        // Cache-bust: append timestamp to prevent stale browser fetch() cache
+        const baseUrl = '/api/website/preview/' + websiteId + '/i18n/' + lang + '?_t=' + Date.now();
+        
+        fetch(baseUrl)
+          .then(res => {
+            if (!res.ok) throw new Error('Failed to load translations');
+            return res.json();
+          })
+          .then(data => {
+            this.translations = data;
+            this.loaded = true;
+            resolve(data);
+          })
+          .catch(err => {
+            console.error('[i18n] Failed to load translations for ' + lang + ':', err);
+            reject(err);
+          });
+      });
+    },
+    
+    changeLanguage: function(lang) {
+      if (!availableLanguages.includes(lang)) return Promise.resolve();
+      
+      var oldLang = this.language;
+      this.language = lang;
+      localStorage.setItem('zappy_lang', lang);
+      
+      return this.loadTranslations(lang).then(() => {
+        updateContent();
+        updateDirection();
+        fixLanguageSwitcherColor();
+        setTimeout(fixLanguageSwitcherColor, 100);
+        
+        // Call all registered language change callbacks (e.g., e-commerce content refresh)
+        languageChangeCallbacks.forEach(function(callback) {
+          try {
+            callback(lang, oldLang);
+          } catch (e) {
+            console.error('[i18n] Language change callback error:', e);
+          }
+        });
+      });
+    },
+    
+    getCurrentLanguage: function() { return this.language; },
+    getAvailableLanguages: function() { return availableLanguages; },
+    // Register a callback to be called when language changes
+    onLanguageChange: function(callback) {
+      if (typeof callback === 'function') {
+        languageChangeCallbacks.push(callback);
+      }
+    }
+  };
+  
+  // Update all translatable content
+  function updateContent() {
+    var newlineChar = String.fromCharCode(10);
+    var structuralTagPattern = /<(i|span|div|svg|img|picture|video|iframe|button|figure|section|article|aside|header|footer|nav|main|ul|ol|li|table|tr|td|th|h[1-6]|p)\b[^>]*>/i;
+    var inlineFormatPattern = /<(font|b|u|strong|em|br|sub|sup|mark|del|ins|s|small|big|a)\b[^>]*>/i;
+
+    function stripMarkup(value) {
+      if (typeof value !== 'string') return value;
+      var temp = document.createElement('div');
+      temp.innerHTML = value;
+      return temp.textContent || temp.innerText || '';
+    }
+
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      var translation = zappyI18n.t(key);
+      if (!translation || translation === key) return;
+      if (el.querySelector('[data-i18n]')) return;
+
+      // Defensive sanitization: if the translation value contains structural
+      // markup (icons, accent spans, wrappers), strip it down to plain text.
+      if (structuralTagPattern.test(translation)) {
+        translation = stripMarkup(translation);
+        if (!translation) return;
+      }
+
+      // If every child element is purely decorative (icons, SVGs, empty
+      // accent spans, <br>, media), replace only the direct text nodes. If
+      // ANY child element carries its own text (<strong>, <em>, <a>…), fall
+      // through to the innerHTML/textContent replacement below so we don't
+      // leave stale child text alongside the translated text.
+      var hasChildElements = el.children.length > 0;
+      if (hasChildElements) {
+        var allDecorative = true;
+        for (var ci = 0; ci < el.children.length; ci++) {
+          var kid = el.children[ci];
+          // Inline SVG elements have tagName 'svg' (lowercase) in the
+          // browser DOM because they're in the SVG namespace. Accept both.
+          var kidTag = kid.tagName;
+          var isMediaOrBr = kidTag === 'SVG' || kidTag === 'svg' ||
+                            kidTag === 'IMG' || kidTag === 'PICTURE' ||
+                            kidTag === 'VIDEO' || kidTag === 'IFRAME' ||
+                            kidTag === 'BR';
+          if (!isMediaOrBr && kid.textContent.trim() !== '') {
+            allDecorative = false;
+            break;
+          }
+        }
+
+        if (allDecorative) {
+          var nodes = el.childNodes;
+          var textUpdated = false;
+          for (var ni = 0; ni < nodes.length; ni++) {
+            var node = nodes[ni];
+            if (node.nodeType === 3 && node.textContent.trim()) {
+              if (!textUpdated) {
+                node.textContent = translation;
+                textUpdated = true;
+              } else {
+                node.textContent = '';
+              }
+            }
+          }
+          if (textUpdated) return;
+
+          var firstEl = el.firstElementChild;
+          var textNode = document.createTextNode(translation);
+          if (firstEl && firstEl.nextSibling) {
+            el.insertBefore(textNode, firstEl.nextSibling);
+          } else if (firstEl) {
+            el.appendChild(textNode);
+          } else {
+            el.insertBefore(textNode, el.firstChild);
+          }
+          return;
+        }
+      }
+
+      // Carry over inline formatting from the source element when the translation
+      // is plain text (mirrors the same logic in generateI18nextScript).
+      var fontChild = el.querySelector('font[color], font[face], font[size]');
+      if (fontChild && !inlineFormatPattern.test(translation)) {
+        var fontTag = '<font';
+        for (var ai = 0; ai < fontChild.attributes.length; ai++) {
+          fontTag += ' ' + fontChild.attributes[ai].name + '="' + fontChild.attributes[ai].value.replace(/"/g, '&quot;') + '"';
+        }
+        translation = fontTag + '>' + translation + '</font>';
+      }
+
+      var hasNewlines = translation.indexOf(newlineChar) !== -1;
+      var hasInlineFormat = inlineFormatPattern.test(translation);
+      var hasEntities = /&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;/.test(translation);
+      var elementHasBr = /<br\s*\/?>/i.test(el.innerHTML);
+
+      if (hasNewlines || hasInlineFormat || hasEntities || elementHasBr) {
+        el.innerHTML = translation.split(newlineChar).join('<br>');
+      } else {
+        el.textContent = translation;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('placeholder', translation);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-alt');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('alt', translation);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-title');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('title', translation);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-content]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-content');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('content', translation);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-aria-label');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) el.setAttribute('aria-label', translation);
+    });
+    document.querySelectorAll('[data-i18n-aria-description]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-aria-description');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) el.setAttribute('aria-description', translation);
+    });
+    document.querySelectorAll('[data-i18n-label]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-label');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) el.setAttribute('label', translation);
+    });
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(function(scriptEl) {
+      try {
+        var raw = scriptEl.textContent;
+        if (!raw || raw.indexOf('__I18N__') === -1) return;
+        var data = JSON.parse(raw);
+        var swapped = false;
+        function walk(node) {
+          if (Array.isArray(node)) { node.forEach(walk); return; }
+          if (!node || typeof node !== 'object') return;
+          for (var k in node) {
+            if (typeof node[k] === 'string' && node[k].indexOf('__I18N__') === 0) {
+              var m = node[k].match(/^__I18N__([^_]+(?:_[^_]+)*?)__([sS]*)$/);
+              if (m) {
+                var key = m[1];
+                var fallback = m[2];
+                var t = zappyI18n.t(key);
+                node[k] = (t && t !== key) ? t : fallback;
+                swapped = true;
+              }
+            } else if (typeof node[k] === 'object' && node[k] !== null) {
+              walk(node[k]);
+            }
+          }
+        }
+        walk(data);
+        if (swapped) scriptEl.textContent = JSON.stringify(data);
+      } catch (_e) {}
+    });
+
+    const titleEl = document.querySelector('title[data-i18n]');
+    if (titleEl) {
+      const key = titleEl.getAttribute('data-i18n');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        document.title = translation;
+      }
+    }
+  }
+  
+  // Update document direction based on language
+  function updateDirection() {
+    const currentLang = zappyI18n.language;
+    const isRTL = rtlLanguages.includes(currentLang);
+    const html = document.documentElement;
+    const body = document.body;
+    const newDir = isRTL ? 'rtl' : 'ltr';
+    
+    html.setAttribute('lang', currentLang);
+    html.setAttribute('dir', newDir);
+    html.style.direction = newDir;
+    
+    if (body) {
+      body.setAttribute('dir', newDir);
+      body.style.direction = newDir;
+    }
+    
+    document.querySelectorAll('main, article, section, footer, aside, .content, .container, .wrapper').forEach(function(el) {
+      el.style.direction = newDir;
+      if (el.hasAttribute('dir')) el.setAttribute('dir', newDir);
+    });
+    
+    document.querySelectorAll('.legal-content, .terms-content, .privacy-content').forEach(function(el) {
+      el.style.direction = newDir;
+      el.style.textAlign = isRTL ? 'right' : 'left';
+    });
+    
+    // Swap inline text-align on content elements when direction changes.
+    // Compare against the actual HTML direction at generation time
+    // (__generatedDir), not defaultLang — they can differ when the user
+    // sets a different default language after generation.
+    var generatedIsRTL = __generatedDir === 'rtl';
+    var needsSwap = isRTL !== generatedIsRTL;
+    document.querySelectorAll('[style]').forEach(function(el) {
+      if (el.closest('header') || el.closest('nav') || el.closest('.navbar') || el.closest('.lang-switcher')) return;
+      if (el.closest('.legal-content') || el.closest('.terms-content') || el.closest('.privacy-content')) return;
+      var ta = el.style.textAlign;
+      if (!ta || ta === 'center' || ta === 'justify' || ta === 'start' || ta === 'end') return;
+      if (!el.hasAttribute('data-ta-orig')) {
+        el.setAttribute('data-ta-orig', ta);
+      }
+      var origTA = el.getAttribute('data-ta-orig');
+      if (needsSwap) {
+        el.style.textAlign = origTA === 'right' ? 'left' : 'right';
+      } else {
+        el.style.textAlign = origTA;
+      }
+    });
+
+    // Swap directional CSS properties in stylesheet rules when direction changes.
+    if (!window.__zappyOrigCSS) window.__zappyOrigCSS = new WeakMap();
+    var origCSSMap = window.__zappyOrigCSS;
+    function swapCSSRule(cssRule) {
+      if (cssRule.cssRules && cssRule.cssRules.length) {
+        for (var ci = 0; ci < cssRule.cssRules.length; ci++) swapCSSRule(cssRule.cssRules[ci]);
+        return;
+      }
+      if (!cssRule.style || !cssRule.selectorText) return;
+      if (cssRule.selectorText.indexOf('[dir=') !== -1) return;
+      if (cssRule.style.direction) return;
+      if (/^(html|body)\s*,?\s*(html|body)?\s*$/.test(cssRule.selectorText.trim())) return;
+      if (/\.(lang-option|lang-switcher|mobile-lang)/.test(cssRule.selectorText)) return;
+      if (!origCSSMap.has(cssRule)) {
+        origCSSMap.set(cssRule, {
+          ta: cssRule.style.textAlign || '',
+          taPri: cssRule.style.getPropertyPriority('text-align'),
+          ai: cssRule.style.alignItems || '',
+          aiPri: cssRule.style.getPropertyPriority('align-items'),
+          fd: cssRule.style.flexDirection || ''
+        });
+      }
+      var orig = origCSSMap.get(cssRule);
+      var rta = orig.ta;
+      if (rta && rta !== 'center' && rta !== 'justify' && rta !== 'start' && rta !== 'end') {
+        var newTA = needsSwap ? (rta === 'right' ? 'left' : 'right') : rta;
+        cssRule.style.setProperty('text-align', newTA, orig.taPri);
+      }
+      var rai = orig.ai;
+      if ((rai === 'flex-end' || rai === 'flex-start') && orig.fd === 'column') {
+        var newAI = needsSwap ? (rai === 'flex-end' ? 'flex-start' : 'flex-end') : rai;
+        cssRule.style.setProperty('align-items', newAI, orig.aiPri);
+      }
+    }
+    for (var si = 0; si < document.styleSheets.length; si++) {
+      try {
+        var sheetRules = document.styleSheets[si].cssRules;
+        for (var ri = 0; ri < sheetRules.length; ri++) swapCSSRule(sheetRules[ri]);
+      } catch(e) {}
+    }
+
+    // Swap align-items on inline-styled flex-direction:column containers
+    document.querySelectorAll('[style]').forEach(function(el) {
+      if (el.closest('header') || el.closest('nav') || el.closest('.navbar') || el.closest('.lang-switcher')) return;
+      if (el.closest('.legal-content') || el.closest('.terms-content') || el.closest('.privacy-content')) return;
+      var ai = el.style.alignItems;
+      if (ai !== 'flex-end' && ai !== 'flex-start') return;
+      if (el.style.flexDirection !== 'column') return;
+      if (!el.hasAttribute('data-ai-orig')) {
+        el.setAttribute('data-ai-orig', ai);
+      }
+      var origAI = el.getAttribute('data-ai-orig');
+      if (needsSwap) {
+        el.style.alignItems = origAI === 'flex-end' ? 'flex-start' : 'flex-end';
+      } else {
+        el.style.alignItems = origAI;
+      }
+    });
+
+    // Update catalog menu RTL class to match current direction
+    document.querySelectorAll('.zappy-catalog-menu').forEach(function(el) {
+      if (isRTL) {
+        el.classList.add('rtl');
+        el.setAttribute('dir', 'rtl');
+      } else {
+        el.classList.remove('rtl');
+        el.removeAttribute('dir');
+      }
+    });
+    
+    document.querySelectorAll('header, nav, .navbar, .nav-container, .header-container, .nav-links, .menu, nav ul, header ul, #navMenu').forEach(function(el) {
+      el.removeAttribute('dir');
+      el.style.removeProperty('direction');
+      el.style.removeProperty('flex-direction');
+      el.style.removeProperty('justify-content');
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    document.querySelectorAll('.nav-menu, #navMenu, .nav-right-group').forEach(function(el) {
+      el.removeAttribute('dir');
+      el.style.removeProperty('direction');
+      el.style.removeProperty('flex-direction');
+      el.style.removeProperty('justify-content');
+      if (isRTL) {
+        el.style.removeProperty('margin-left');
+        el.style.removeProperty('margin-right');
+      } else {
+        el.style.setProperty('margin-left', '0', 'important');
+        el.style.removeProperty('margin-right');
+      }
+    });
+    
+    document.querySelectorAll('.lang-switcher').forEach(function(el) {
+      var ctaContainer = el.parentElement ? el.parentElement.querySelector('.nav-cta-container') : null;
+      if (ctaContainer && el.parentElement === ctaContainer.parentElement) {
+        ctaContainer.insertBefore(el, ctaContainer.firstChild);
+        // Ensure vertical alignment when lang-switcher and CTA button are siblings
+        ctaContainer.style.setProperty('align-items', 'center', 'important');
+      }
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    // E-commerce fix: Move lang-switcher inside nav-icons-left near search box
+    document.querySelectorAll('.lang-switcher').forEach(function(el) {
+      var navIconsLeft = document.querySelector('.nav-icons-left');
+      var searchBox = document.querySelector('.nav-search-box');
+      if (navIconsLeft && searchBox && !el.closest('.nav-icons-left')) {
+        navIconsLeft.insertBefore(el, searchBox);
+      }
+    });
+    
+    document.querySelectorAll('header > a, nav > a, .nav-menu > a, .nav-links > a, nav ul li, header ul li, .logo, .site-logo, .brand, .navbar-brand, .nav-brand').forEach(function(el) {
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    document.querySelectorAll('header .btn, header .button, header .cta, nav .btn, nav .button, .navbar .btn, .nav-cta-container, .cta-container, .header-cta, .nav-cta').forEach(function(el) {
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    // Globe icon SVG - uses currentColor so it adopts whatever color is set on the button
+    var globeIconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"/></svg>';
+    
+    // Match the button color to a sibling nav link so the globe contrasts with the nav bg
+    var currentLangEl = document.querySelector('.lang-switcher-current');
+    if (currentLangEl) {
+      var navContainer = currentLangEl.closest('nav') || currentLangEl.closest('header') || currentLangEl.closest('.navbar');
+      if (navContainer) {
+        var navLink = navContainer.querySelector('.nav-menu a, .nav-links a');
+        if (!navLink) navLink = navContainer.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');
+        if (navLink) {
+          var linkColor = getComputedStyle(navLink).color;
+          if (linkColor && linkColor !== 'rgb(0, 0, 0)' && linkColor !== 'rgba(0, 0, 0, 0)') {
+            currentLangEl.style.color = linkColor;
+          }
+        }
+      }
+      currentLangEl.innerHTML = globeIconSvg;
+    }
+    
+    document.querySelectorAll('.lang-switcher-dropdown').forEach(function(dropdown) {
+      dropdown.innerHTML = availableLanguages
+        .filter(function(lang) { return lang !== currentLang; })
+        .map(function(lang) {
+          const info = languageInfo[lang] || { flag: '🌐', flagImg: '🌐', nativeName: lang };
+          return '<button class="lang-option" data-lang="' + lang + '" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;">' + (info.flagImg || info.flag) + ' ' + info.nativeName + '</button>';
+        })
+        .join('');
+      
+      dropdown.querySelectorAll('.lang-option').forEach(function(option) {
+        option.addEventListener('click', function(e) {
+          var langAttr = this.getAttribute('data-lang');
+          var hrefAttr = this.getAttribute('href');
+          if (this.tagName === 'A' && hrefAttr && hrefAttr !== '#') {
+            e.stopPropagation();
+            try { if (langAttr) localStorage.setItem('zappy_lang', langAttr); } catch (_) {}
+            dropdown.style.opacity = '0';
+            dropdown.style.visibility = 'hidden';
+            dropdown.style.transform = 'translateY(-8px)';
+            return;
+          }
+          e.preventDefault();
+          e.stopPropagation();
+          if (langAttr) navigateToLanguage(langAttr);
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          dropdown.style.transform = 'translateY(-8px)';
+        });
+      });
+    });
+    
+    if (window.innerWidth < 768) {
+      var mobileToggle = document.querySelector('.mobile-toggle');
+      var phoneBtn = document.querySelector('.phone-header-btn');
+      var navCtaContainer = document.querySelector('.nav-cta-container');
+      
+      if (mobileToggle) {
+        mobileToggle.style.removeProperty('left');
+        mobileToggle.style.removeProperty('right');
+      }
+      
+      if (phoneBtn) {
+        phoneBtn.style.removeProperty('left');
+        phoneBtn.style.removeProperty('right');
+      }
+      
+      if (navCtaContainer) {
+        navCtaContainer.style.removeProperty('left');
+        navCtaContainer.style.removeProperty('right');
+      }
+    }
+    
+    // Update mobile language submenu in hamburger
+    updateMobileLangMenu();
+  }
+  
+  function initLanguageSwitcher() {
+    // Guard against multiple initializations (multiple scripts on page)
+    if (window._zappyLangSwitcherInitialized) return;
+    window._zappyLangSwitcherInitialized = true;
+    
+    const switchers = document.querySelectorAll('.lang-switcher');
+    if (!switchers.length) return;
+    
+    switchers.forEach(function(switcher) {
+      const dropdown = switcher.querySelector('.lang-switcher-dropdown');
+      const current = switcher.querySelector('.lang-switcher-current');
+      
+      if (!current || !dropdown) return;
+      
+      // Ensure proper positioning
+      switcher.style.position = 'relative';
+      dropdown.style.cssText = 'opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none; display: none;';
+      
+      current.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = dropdown.style.opacity === '1';
+        if (isOpen) {
+          dropdown.style.cssText = 'opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none; display: none;';
+        } else {
+          dropdown.style.cssText = 'opacity: 1; visibility: visible; transform: translateY(0); display: block; position: absolute; z-index: 99999; pointer-events: auto; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); min-width: 140px; padding: 8px 0; top: calc(100% + 4px); left: 0;';
+          dropdown.querySelectorAll('.lang-option').forEach(function(opt) {
+            opt.style.cssText = 'display: flex; opacity: 1; visibility: visible; color: #333 !important; -webkit-text-fill-color: #333 !important;';
+          });
+        }
+      });
+      
+      dropdown.querySelectorAll('.lang-option').forEach(function(option) {
+        option.addEventListener('click', function(e) {
+          var langAttr = this.getAttribute('data-lang');
+          var hrefAttr = this.getAttribute('href');
+          if (this.tagName === 'A' && hrefAttr && hrefAttr !== '#') {
+            e.stopPropagation();
+            try { if (langAttr) localStorage.setItem('zappy_lang', langAttr); } catch (_) {}
+            dropdown.style.cssText = 'opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none; display: none;';
+            return;
+          }
+          e.preventDefault();
+          e.stopPropagation();
+          if (langAttr) navigateToLanguage(langAttr);
+          dropdown.style.cssText = 'opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none; display: none;';
+        });
+      });
+    });
+    
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.lang-switcher-dropdown').forEach(function(dropdown) {
+        dropdown.style.cssText = 'opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none; display: none;';
+      });
+    });
+  }
+  
+  // ==============================================
+  // MOBILE LANGUAGE SUBMENU (inside hamburger menu)
+  // ==============================================
+  
+  function injectMobileLangCss() {
+    if (document.getElementById('mobile-lang-menu-css')) return;
+    var style = document.createElement('style');
+    style.id = 'mobile-lang-menu-css';
+    style.textContent = '@media (max-width: 768px) {' +
+      '.lang-switcher, .nav-cta-container .lang-switcher, .nav-container .lang-switcher,' +
+      '.navbar .lang-switcher, .navbar .nav-cta-container .lang-switcher,' +
+      '.nav-icons-left .lang-switcher, .nav-ecommerce-icons .lang-switcher { display: none !important; }' +
+      '.zappy-lang-switcher-container { display: none !important; }' +
+      '.mobile-lang-menu { list-style: none !important; width: 100%; border-top: 1px solid rgba(128,128,128,0.2); margin-top: 8px; padding-top: 8px; }' +
+      '.mobile-lang-toggle { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; color: inherit; font-size: 15px; font-family: inherit; }' +
+      '.mobile-lang-toggle span { flex: 1; }' +
+      'html[dir="rtl"] .mobile-lang-toggle span, html[lang="he"] .mobile-lang-toggle span, html[lang="ar"] .mobile-lang-toggle span { text-align: right; }' +
+      'html:not([dir="rtl"]) .mobile-lang-toggle span { text-align: left; }' +
+      '.mobile-lang-chevron { transition: transform 0.3s ease; flex-shrink: 0; }' +
+      '.mobile-lang-options { display: none; flex-direction: column; padding: 0 16px 8px 46px; }' +
+      'html[dir="rtl"] .mobile-lang-options, html[lang="he"] .mobile-lang-options, html[lang="ar"] .mobile-lang-options { padding: 0 46px 8px 16px; }' +
+      '.mobile-lang-options.open { display: flex; }' +
+      '.mobile-lang-option { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: none; border: none; cursor: pointer; color: inherit; font-size: 14px; font-family: inherit; border-radius: 6px; transition: background-color 0.2s; width: 100%; }' +
+      'html[dir="rtl"] .mobile-lang-option, html[lang="he"] .mobile-lang-option, html[lang="ar"] .mobile-lang-option { text-align: right; }' +
+      'html:not([dir="rtl"]) .mobile-lang-option { text-align: left; }' +
+      '.mobile-lang-option:hover { background: rgba(128,128,128,0.1); }' +
+      '.mobile-lang-option img { width: 20px; height: 20px; border-radius: 50%; display: inline-block; vertical-align: middle; }' +
+      '}';
+    document.head.appendChild(style);
+  }
+
+  function createMobileLangMenu() {
+    if (window.innerWidth > 768) return;
+    if (document.querySelector('.mobile-lang-menu')) return;
+    if (availableLanguages.length < 2) return;
+    
+    injectMobileLangCss();
+    
+    var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu');
+    if (!navMenu) return;
+    
+    var currentLang = zappyI18n.language;
+    var currentInfo = languageInfo[currentLang] || { nativeName: currentLang, flagImg: '' };
+    
+    var optionsHtml = availableLanguages
+      .filter(function(lang) { return lang !== currentLang; })
+      .map(function(lang) {
+        var info = languageInfo[lang] || { nativeName: lang, flagImg: '' };
+        return '<button class="mobile-lang-option" data-lang="' + lang + '">' +
+          (info.flagImg || info.flag || '') + ' ' + info.nativeName + '</button>';
+      })
+      .join('');
+    
+    var li = document.createElement('li');
+    li.className = 'mobile-lang-menu';
+    li.innerHTML =
+      '<button class="mobile-lang-toggle" type="button">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421,6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"/></svg>' +
+        '<span>' + currentInfo.nativeName + '</span>' +
+        '<svg class="mobile-lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"></polyline></svg>' +
+      '</button>' +
+      '<div class="mobile-lang-options">' + optionsHtml + '</div>';
+    
+    navMenu.appendChild(li);
+    
+    console.log('[i18n] Mobile language submenu created in hamburger menu');
+  }
+  
+  function initMobileLangSwitcher() {
+    var toggle = document.querySelector('.mobile-lang-toggle');
+    var options = document.querySelector('.mobile-lang-options');
+    if (!toggle || !options) return;
+    
+    var newToggle = toggle.cloneNode(true);
+    toggle.parentNode.replaceChild(newToggle, toggle);
+    var optionsEl = newToggle.parentNode.querySelector('.mobile-lang-options');
+    
+    newToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = optionsEl.classList.contains('open');
+      if (isOpen) {
+        optionsEl.classList.remove('open');
+        optionsEl.style.display = 'none';
+      } else {
+        optionsEl.classList.add('open');
+        optionsEl.style.display = 'flex';
+      }
+      var chevron = newToggle.querySelector('.mobile-lang-chevron');
+      if (chevron) chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+    });
+    
+    optionsEl.querySelectorAll('.mobile-lang-option').forEach(function(option) {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var lang = this.getAttribute('data-lang');
+        // Loader-script mirror of the mobile navigation behaviour: see the
+        // matching block in generateI18nextScript for full rationale.
+        if (lang) navigateToLanguage(lang);
+      });
+    });
+  }
+  
+  function updateMobileLangMenu() {
+    var menuItem = document.querySelector('.mobile-lang-menu');
+    if (!menuItem) {
+      createMobileLangMenu();
+      initMobileLangSwitcher();
+      return;
+    }
+    
+    var currentLang = zappyI18n.language;
+    var currentInfo = languageInfo[currentLang] || { nativeName: currentLang };
+    
+    var toggleSpan = menuItem.querySelector('.mobile-lang-toggle span');
+    if (toggleSpan) toggleSpan.textContent = currentInfo.nativeName;
+    
+    var optionsContainer = menuItem.querySelector('.mobile-lang-options');
+    if (!optionsContainer) return;
+    
+    optionsContainer.innerHTML = availableLanguages
+      .filter(function(lang) { return lang !== currentLang; })
+      .map(function(lang) {
+        var info = languageInfo[lang] || { nativeName: lang, flagImg: '' };
+        return '<button class="mobile-lang-option" data-lang="' + lang + '">' +
+          (info.flagImg || info.flag || '') + ' ' + info.nativeName + '</button>';
+      })
+      .join('');
+    
+    optionsContainer.querySelectorAll('.mobile-lang-option').forEach(function(option) {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var lang = this.getAttribute('data-lang');
+        // See the matching block in the embedded script for full rationale.
+        if (lang) navigateToLanguage(lang);
+      });
+    });
+    
+    optionsContainer.classList.remove('open');
+    optionsContainer.style.display = 'none';
+  }
+  
+  function fixMobileMenuStyles() {
+    if (window.innerWidth >= 768) return;
+    document.querySelectorAll('.nav-menu, #navMenu, nav ul, header ul').forEach(function(el) {
+      if (el.style.flexDirection) {
+        el.style.removeProperty('flex-direction');
+      }
+    });
+  }
+  
+  function fixMobileButtonPositioning() {
+    if (window.innerWidth >= 768) return;
+    var mobileToggle = document.querySelector('.mobile-toggle');
+    var phoneBtn = document.querySelector('.phone-header-btn');
+    var navCtaContainer = document.querySelector('.nav-cta-container');
+    
+    if (mobileToggle) {
+      mobileToggle.style.removeProperty('left');
+      mobileToggle.style.removeProperty('right');
+    }
+    if (phoneBtn) {
+      phoneBtn.style.removeProperty('left');
+      phoneBtn.style.removeProperty('right');
+    }
+    if (navCtaContainer) {
+      navCtaContainer.style.removeProperty('left');
+      navCtaContainer.style.removeProperty('right');
+    }
+  }
+  
+  function fixLanguageSwitcherColor() {
+    var switcher = document.querySelector('.lang-switcher-current');
+    var svg = switcher ? switcher.querySelector('svg') : null;
+    if (!switcher || !svg) return;
+    
+    var navbar = document.querySelector('.navbar') || document.querySelector('nav') || document.querySelector('header');
+    if (!navbar) return;
+    
+    function getEffectiveBackgroundColor(element) {
+      var el = element;
+      var maxDepth = 10;
+      while (el && maxDepth > 0) {
+        var style = window.getComputedStyle(el);
+        var bg = style.backgroundColor;
+        if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
+          return bg;
+        }
+        el = el.parentElement;
+        maxDepth--;
+      }
+      return 'rgb(255, 255, 255)';
+    }
+    
+    function parseColor(colorStr) {
+      if (!colorStr) return null;
+      var rgbMatch = colorStr.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+      if (rgbMatch) {
+        return { r: parseInt(rgbMatch[1], 10), g: parseInt(rgbMatch[2], 10), b: parseInt(rgbMatch[3], 10) };
+      }
+      var hexMatch = colorStr.match(/#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/);
+      if (hexMatch) {
+        return { r: parseInt(hexMatch[1], 16), g: parseInt(hexMatch[2], 16), b: parseInt(hexMatch[3], 16) };
+      }
+      return null;
+    }
+    
+    function getLuminance(rgb) {
+      if (!rgb) return 0.5;
+      var r = rgb.r / 255, g = rgb.g / 255, b = rgb.b / 255;
+      r = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
+      g = g <= 0.03928 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4);
+      b = b <= 0.03928 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4);
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    }
+    
+    var bgColor = getEffectiveBackgroundColor(navbar);
+    var rgb = parseColor(bgColor);
+    var luminance = getLuminance(rgb);
+    var isLightBackground = luminance > 0.4;
+    var iconColor = isLightBackground ? '#1a1a1a' : '#F3FAFF';
+    
+    svg.style.fill = iconColor;
+    switcher.style.color = iconColor;
+  }
+  
+  // Initialize - load translations then set up UI
+  function init() {
+    zappyI18n.loadTranslations(zappyI18n.language).then(function() {
+      updateContent();
+      updateDirection();
+      initLanguageSwitcher();
+      createMobileLangMenu();
+      initMobileLangSwitcher();
+      fixMobileMenuStyles();
+      fixMobileButtonPositioning();
+      fixLanguageSwitcherColor();
+      
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+          // Desktop: remove mobile lang menu if it exists
+          var mobileLangEl = document.querySelector('.mobile-lang-menu');
+          if (mobileLangEl) mobileLangEl.remove();
+          var mobileCssEl = document.getElementById('mobile-lang-menu-css');
+          if (mobileCssEl) mobileCssEl.remove();
+        } else {
+          createMobileLangMenu();
+          initMobileLangSwitcher();
+        }
+        fixMobileMenuStyles();
+        fixMobileButtonPositioning();
+        fixLanguageSwitcherColor();
+      });
+      
+      setTimeout(fixLanguageSwitcherColor, 500);
+      setTimeout(fixLanguageSwitcherColor, 1500);
+    }).catch(function(err) {
+      console.error('[i18n] Initialization failed:', err);
+      // Still initialize UI even if translations fail
+      initLanguageSwitcher();
+      createMobileLangMenu();
+      initMobileLangSwitcher();
+      fixLanguageSwitcherColor();
+    });
+  }
+  
+  // Expose to global scope
+  window.zappyI18n = zappyI18n;
+  
+  // Run initialization
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
     <script src="/script.js"></script>
 
     <script id="zappy-mobile-submenu-script">
