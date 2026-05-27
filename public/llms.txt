@@ -92,7 +92,12 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 3**
+**Total active products: 4**
+
+### חגורה כתומה - לימוד מתקדם
+https://limud-karate.zappy5.app/product/chgvrh-ktvmh-lymvd-mtkdm-uxsvtr
+- Price: 0.00 ILS
+- Availability: In stock
 
 ### חגורה צהובה - לימוד מעשי
 https://limud-karate.zappy5.app/product/chgvrh-tshvbh-lymvd-mashy-uclw8u

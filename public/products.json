@@ -1,10 +1,33 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-26T20:15:29.909Z",
+  "generated_at": "2026-05-27T08:13:50.850Z",
   "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
-  "count": 3,
+  "count": 4,
   "products": [
+    {
+      "id": "81d056ed-79c5-4282-908b-dd42b12ab58b",
+      "slug": "chgvrh-ktvmh-lymvd-mtkdm-uxsvtr",
+      "name": "חגורה כתומה - לימוד מתקדם",
+      "name_translations": {
+        "en": "Orange Belt - Advanced Learning",
+        "he": "חגורה כתומה - לימוד מתקדם"
+      },
+      "description": "",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 0,
+      "base_price": 0,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://limud-karate.zappy5.app/product/chgvrh-ktvmh-lymvd-mtkdm-uxsvtr",
+      "categories": [],
+      "updated_at": "2026-05-27T08:13:19.280Z"
+    },
     {
       "id": "ba800ef3-3fc8-442b-86ab-9d04aafcc08f",
       "slug": "chgvrh-tshvbh-lymvd-mashy-uclw8u",
