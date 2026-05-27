@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-27T09:10:57.501Z",
+  "generated_at": "2026-05-27T09:18:04.153Z",
   "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
   "count": 4,
   "products": [
     {
       "id": "81d056ed-79c5-4282-908b-dd42b12ab58b",
-      "slug": "hblvg-shl-mavr-chlk-2-lraan8",
+      "slug": "hblvg-shl-mavr-chlk-2-nn1s65",
       "name": "הבלוג של מאור חלק 2",
       "name_translations": {
         "en": "Maor's Blog Part 2",
@@ -26,9 +26,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://limud-karate.zappy5.app/product/hblvg-shl-mavr-chlk-2-lraan8",
+      "url": "https://limud-karate.zappy5.app/product/hblvg-shl-mavr-chlk-2-nn1s65",
       "categories": [],
-      "updated_at": "2026-05-27T09:10:17.635Z"
+      "updated_at": "2026-05-27T09:16:58.384Z"
     },
     {
       "id": "ba800ef3-3fc8-442b-86ab-9d04aafcc08f",
