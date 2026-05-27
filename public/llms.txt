@@ -98,6 +98,7 @@ Information about WCAG compliance and accessibility features.
 https://limud-karate.zappy5.app/product/chgvrh-ktvmh-lymvd-mtkdm-uxsvtr
 - Price: 0.00 ILS
 - Availability: In stock
+- Image: https://limud-karate.zappy5.app/assets/course-81d056ed-79c5-4282-908b-dd42b12ab58b-main-video-thumb.jpg
 
 ### חגורה צהובה - לימוד מעשי
 https://limud-karate.zappy5.app/product/chgvrh-tshvbh-lymvd-mashy-uclw8u
