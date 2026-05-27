@@ -5245,10 +5245,12 @@ Verifying…
 
 ## Product Catalog
 
-### חגורה כתומה - לימוד מתקדם
-URL: https://limud-karate.zappy5.app/product/chgvrh-ktvmh-lymvd-mtkdm-n87un0
-Price: 0.00 ILS
+### הבלוג של מאור חלק 2
+URL: https://limud-karate.zappy5.app/product/hblvg-shl-mavr-chlk-2-lraan8
+Price: 40.00 ILS
 Availability: In stock
+
+מאור משתף איך הוא מוסיף יכולת חדשה של לספק הנחה ללקוחות ספציפיים בחנות. הוא עובר על שלבי הפיתוח והעבודה עם המודלים השונים.
 
 ---
 

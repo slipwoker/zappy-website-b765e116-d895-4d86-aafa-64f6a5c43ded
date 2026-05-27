@@ -1,24 +1,24 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-27T09:07:48.728Z",
+  "generated_at": "2026-05-27T09:10:57.501Z",
   "base_url": "https://limud-karate.zappy5.app",
   "currency": "ILS",
   "count": 4,
   "products": [
     {
       "id": "81d056ed-79c5-4282-908b-dd42b12ab58b",
-      "slug": "chgvrh-ktvmh-lymvd-mtkdm-n87un0",
-      "name": "חגורה כתומה - לימוד מתקדם",
+      "slug": "hblvg-shl-mavr-chlk-2-lraan8",
+      "name": "הבלוג של מאור חלק 2",
       "name_translations": {
-        "en": "Orange Belt - Advanced Learning",
-        "he": "חגורה כתומה - לימוד מתקדם"
+        "en": "Maor's Blog Part 2",
+        "he": "הבלוג של מאור חלק 2"
       },
-      "description": "",
-      "short_description": null,
+      "description": "מאור משתף איך הוא מוסיף יכולת חדשה של לספק הנחה ללקוחות ספציפיים בחנות. הוא עובר על שלבי הפיתוח והעבודה עם המודלים השונים.",
+      "short_description": "מאור מספר על העבודה בזאפי, תוך שימוש בכלי cursor ופיתוח של יכולת חדשה באפליקציה",
       "sku": null,
       "brand": null,
-      "price": 0,
-      "base_price": 0,
+      "price": 40,
+      "base_price": 40,
       "sale_price": null,
       "currency": "ILS",
       "images": [
@@ -26,9 +26,9 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://limud-karate.zappy5.app/product/chgvrh-ktvmh-lymvd-mtkdm-n87un0",
+      "url": "https://limud-karate.zappy5.app/product/hblvg-shl-mavr-chlk-2-lraan8",
       "categories": [],
-      "updated_at": "2026-05-27T09:07:10.056Z"
+      "updated_at": "2026-05-27T09:10:17.635Z"
     },
     {
       "id": "ba800ef3-3fc8-442b-86ab-9d04aafcc08f",
