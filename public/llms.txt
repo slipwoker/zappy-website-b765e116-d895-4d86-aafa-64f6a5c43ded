@@ -95,11 +95,11 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 4**
 
 ### הבלוג של מאור חלק 2
-https://limud-karate.zappy5.app/product/hblvg-shl-mavr-chlk-2-nn1s65
+https://limud-karate.zappy5.app/product/hblvg-shl-mavr-chlk-2-ob00ys
 - Price: 40.00 ILS
 - Availability: In stock
 - Description: מאור מספר על העבודה בזאפי, תוך שימוש בכלי cursor ופיתוח של יכולת חדשה באפליקציה
-- Image: https://limud-karate.zappy5.app/assets/course-81d056ed-79c5-4282-908b-dd42b12ab58b-main-video-thumb.jpg
+- Image: https://limud-karate.zappy5.app/assets/product-1779880403557-ql6763.webp
 
 ### חגורה צהובה - לימוד מעשי
 https://limud-karate.zappy5.app/product/chgvrh-tshvbh-lymvd-mashy-uclw8u
