@@ -2288,10 +2288,12 @@ html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li{flex-di
   margin: 0 0 12px 0;
   letter-spacing: -0.01em;}
 
-.index-hero-section .index-hero-h1-accent {color: var(--accent);
+.index-hero-section .index-hero-h1-accent {
+  color: var(--accent);
   display: block;
   font-style: normal;
-  font-weight: 900;}
+  font-weight: 900;
+}
 
 /* ── H3 Subtitle ── */
 .index-hero-section .index-hero-subtitle {

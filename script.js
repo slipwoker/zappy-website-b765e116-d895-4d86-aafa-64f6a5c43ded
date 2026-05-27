@@ -5541,10 +5541,6 @@ function stripHtmlToText(html) {
               source: 'client'
             });
           }
-          if (isCoursesMode) {
-            navigateStorefrontPage('/my-learning');
-            return;
-          }
         } else {
           console.warn('Order confirmation response:', confirmData);
         }
@@ -10094,7 +10090,13 @@ async function loadRelatedProducts(currentProduct, t) {
     if (location.pathname.indexOf('/api/website/preview') !== -1) {
       var m = location.pathname.match(/\/api\/website\/(preview(?:-fullscreen)?)\/([^\/]+)/);
       if (m) {
-        return '/api/website/' + m[1] + '/' + m[2] + '?page=' + encodeURIComponent(routePath);
+        var out = '/api/website/' + m[1] + '/' + m[2] + '?page=' + encodeURIComponent(routePath);
+        try {
+          var sp = new URLSearchParams(location.search || '');
+          var lang = sp.get('lang');
+          if (lang) out += '&lang=' + encodeURIComponent(lang);
+        } catch (e) {}
+        return out;
       }
     }
     return routePath;
@@ -10931,6 +10933,32 @@ async function loadRelatedProducts(currentProduct, t) {
           return '<details open><summary>' + escapeHtml(m.title || '') + '</summary><ol>' + lessons + '</ol></details>';
         }).join('');
       }
+
+      var orderedLessons = [];
+      payload.modules.forEach(function(m) {
+        (m.lessons || []).forEach(function(l) { orderedLessons.push(l); });
+      });
+      var currentIndex = orderedLessons.findIndex(function(l) { return l.id === lesson.id; });
+      var prevLesson = currentIndex > 0 ? orderedLessons[currentIndex - 1] : null;
+      var nextLesson = currentIndex >= 0 && currentIndex < orderedLessons.length - 1
+        ? orderedLessons[currentIndex + 1]
+        : null;
+      var prevBtn = root.querySelector('[data-zappy-lesson-prev]');
+      var nextBtn = root.querySelector('[data-zappy-lesson-next]');
+      if (prevBtn) {
+        prevBtn.disabled = !prevLesson;
+        prevBtn.classList.toggle('disabled', !prevLesson);
+        prevBtn.onclick = prevLesson ? function() {
+          window.location.href = pageUrl('/lesson/' + prevLesson.id);
+        } : null;
+      }
+      if (nextBtn) {
+        nextBtn.disabled = !nextLesson;
+        nextBtn.classList.toggle('disabled', !nextLesson);
+        nextBtn.onclick = nextLesson ? function() {
+          window.location.href = pageUrl('/lesson/' + nextLesson.id);
+        } : null;
+      }
     }
 
     var complete = root.querySelector('[data-zappy-lesson-complete]');
@@ -11217,6 +11245,36 @@ async function loadRelatedProducts(currentProduct, t) {
     return null;
   }
 
+  function ensureMyLearningNavLink() {
+    var token = '';
+    try { token = localStorage.getItem('zappy_customer_token_' + WEBSITE_ID) || ''; } catch (e) {}
+    var existing = document.querySelector('[data-zappy-my-learning-nav]');
+    if (!token) {
+      if (existing) existing.remove();
+      return;
+    }
+    var navList = getNavCategoryLinksContainer();
+    if (!navList) return;
+    var label = tx('ecom_coursesMyLearningTitle', 'My Learning');
+    if (existing) {
+      var existingLink = existing.querySelector('a');
+      if (existingLink) {
+        existingLink.href = pageUrl('/my-learning');
+        existingLink.textContent = label;
+      }
+      return;
+    }
+    var li = document.createElement('li');
+    li.setAttribute('data-zappy-my-learning-nav', 'true');
+    li.className = 'zappy-nav-my-learning';
+    var a = document.createElement('a');
+    a.href = pageUrl('/my-learning');
+    a.textContent = label;
+    a.setAttribute('dir', getRuntimeDir());
+    li.appendChild(a);
+    navList.insertBefore(li, navList.firstChild);
+  }
+
   /** Fallback catalog loader for course sites missing the ecommerce JS block. */
   async function loadCatalogCategoriesForCourses() {
     var list = document.getElementById('zappy-category-links');
@@ -11290,6 +11348,7 @@ async function loadRelatedProducts(currentProduct, t) {
       if (navList) {
         navList.querySelectorAll('li[data-category-id]').forEach(function(node) { node.remove(); });
         navList.insertAdjacentHTML('beforeend', dropdownItemsHtml);
+        ensureMyLearningNavLink();
       }
       if (list) {
         list.querySelectorAll('[data-category-id]').forEach(function(node) { node.remove(); });
@@ -11327,6 +11386,7 @@ async function loadRelatedProducts(currentProduct, t) {
       : ensureCoursesStorefrontSettings();
 
     settingsPromise.then(function() {
+      ensureMyLearningNavLink();
       if (hasFeatured || onHome) loadFeaturedCoursesHome();
       if (hasFeaturedCats || onHome) loadFeaturedCategoriesHome();
       if (hasCatalogNav || onHome) {
@@ -11335,6 +11395,12 @@ async function loadRelatedProducts(currentProduct, t) {
       }
     });
   }
+
+  window.addEventListener('storage', function(e) {
+    if (e && e.key === 'zappy_customer_token_' + WEBSITE_ID) {
+      ensureMyLearningNavLink();
+    }
+  });
 
   /** Hide physical-shipping accordion on checkout — courses are digital-only. */
   function applyCoursesCheckoutShippingHide() {
