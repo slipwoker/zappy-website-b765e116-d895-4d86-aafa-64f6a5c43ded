@@ -10562,19 +10562,15 @@ async function loadRelatedProducts(currentProduct, t) {
 
     var loginPrompt = root.querySelector('[data-zappy-course-login-prompt]');
     var loginLink = root.querySelector('[data-zappy-course-login-link]');
-    if (loginLink) loginLink.href = pageUrl('/login');
+    if (loginLink) {
+      loginLink.href = pageUrl('/login');
+      loginLink.addEventListener('click', function() {
+        try { sessionStorage.setItem('zappy_login_return', window.location.pathname + window.location.search); } catch(e) {}
+      });
+    }
 
     if (payload.enrollment && payload.enrollment.status === 'active') {
-      var enrollBtn = root.querySelector('[data-zappy-course-enroll]');
-      if (enrollBtn) enrollBtn.hidden = true;
-      var badge = root.querySelector('[data-zappy-course-enrolled-badge]');
-      if (badge) badge.hidden = false;
-      if (loginPrompt) loginPrompt.hidden = true;
-      var resume = root.querySelector('[data-zappy-course-resume]');
-      if (resume && payload.resumeLessonId) {
-        resume.hidden = false;
-        resume.href = pageUrl('/lesson/' + payload.resumeLessonId);
-      }
+      applyEnrolledState(root, payload.resumeLessonId);
     } else {
       var token = localStorage.getItem('zappy_customer_token_' + getWebsiteId()) || '';
       if (loginPrompt) loginPrompt.hidden = !!token;
@@ -10611,6 +10607,20 @@ async function loadRelatedProducts(currentProduct, t) {
       });
   }
 
+  function applyEnrolledState(root, resumeLessonId) {
+    var enrollBtn = root.querySelector('[data-zappy-course-enroll]');
+    if (enrollBtn) enrollBtn.hidden = true;
+    var badge = root.querySelector('[data-zappy-course-enrolled-badge]');
+    if (badge) badge.hidden = false;
+    var loginPrompt = root.querySelector('[data-zappy-course-login-prompt]');
+    if (loginPrompt) loginPrompt.hidden = true;
+    var resume = root.querySelector('[data-zappy-course-resume]');
+    if (resume && resumeLessonId) {
+      resume.hidden = false;
+      resume.href = pageUrl('/lesson/' + resumeLessonId);
+    }
+  }
+
   // ---- /courses/:slug ----
   function hydrateCourseDetail() {
     var root = document.querySelector('[data-zappy-course-detail]');
@@ -10623,6 +10633,20 @@ async function loadRelatedProducts(currentProduct, t) {
       .then(function(payload) {
         refreshCourseCartLinesFromProducts(payload && payload.course ? [payload.course] : []);
         applyCourseDetailPayload(root, payload);
+
+        var token = localStorage.getItem('zappy_customer_token_' + getWebsiteId()) || '';
+        var alreadyEnrolled = payload && payload.enrollment && payload.enrollment.status === 'active';
+        var productId = payload && payload.course && payload.course.id;
+        if (token && !alreadyEnrolled && productId) {
+          var qs = '?websiteId=' + encodeURIComponent(getWebsiteId()) + '&productId=' + encodeURIComponent(productId);
+          api('/api/ecommerce/storefront/enrollment-check' + qs)
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(res) {
+              if (res && res.data && res.data.enrolled) {
+                applyEnrolledState(root, res.data.resumeLessonId || null);
+              }
+            });
+        }
       });
   }
 
