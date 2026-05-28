@@ -22,10 +22,6 @@ https://limud-karate.zappy5.app/about
 https://limud-karate.zappy5.app/contact
 יש לך שאלות על קורס קראטה אונליין לילדים או על תוכניות האימון שלנו? צוות לימוד קראטה כאן בשבילך. צור קשר עכשיו ונעזור לך לבחור את המסלול המושלם עבורך.
 
-### Products
-https://limud-karate.zappy5.app/products
-הקורסים שלנו - לימוד קראטה
-
 ### Cart
 https://limud-karate.zappy5.app/cart
 עגלת הקניות שלך
@@ -45,10 +41,6 @@ https://limud-karate.zappy5.app/account
 ### Order Success
 https://limud-karate.zappy5.app/order-success
 תודה על ההזמנה
-
-### Product Detail
-https://limud-karate.zappy5.app/product/:slug
-פרטי המוצר - לימוד קראטה
 
 ### Courses
 https://limud-karate.zappy5.app/courses

@@ -10062,8 +10062,13 @@ async function loadRelatedProducts(currentProduct, t) {
     return (window.ZAPPY_API_BASE || window.zappyApiBase || '').replace(/\/$/, '');
   }
 
-  var WEBSITE_ID = resolveWebsiteId();
-  var API_BASE = resolveApiBase();
+  function getWebsiteId() {
+    return resolveWebsiteId();
+  }
+
+  function getApiBase() {
+    return resolveApiBase();
+  }
 
   /** In preview iframes the logical page lives in ?page=/courses, not pathname. */
   function getEffectivePath() {
@@ -10152,7 +10157,8 @@ async function loadRelatedProducts(currentProduct, t) {
   }
 
   function api(path, opts) {
-    var token = localStorage.getItem('zappy_customer_token_' + WEBSITE_ID) || '';
+    var wid = getWebsiteId();
+    var token = wid ? (localStorage.getItem('zappy_customer_token_' + wid) || '') : '';
     var headers = Object.assign({ 'Content-Type': 'application/json' }, (opts && opts.headers) || {});
     if (token) headers.Authorization = 'Bearer ' + token;
     // Append ?lang= via the shared helper so every /api/courses/student/*
@@ -10244,11 +10250,11 @@ async function loadRelatedProducts(currentProduct, t) {
 
   function addCourseProductToCart(course, imageUrl) {
     if (!buildCourseCartProduct(course, imageUrl)) return Promise.resolve(false);
-    var token = localStorage.getItem('zappy_customer_token_' + WEBSITE_ID) || '';
+    var token = localStorage.getItem('zappy_customer_token_' + getWebsiteId()) || '';
     if (!token) {
       return Promise.resolve(doAddCourseProductToCart(course, imageUrl));
     }
-    var checkUrl = appendLangParam('/api/ecommerce/storefront/enrollment-check?websiteId=' + encodeURIComponent(WEBSITE_ID) + '&productId=' + encodeURIComponent(course.id));
+    var checkUrl = appendLangParam('/api/ecommerce/storefront/enrollment-check?websiteId=' + encodeURIComponent(getWebsiteId()) + '&productId=' + encodeURIComponent(course.id));
     return fetch(checkUrl, { headers: { Authorization: 'Bearer ' + token }, credentials: 'include' })
       .then(function(r) {
         if (!r.ok) throw new Error('enrollment-check-failed');
@@ -10318,18 +10324,18 @@ async function loadRelatedProducts(currentProduct, t) {
     if (typeof buildApiUrlWithLang === 'function') {
       return buildApiUrlWithLang(url);
     }
-    return API_BASE + url;
+    return getApiBase() + url;
   }
 
   function hydrateCatalog() {
     var grid = document.querySelector('[data-zappy-courses-grid]');
-    if (!grid || !WEBSITE_ID) {
-      if (grid && !WEBSITE_ID) {
+    if (!grid || !getWebsiteId()) {
+      if (grid && !getWebsiteId()) {
         grid.innerHTML = '<p>' + tx('ecom_coursesCatalogError', 'Failed to load courses.') + '</p>';
       }
       return;
     }
-    var url = appendLangParam('/api/ecommerce/storefront/products?websiteId=' + encodeURIComponent(WEBSITE_ID));
+    var url = appendLangParam('/api/ecommerce/storefront/products?websiteId=' + encodeURIComponent(getWebsiteId()));
     fetch(url, { credentials: 'include' })
       .then(function(r) { return r.ok ? r.json() : { success: false, data: [] }; })
       .then(function(payload) {
@@ -10348,12 +10354,12 @@ async function loadRelatedProducts(currentProduct, t) {
 
   function hydrateCategoryCatalog() {
     var grid = document.querySelector('[data-zappy-courses-grid]');
-    if (!grid || !WEBSITE_ID) return;
+    if (!grid || !getWebsiteId()) return;
     var slug = (getEffectivePath().match(/^\/category\/([^\/]+)$/) || [])[1];
     if (!slug) return hydrateCatalog();
     var title = document.querySelector('[data-zappy-courses-category-title]');
     var description = document.querySelector('[data-zappy-courses-category-description]');
-    var url = appendLangParam('/api/ecommerce/storefront/categories/' + encodeURIComponent(slug) + '?websiteId=' + encodeURIComponent(WEBSITE_ID));
+    var url = appendLangParam('/api/ecommerce/storefront/categories/' + encodeURIComponent(slug) + '?websiteId=' + encodeURIComponent(getWebsiteId()));
     fetch(url, { credentials: 'include' })
       .then(function(r) { return r.ok ? r.json() : { success: false, data: null }; })
       .then(function(payload) {
@@ -10579,7 +10585,7 @@ async function loadRelatedProducts(currentProduct, t) {
   }
 
   function fetchCourseDetailPayload(slug) {
-    var qs = '?websiteId=' + encodeURIComponent(WEBSITE_ID);
+    var qs = '?websiteId=' + encodeURIComponent(getWebsiteId());
     var storefrontPath = '/api/ecommerce/storefront/courses/' + encodeURIComponent(slug) + qs;
     var legacyPath = '/api/courses/student/courses/' + encodeURIComponent(slug) + qs;
     return api(storefrontPath)
@@ -10600,7 +10606,8 @@ async function loadRelatedProducts(currentProduct, t) {
   function hydrateCourseDetail() {
     var root = document.querySelector('[data-zappy-course-detail]');
     if (!root) return;
-    var slug = (getEffectivePath().match(/^\/courses\/([^\/]+)$/) || [])[1];
+    var path = getEffectivePath();
+    var slug = (path.match(/^\/courses\/([^\/]+)$/) || path.match(/^\/product\/([^\/]+)$/) || [])[1];
     if (!slug) return;
 
     fetchCourseDetailPayload(slug)
@@ -10611,7 +10618,7 @@ async function loadRelatedProducts(currentProduct, t) {
   }
 
   function refreshCourseCartLinesFromProducts(products) {
-    if (!Array.isArray(products) || !products.length || !WEBSITE_ID) return;
+    if (!Array.isArray(products) || !products.length || !getWebsiteId()) return;
     var productById = {};
     products.forEach(function(product) {
       if (product && product.id) productById[String(product.id)] = product;
@@ -10619,7 +10626,7 @@ async function loadRelatedProducts(currentProduct, t) {
     if (!Object.keys(productById).length) return;
 
     try {
-      var key = 'zappy_cart_' + WEBSITE_ID;
+      var key = 'zappy_cart_' + getWebsiteId();
       var cart = JSON.parse(localStorage.getItem(key) || '[]');
       if (!Array.isArray(cart) || !cart.length) return;
 
@@ -10992,9 +10999,30 @@ async function loadRelatedProducts(currentProduct, t) {
   function renderQuizPlayer(body, lessonId) {
     body.innerHTML = '<div class="quiz-loading">' + tx('ecom_coursesQuizLoading', 'Loading quiz…') + '</div>';
     api('/api/courses/student/lessons/' + encodeURIComponent(lessonId) + '/quiz')
-      .then(function(r) { return r.json(); })
-      .then(function(payload) {
-        var quiz = payload && payload.data;
+      .then(function(r) {
+        if (r.status === 401) {
+          redirectToLogin('/lesson/' + lessonId);
+          throw 0;
+        }
+        return r.json().then(function(payload) {
+          return { status: r.status, ok: r.ok, payload: payload || {} };
+        });
+      })
+      .then(function(res) {
+        if (!res) return;
+        if (res.status === 403) {
+          body.innerHTML = '<p>' + tx('ecom_coursesLessonGate', 'Enroll in this course to access this lesson.') + '</p>';
+          return;
+        }
+        if (res.status === 404 || (res.payload && res.payload.code === 'QUIZ_NOT_FOUND')) {
+          body.innerHTML = '<p>' + tx('ecom_coursesQuizNone', 'No quiz on this lesson.') + '</p>';
+          return;
+        }
+        if (!res.ok) {
+          body.innerHTML = '<p class="quiz-error">' + tx('ecom_coursesQuizError', 'Failed to load quiz.') + '</p>';
+          return;
+        }
+        var quiz = res.payload && res.payload.data;
         if (!quiz || !quiz.questions || !quiz.questions.length) {
           body.innerHTML = '<p>' + tx('ecom_coursesQuizNone', 'No quiz on this lesson.') + '</p>';
           return;
@@ -11148,9 +11176,9 @@ async function loadRelatedProducts(currentProduct, t) {
   /** Home page featured section — course cards instead of product cards. */
   async function loadFeaturedCoursesHome() {
     var grid = document.getElementById('zappy-featured-products');
-    if (!grid || !WEBSITE_ID) return;
+    if (!grid || !getWebsiteId()) return;
     try {
-      var url = appendLangParam('/api/ecommerce/storefront/products?websiteId=' + encodeURIComponent(WEBSITE_ID) + '&featured=true');
+      var url = appendLangParam('/api/ecommerce/storefront/products?websiteId=' + encodeURIComponent(getWebsiteId()) + '&featured=true');
       var res = await fetch(url);
       var data = await res.json();
       if (!data.success || !data.data || !data.data.length) {
@@ -11168,9 +11196,9 @@ async function loadRelatedProducts(currentProduct, t) {
   /** Home page featured categories — category blocks linking to /category/:slug. */
   async function loadFeaturedCategoriesHome() {
     var container = document.getElementById('zappy-featured-categories');
-    if (!container || !WEBSITE_ID) return;
+    if (!container || !getWebsiteId()) return;
     try {
-      var url = appendLangParam('/api/ecommerce/storefront/featured-categories?websiteId=' + encodeURIComponent(WEBSITE_ID));
+      var url = appendLangParam('/api/ecommerce/storefront/featured-categories?websiteId=' + encodeURIComponent(getWebsiteId()));
       var res = await fetch(url);
       var data = await res.json();
       if (!data.success || !data.data || !data.data.length) {
@@ -11196,9 +11224,9 @@ async function loadRelatedProducts(currentProduct, t) {
 
   /** Minimal storefront settings fetch when the ecommerce JS block is absent. */
   async function ensureCoursesStorefrontSettings() {
-    if (!WEBSITE_ID) return;
+    if (!getWebsiteId()) return;
     try {
-      var res = await fetch(appendLangParam('/api/ecommerce/storefront/settings?websiteId=' + encodeURIComponent(WEBSITE_ID)));
+      var res = await fetch(appendLangParam('/api/ecommerce/storefront/settings?websiteId=' + encodeURIComponent(getWebsiteId())));
       var data = await res.json();
       if (!data.success || !data.data) return;
       if (data.data.catalogMenuEnabled === true) {
@@ -11247,7 +11275,7 @@ async function loadRelatedProducts(currentProduct, t) {
 
   function ensureMyLearningNavLink() {
     var token = '';
-    try { token = localStorage.getItem('zappy_customer_token_' + WEBSITE_ID) || ''; } catch (e) {}
+    try { token = localStorage.getItem('zappy_customer_token_' + getWebsiteId()) || ''; } catch (e) {}
     var existing = document.querySelector('[data-zappy-my-learning-nav]');
     if (!token) {
       if (existing) existing.remove();
@@ -11280,7 +11308,7 @@ async function loadRelatedProducts(currentProduct, t) {
     var list = document.getElementById('zappy-category-links');
     var navList = getNavCategoryLinksContainer();
     if (!list && !navList) return;
-    if (!WEBSITE_ID) return;
+    if (!getWebsiteId()) return;
     var currentDir = getRuntimeDir();
     var catalogMenu = document.getElementById('zappy-catalog-menu');
     if (catalogMenu) {
@@ -11294,7 +11322,7 @@ async function loadRelatedProducts(currentProduct, t) {
       menuList.style.setProperty('direction', currentDir, 'important');
     });
     try {
-      var res = await fetch(appendLangParam('/api/ecommerce/storefront/categories?websiteId=' + encodeURIComponent(WEBSITE_ID)));
+      var res = await fetch(appendLangParam('/api/ecommerce/storefront/categories?websiteId=' + encodeURIComponent(getWebsiteId())));
       var data = await res.json();
       if (!data.success || !data.data || !data.data.length) return;
       var allCats = data.data;
@@ -11397,7 +11425,7 @@ async function loadRelatedProducts(currentProduct, t) {
   }
 
   window.addEventListener('storage', function(e) {
-    if (e && e.key === 'zappy_customer_token_' + WEBSITE_ID) {
+    if (e && e.key === 'zappy_customer_token_' + getWebsiteId()) {
       ensureMyLearningNavLink();
     }
   });
@@ -11473,6 +11501,7 @@ async function loadRelatedProducts(currentProduct, t) {
     if (path === '/courses' || path === '/courses/') return hydrateCatalog();
     if (/^\/category\/[^\/]+$/.test(path)) return hydrateCategoryCatalog();
     if (/^\/courses\/[^\/]+$/.test(path)) return hydrateCourseDetail();
+    if (/^\/product\/[^\/]+$/.test(path)) return hydrateCourseDetail();
     if (/^\/lesson\/[^\/]+$/.test(path)) return hydrateLessonPlayer();
     if (path === '/my-learning' || path === '/my-learning/') return hydrateMyLearning();
     if (/^\/certificate\/[^\/]+$/.test(path)) return hydrateCertificate();
@@ -11538,6 +11567,12 @@ async function loadRelatedProducts(currentProduct, t) {
   if (location.pathname === '/products' || location.pathname === '/products/') {
     var q = location.search || '';
     location.replace(CATALOG + q);
+    return;
+  }
+  var productMatch = location.pathname.match(/^\/product\/(.+)/);
+  if (productMatch) {
+    var slug = productMatch[1];
+    location.replace('/courses/' + slug + (location.search || '') + (location.hash || ''));
     return;
   }
   if (document.readyState === 'loading') {
