@@ -5867,6 +5867,29 @@ html[dir="rtl"] body {
       return;
     }
 
+    // COURSES DYNAMIC PAGES: paths like /courses/:slug, /lesson/:id,
+    // /my-learning, /certificate/:code are served by a single static
+    // template with Render rewrite rules. There are no physical
+    // /en/courses/:slug files — prepending /<lang>/ would 404. Instead,
+    // toggle ?lang= and let the i18n runtime translate in-place (same
+    // approach as preview mode).
+    var strippedPath = path;
+    var langPrefix = path.match(/^\/([a-z]{2})(?=\/|$)/i);
+    if (langPrefix && availableLanguages.includes(langPrefix[1].toLowerCase())) {
+      strippedPath = path.slice(langPrefix[0].length) || '/';
+    }
+    if (/^\/(courses(\/|$)|lesson\/|my-learning(\/|$)|certificate\/)/.test(strippedPath)) {
+      var dynUrl = new URL(window.location.href);
+      dynUrl.pathname = strippedPath;
+      if (targetLang === 'he') {
+        dynUrl.searchParams.delete('lang');
+      } else {
+        dynUrl.searchParams.set('lang', targetLang);
+      }
+      window.location.assign(dynUrl.pathname + dynUrl.search + dynUrl.hash);
+      return;
+    }
+
     var prefixMatch = path.match(/^\/([a-z]{2})(?=\/|$)/i);
     if (prefixMatch && availableLanguages.includes(prefixMatch[1].toLowerCase())) {
       path = path.slice(prefixMatch[0].length) || '/';

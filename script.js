@@ -11575,6 +11575,19 @@ async function loadRelatedProducts(currentProduct, t) {
     location.replace('/courses/' + slug + (location.search || '') + (location.hash || ''));
     return;
   }
+  // Language-prefixed courses paths (e.g. /en/courses/slug) have no
+  // matching Render rewrite. Strip the prefix and keep the language as
+  // ?lang= so the i18n runtime picks it up.
+  var langCourseMatch = location.pathname.match(/^\/([a-z]{2})\/(courses(\/.*)?|lesson\/.*|my-learning(\/.*)?|certificate\/.*)$/i);
+  if (langCourseMatch) {
+    var lang = langCourseMatch[1].toLowerCase();
+    var rest = '/' + langCourseMatch[2];
+    var u = new URL(location.href);
+    u.pathname = rest;
+    if (lang) u.searchParams.set('lang', lang);
+    location.replace(u.pathname + u.search + (u.hash || ''));
+    return;
+  }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', patchDom);
   } else {

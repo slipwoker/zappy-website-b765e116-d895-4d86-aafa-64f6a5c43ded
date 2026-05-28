@@ -1186,10 +1186,9 @@ html[dir="rtl"] body {
       @media (min-width: 769px) {
         #mic-access-tool-general-button, .mic-access-tool-general-button,
         #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-        ._access-icon { display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; }
-        #mic-access-tool-box.opened-mic-access-tool, .mic-access-tool-box.opened-mic-access-tool,
-        #mic-init-access-tool #mic-access-tool-box.opened-mic-access-tool {
-          visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
         }
       }
     </style>
@@ -6126,6 +6125,29 @@ html[dir="rtl"] body {
         previewUrl.searchParams.set('lang', targetLang);
       }
       window.location.assign(previewUrl.pathname + previewUrl.search + previewUrl.hash);
+      return;
+    }
+
+    // COURSES DYNAMIC PAGES: paths like /courses/:slug, /lesson/:id,
+    // /my-learning, /certificate/:code are served by a single static
+    // template with Render rewrite rules. There are no physical
+    // /en/courses/:slug files — prepending /<lang>/ would 404. Instead,
+    // toggle ?lang= and let the i18n runtime translate in-place (same
+    // approach as preview mode).
+    var strippedPath = path;
+    var langPrefix = path.match(/^\/([a-z]{2})(?=\/|$)/i);
+    if (langPrefix && availableLanguages.includes(langPrefix[1].toLowerCase())) {
+      strippedPath = path.slice(langPrefix[0].length) || '/';
+    }
+    if (/^\/(courses(\/|$)|lesson\/|my-learning(\/|$)|certificate\/)/.test(strippedPath)) {
+      var dynUrl = new URL(window.location.href);
+      dynUrl.pathname = strippedPath;
+      if (targetLang === 'he') {
+        dynUrl.searchParams.delete('lang');
+      } else {
+        dynUrl.searchParams.set('lang', targetLang);
+      }
+      window.location.assign(dynUrl.pathname + dynUrl.search + dynUrl.hash);
       return;
     }
 
