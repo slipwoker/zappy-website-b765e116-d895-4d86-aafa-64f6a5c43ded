@@ -5522,6 +5522,7 @@ function stripHtmlToText(html) {
     const orderDisplay = parts.length >= 3 ? parts[2] : reference;
     if (orderNumberEl) orderNumberEl.textContent = '#' + orderDisplay;
     
+    let confirmedOrderData = null;
     // Confirm/create the order on the server (in case webhook didn't fire)
     const websiteId = window.ZAPPY_WEBSITE_ID;
     if (websiteId) {
@@ -5533,6 +5534,9 @@ function stripHtmlToText(html) {
         const confirmData = await confirmRes.json();
         if (confirmData.success) {
           console.log('✅ Order confirmed:', confirmData.data);
+          if (confirmData.data && confirmData.data.orderData) {
+            confirmedOrderData = confirmData.data.orderData;
+          }
           // Update order number to the official one if available
           if (confirmData.data.orderNumber && orderNumberEl) {
             orderNumberEl.textContent = '#' + confirmData.data.orderNumber;
@@ -5564,7 +5568,12 @@ function stripHtmlToText(html) {
       const pendingOrderKey = 'zappy_pending_order_' + reference;
       let pendingOrderData = localStorage.getItem(pendingOrderKey);
       
-      // If not in localStorage, fetch from API (cross-domain checkout)
+      // If not in localStorage, use confirmedOrderData from confirm-order response
+      if (!pendingOrderData && confirmedOrderData) {
+        pendingOrderData = JSON.stringify(confirmedOrderData);
+      }
+
+      // If still empty, fetch from API (cross-domain checkout)
       if (!pendingOrderData) {
         try {
           const res = await fetch(buildApiUrl('/api/ecommerce/pending-order/' + encodeURIComponent(reference)));
@@ -10958,7 +10967,6 @@ async function loadRelatedProducts(currentProduct, t) {
       body.innerHTML = '<audio controls src="' + escapeAttr(payload.audioUrl) + '"></audio>';
     } else if (type === 'quiz' || payload.quizPending) {
       renderQuizPlayer(body, lesson.id);
-      return;
     } else if (type === 'live') {
       body.innerHTML = '<div class="lesson-live">'
         + '<p>' + tx('ecom_coursesLiveScheduled', 'Live session scheduled') + '</p>'
@@ -10974,7 +10982,7 @@ async function loadRelatedProducts(currentProduct, t) {
       if (nav) {
         nav.innerHTML = payload.modules.map(function(m) {
           var lessons = (m.lessons || []).map(function(l) {
-            var active = l.id === lesson.id ? ' class="active"' : '';
+            var active = String(l.id) === String(lesson.id) ? ' class="active"' : '';
             var done = l.completed ? ' ✓' : '';
             return '<li' + active + '><a href="' + escapeAttr(pageUrl('/lesson/' + l.id)) + '">' + escapeHtml(l.title || '') + done + '</a></li>';
           }).join('');
@@ -10986,7 +10994,7 @@ async function loadRelatedProducts(currentProduct, t) {
       payload.modules.forEach(function(m) {
         (m.lessons || []).forEach(function(l) { orderedLessons.push(l); });
       });
-      var currentIndex = orderedLessons.findIndex(function(l) { return l.id === lesson.id; });
+      var currentIndex = orderedLessons.findIndex(function(l) { return String(l.id) === String(lesson.id); });
       var prevLesson = currentIndex > 0 ? orderedLessons[currentIndex - 1] : null;
       var nextLesson = currentIndex >= 0 && currentIndex < orderedLessons.length - 1
         ? orderedLessons[currentIndex + 1]
@@ -11144,7 +11152,7 @@ async function loadRelatedProducts(currentProduct, t) {
           return;
         }
         grid.innerHTML = enrollments.map(function(e) {
-          var pct = Math.round((e.progress_pct != null ? e.progress_pct : e.percent) || 0);
+          var pct = Math.min(100, Math.round((e.progress_pct != null ? e.progress_pct : e.percent) || 0));
           var courseSlug = e.course_slug || e.product_slug || e.productSlug || e.slug || e.productId || e.product_id || '';
           var courseName = e.course_name || e.productName || e.product_name || '';
           var image = e.image || e.imageUrl || e.product_image || '';
