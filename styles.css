@@ -15686,9 +15686,10 @@ html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
   #mic-access-tool-general-button, .mic-access-tool-general-button,
   #mic-init-access-tool .mic-access-tool-general-button,
   #mic-init-access-tool #mic-access-tool-general-button,
-  ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+  ._access-icon { display: flex !important; }
+  #mic-access-tool-box, .mic-access-tool-box,
   #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"],
-  ._access-menu { }
+  ._access-menu { visibility: hidden; opacity: 0; pointer-events: auto !important; }
 }
 /* WIDGET-DISPLAY-END */
 /* LTR: keep image on left for solution-reverse sections */
