@@ -5493,26 +5493,34 @@ function stripHtmlToText(html) {
       }
     }
     
-    const orderNumberEl = document.getElementById('order-number-value');
+    /* ZAPPY_ORDER_SUCCESS_SPAN_FIX */
+    var orderNumberEl = document.getElementById('order-number-value');
     const orderDetailsSection = document.getElementById('order-details-section');
     const orderItemsList = document.getElementById('order-items-list');
     const orderTotalsSummary = document.getElementById('order-totals-summary');
     
-    if (!orderNumberEl) return;
+    if (!orderNumberEl) {
+          var h1 = document.querySelector('.order-success-title');
+          if (h1) {
+            var existingText = h1.textContent || '';
+            h1.innerHTML = existingText + ' <span class="order-number-inline" id="order-number-value"></span>';
+            orderNumberEl = document.getElementById('order-number-value');
+          }
+        }
     
     // Get reference from URL
     const urlParams = new URLSearchParams(window.location.search);
     const reference = urlParams.get('ref');
     
     if (!reference) {
-      orderNumberEl.textContent = t.orderNotFound || 'Order not found';
+      if (orderNumberEl) orderNumberEl.textContent = t.orderNotFound || 'Order not found';
       return;
     }
     
     // Extract order number from reference (format: zappy_websiteId_timestamp)
     const parts = reference.split('_');
     const orderDisplay = parts.length >= 3 ? parts[2] : reference;
-    orderNumberEl.textContent = '#' + orderDisplay;
+    if (orderNumberEl) orderNumberEl.textContent = '#' + orderDisplay;
     
     // Confirm/create the order on the server (in case webhook didn't fire)
     const websiteId = window.ZAPPY_WEBSITE_ID;
@@ -5526,7 +5534,7 @@ function stripHtmlToText(html) {
         if (confirmData.success) {
           console.log('✅ Order confirmed:', confirmData.data);
           // Update order number to the official one if available
-          if (confirmData.data.orderNumber) {
+          if (confirmData.data.orderNumber && orderNumberEl) {
             orderNumberEl.textContent = '#' + confirmData.data.orderNumber;
           }
           if (confirmData.data.loginToken) {
