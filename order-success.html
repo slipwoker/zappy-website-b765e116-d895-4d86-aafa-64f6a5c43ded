@@ -1191,9 +1191,10 @@ html[dir="rtl"] body {
       @media (min-width: 769px) {
         #mic-access-tool-general-button, .mic-access-tool-general-button,
         #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
-        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
-          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        ._access-icon { display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; }
+        #mic-access-tool-box.opened-mic-access-tool, .mic-access-tool-box.opened-mic-access-tool,
+        #mic-init-access-tool #mic-access-tool-box.opened-mic-access-tool {
+          visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;
         }
       }
     </style>
@@ -1678,6 +1679,10 @@ html[dir="rtl"] body {
       "ecom_coursesAlreadyOwned": "כבר יש לך גישה לקורס זה.",
       "ecom_coursesAlreadyOwnedCheckout": "כבר נרשמת לקורס שבעגלת הקניות.",
       "ecom_coursesEnrollmentCheckFailed": "לא ניתן לאמת בעלות על הקורס. אנא נסה שוב.",
+      "ecom_coursesAlreadyEnrolledPrompt": "כבר נרשמת?",
+      "ecom_coursesLoginLink": "לכניסה",
+      "ecom_processing": "מעבד...",
+      "ecom_checkoutFailed": "שגיאה בתהליך התשלום. נסו שוב.",
       "cart_p_7": "שליטה. משמעת. מצוינות.\nלימוד קראטה מקצועי — בכל מקום, בכל זמן.",
       "cart_p_8": "פלטפורמת הלמידה המובילה לאמנויות לחימה בישראל. אימונים מודרכים, שיטה מוכחת, ותוצאות אמיתיות — ישירות אליך הביתה.",
       "cart_h1_1": "עגלת הקניות שלך",
@@ -3685,6 +3690,10 @@ html[dir="rtl"] body {
       "ecom_coursesAlreadyOwned": "You already own this course.",
       "ecom_coursesAlreadyOwnedCheckout": "You are already enrolled in a course in your cart.",
       "ecom_coursesEnrollmentCheckFailed": "Could not verify course ownership. Please try again.",
+      "ecom_coursesAlreadyEnrolledPrompt": "Already enrolled?",
+      "ecom_coursesLoginLink": "Log in",
+      "ecom_processing": "Processing...",
+      "ecom_checkoutFailed": "Checkout failed. Please try again.",
       "cart_p_7": "Control. Discipline. Excellence.\nProfessional karate learning — anywhere, anytime.",
       "cart_p_8": "Israel's leading learning platform for martial arts. Guided training, proven method, and real results — directly to your home.",
       "cart_h1_1": "Your Shopping Cart",

@@ -15686,9 +15686,10 @@ html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
   #mic-access-tool-general-button, .mic-access-tool-general-button,
   #mic-init-access-tool .mic-access-tool-general-button,
   #mic-init-access-tool #mic-access-tool-general-button,
-  ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+  ._access-icon { display: flex !important; }
+  #mic-access-tool-box, .mic-access-tool-box,
   #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"],
-  ._access-menu { }
+  ._access-menu { visibility: hidden; opacity: 0; pointer-events: auto !important; }
 }
 /* WIDGET-DISPLAY-END */
 /* LTR: keep image on left for solution-reverse sections */
@@ -15961,6 +15962,20 @@ body:has(.courses-page-main) .courses-page-main:has(.course-detail-section) {
   margin-top:1.25rem; line-height:1.65; white-space:pre-wrap;
 }
 .course-detail-cta { margin-top:1rem; display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; }
+.course-detail-enrolled-badge {
+  display:flex; align-items:center; gap:.5rem;
+  padding:.6rem 1.25rem; border-radius:.5rem;
+  background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;
+  font-weight:600; font-size:.95rem;
+}
+.course-detail-enrolled-badge svg { flex-shrink:0; stroke:#047857; }
+.course-detail-login-prompt {
+  width:100%; font-size:.875rem; color:var(--text-secondary,#6b7280); text-align:center;
+}
+.course-detail-login-prompt a {
+  color:var(--accent, var(--accent-color, var(--primary-color, var(--primary)))); font-weight:600; text-decoration:none;
+}
+.course-detail-login-prompt a:hover { text-decoration:underline; }
 .course-detail-enroll {
   padding:.75rem 1.5rem;
   background:var(--accent, var(--accent-color, var(--primary-color, var(--primary))));
