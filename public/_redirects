@@ -1,17 +1,55 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-05-29T20:43:37.864Z
-# Generated during publish asset refresh
+# Generated: 2026-05-29T20:47:55.777Z
+# NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
+# This file is kept for reference only
 
-# Courses catalog (must precede /courses/* wildcard)
+/training-method  /training-method.html  200!
+/about  /about.html  200!
+/contact  /contact.html  200!
+/cart  /cart.html  200!
+/checkout  /checkout.html  200!
+/login  /login.html  200!
+/account  /account.html  200!
+/order-success  /order-success.html  200!
+/return-policy  /return-policy.html  200!
+/privacy  /privacy.html  200!
+/accessibility  /accessibility.html  200!
+/terms  /terms.html  200!
 /courses  /courses/index.html  200!
 /courses/  /courses/index.html  200!
+/my-learning  /my-learning.html  200!
+
+# Language slug rewrites for SEO
+/en  /en/index.html  200!
+/en/training-method  /en/training-method.html  200!
+/en/about  /en/about.html  200!
+/en/contact  /en/contact.html  200!
+/en/cart  /en/cart.html  200!
+/en/checkout  /en/checkout.html  200!
+/en/login  /en/login.html  200!
+/en/account  /en/account.html  200!
+/en/order-success  /en/order-success.html  200!
+/en/return-policy  /en/return-policy.html  200!
+/en/privacy  /en/privacy.html  200!
+/en/accessibility  /en/accessibility.html  200!
+/en/terms  /en/terms.html  200!
+/en/courses  /en/courses.html  200!
+/en/my-learning  /en/my-learning.html  200!
+/en  /en/index.html  200!
+
+# Legal pages - redirect old .html URLs to friendly URLs
+/privacy.html  /privacy  301
+/accessibility.html  /accessibility  301
+/terms.html  /terms  301
+
+/  /index.html  200!
 
 # Dynamic routes - serve dedicated HTML templates for dynamic paths
 /category/*  /category.html  200!
 /courses/*  /course-detail.html  200!
 /lesson/*  /lesson.html  200!
 /certificate/*  /certificate.html  200!
-/en/category/*  /category.html  200!
-/en/courses/*  /course-detail.html  200!
-/en/lesson/*  /lesson.html  200!
-/en/certificate/*  /certificate.html  200!
+/en/category/*  /en/category/index.html  200!
+/en/courses/*  /en/courses/index.html  200!
+/en/lesson/*  /en/lesson/index.html  200!
+/en/certificate/*  /en/certificate/index.html  200!

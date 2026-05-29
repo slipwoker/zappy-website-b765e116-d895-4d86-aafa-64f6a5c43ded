@@ -40,7 +40,7 @@ https://limud-karate.zappy5.app/account
 
 ### Order Success
 https://limud-karate.zappy5.app/order-success
-תודה על ההזמנה
+תודה שנרשמת לקורס
 
 ### Courses
 https://limud-karate.zappy5.app/courses
