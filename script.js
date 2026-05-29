@@ -10121,6 +10121,30 @@ async function loadRelatedProducts(currentProduct, t) {
         return out;
       }
     }
+    // Static storefront pages (login/account/cart/checkout) are served as
+    // per-language files (/en/login), unlike courses pages which switch
+    // language via ?lang + localStorage. So an English shopper's "sign in"
+    // link must resolve to /en/login, not the Hebrew default /login. Derive
+    // the active language purely from URL signals (?lang on courses pages,
+    // path prefix on static pages) — this is default-language-agnostic, so it
+    // never produces a bogus /he/login on a default-language page (which never
+    // carries a language signal in its URL). Courses dynamic pages keep their
+    // bare path; localStorage already drives their runtime language.
+    if (/^\/(login|account|cart|checkout)(?:\/|\?|#|$)/i.test(routePath)) {
+      var urlLang = '';
+      try {
+        urlLang = new URLSearchParams(location.search || '').get('lang') || '';
+      } catch (e) { urlLang = ''; }
+      if (!urlLang) {
+        var pm = (location.pathname || '').match(/^\/([a-z]{2})(?:\/|$)/i);
+        urlLang = pm ? pm[1] : '';
+      }
+      urlLang = String(urlLang || '').split('-')[0].toLowerCase();
+      if (urlLang) {
+        var bare = routePath.replace(/^\/[a-z]{2}(?=\/)/i, '');
+        return '/' + urlLang + bare;
+      }
+    }
     return routePath;
   }
 
