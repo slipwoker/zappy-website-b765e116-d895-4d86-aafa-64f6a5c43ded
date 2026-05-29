@@ -1186,10 +1186,9 @@ html[dir="rtl"] body {
       @media (min-width: 769px) {
         #mic-access-tool-general-button, .mic-access-tool-general-button,
         #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-        ._access-icon { display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; }
-        #mic-access-tool-box.opened-mic-access-tool, .mic-access-tool-box.opened-mic-access-tool,
-        #mic-init-access-tool #mic-access-tool-box.opened-mic-access-tool {
-          visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
         }
       }
     </style>
@@ -2084,6 +2083,7 @@ html[dir="rtl"] body {
       "ecom_coursesDetailEnroll": "הוסף לעגלה",
       "ecom_coursesDetailResume": "המשך ללמוד",
       "ecom_coursesDigitalDelivery": "גישה דיגיטלית מקוונת",
+      "ecom_coursesLessonCompleted": "הושלם",
       "ecom_coursesLessonLoading": "טוען שיעור…",
       "ecom_coursesLessonMarkComplete": "סימון כהושלם",
       "ecom_coursesLessonNext": "הבא",
@@ -2099,6 +2099,11 @@ html[dir="rtl"] body {
       "ecom_coursesCertIssued": "הונפק",
       "ecom_coursesCertStudent": "תלמיד",
       "ecom_coursesCertValid": "מאומת",
+      "ecom_coursesCertIssuer": "הונפק על ידי",
+      "ecom_coursesCertCode": "קוד אימות",
+      "ecom_coursesViewCertificate": "צפייה בתעודה",
+      "ecom_coursesCertEarnedTitle": "הקורס הושלם!",
+      "ecom_coursesCertEarnedBody": "התעודה שלך מוכנה.",
       "ecom_coursesCurriculumEmpty": "תכנית הלימודים תגיע בקרוב.",
       "ecom_coursesFree": "חינם",
       "ecom_coursesJoinLive": "הצטרף בשידור חי",
@@ -4095,6 +4100,7 @@ html[dir="rtl"] body {
       "ecom_coursesDetailEnroll": "Add to Cart",
       "ecom_coursesDetailResume": "Resume learning",
       "ecom_coursesDigitalDelivery": "Digital online access",
+      "ecom_coursesLessonCompleted": "Completed",
       "ecom_coursesLessonLoading": "Loading lesson…",
       "ecom_coursesLessonMarkComplete": "Mark complete",
       "ecom_coursesLessonNext": "Next",
@@ -4110,6 +4116,11 @@ html[dir="rtl"] body {
       "ecom_coursesCertIssued": "Issued",
       "ecom_coursesCertStudent": "Student",
       "ecom_coursesCertValid": "Verified",
+      "ecom_coursesCertIssuer": "Issued by",
+      "ecom_coursesCertCode": "Verification code",
+      "ecom_coursesViewCertificate": "View certificate",
+      "ecom_coursesCertEarnedTitle": "Course complete!",
+      "ecom_coursesCertEarnedBody": "Your certificate is ready.",
       "ecom_coursesCurriculumEmpty": "Curriculum coming soon.",
       "ecom_coursesFree": "Free",
       "ecom_coursesJoinLive": "Join live",
