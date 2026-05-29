@@ -6027,7 +6027,7 @@ function stripHtmlToText(html) {
         const newPhone = editPhoneInput ? editPhoneInput.value.trim() : '';
         
         saveProfileBtn.disabled = true;
-        saveProfileBtn.textContent = t.saving || 'Saving...';
+        saveProfileBtn.textContent = getEcomText('saving', t.saving || 'Saving...');
         
         try {
           // Include websiteId for session isolation validation
@@ -6057,7 +6057,7 @@ function stripHtmlToText(html) {
             if (profileForm) profileForm.style.display = 'none';
             if (editProfileBtn) editProfileBtn.style.display = 'inline-flex';
             
-            showToast(t.profileUpdated || 'Profile updated successfully', 'success');
+            showToast(getEcomText('profileUpdated', t.profileUpdated || 'Profile updated successfully'), 'success');
           } else {
             throw new Error(data.error || 'Failed to update profile');
           }
@@ -6066,7 +6066,7 @@ function stripHtmlToText(html) {
           showToast(error.message || 'Error saving profile', 'error');
         } finally {
           saveProfileBtn.disabled = false;
-          saveProfileBtn.textContent = t.saveChanges || 'Save Changes';
+          saveProfileBtn.textContent = getEcomText('saveChanges', t.saveChanges || 'Save Changes');
         }
       });
     }
@@ -6076,24 +6076,24 @@ function stripHtmlToText(html) {
       if (!addressesList) return;
       
       if (!customerData.addresses || customerData.addresses.length === 0) {
-        addressesList.innerHTML = '<div class="addresses-empty" id="addresses-empty"><p>' + (t.noAddresses || 'No saved addresses') + '</p></div>';
+        addressesList.innerHTML = '<div class="addresses-empty" id="addresses-empty"><p>' + getEcomText('noAddresses', t.noAddresses || 'No saved addresses') + '</p></div>';
         return;
       }
       
       const labelNames = {
-        home: t.home || 'Home',
-        work: t.work || 'Work',
-        other: t.other || 'Other'
+        home: getEcomText('home', t.home || 'Home'),
+        work: getEcomText('work', t.work || 'Work'),
+        other: getEcomText('other', t.other || 'Other')
       };
       
       addressesList.innerHTML = customerData.addresses.map(function(addr) {
-        const labelText = labelNames[addr.label] || addr.label || t.other || 'Other';
+        const labelText = labelNames[addr.label] || addr.label || getEcomText('other', t.other || 'Other');
         const isDefault = addr.isDefault;
         
         return '<div class="address-card' + (isDefault ? ' default' : '') + '" data-id="' + addr.id + '">' +
           '<div class="address-card-header">' +
             '<span class="address-label-tag">' + labelText + '</span>' +
-            (isDefault ? '<span class="address-default-badge">' + (t.defaultAddress || 'Default') + '</span>' : '') +
+            (isDefault ? '<span class="address-default-badge">' + getEcomText('defaultAddress', t.defaultAddress || 'Default') + '</span>' : '') +
           '</div>' +
           '<div class="address-card-body">' +
             '<div>' + (addr.street || '') + (addr.apartment ? ', ' + addr.apartment : '') + '</div>' +
@@ -6102,15 +6102,15 @@ function stripHtmlToText(html) {
           '<div class="address-card-actions">' +
             '<button class="btn-icon btn-edit-address" data-id="' + addr.id + '">' +
               '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>' +
-              '<span>' + (t.editAddress || 'Edit') + '</span>' +
+              '<span>' + getEcomText('editAddress', t.editAddress || 'Edit') + '</span>' +
             '</button>' +
             (!isDefault ? '<button class="btn-icon btn-default-address" data-id="' + addr.id + '">' +
               '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
-              '<span>' + (t.setAsDefault || 'Set as Default') + '</span>' +
+              '<span>' + getEcomText('setAsDefault', t.setAsDefault || 'Set as Default') + '</span>' +
             '</button>' : '') +
             '<button class="btn-icon btn-delete btn-delete-address" data-id="' + addr.id + '">' +
               '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>' +
-              '<span>' + (t.deleteAddress || 'Delete') + '</span>' +
+              '<span>' + getEcomText('deleteAddress', t.deleteAddress || 'Delete') + '</span>' +
             '</button>' +
           '</div>' +
         '</div>';
@@ -6143,7 +6143,7 @@ function stripHtmlToText(html) {
       const isEdit = !!editId;
       
       if (addressModalTitle) {
-        addressModalTitle.textContent = isEdit ? (t.editAddress || 'Edit Address') : (t.addAddress || 'Add Address');
+        addressModalTitle.textContent = isEdit ? getEcomText('editAddress', t.editAddress || 'Edit Address') : getEcomText('addAddress', t.addAddress || 'Add Address');
       }
       
       // Reset form
@@ -6379,7 +6379,7 @@ function stripHtmlToText(html) {
 
           var favoriteProductHref = buildStorefrontPath('/courses/' + (p.slug || p.id));
           return '<div class="favorite-card" style="background:transparent;border:1px solid var(--border-color,rgba(128,128,128,0.2));border-radius:12px;overflow:hidden;position:relative;transition:box-shadow 0.2s;" data-product-id="' + p.id + '">' +
-            '<button class="favorite-remove-btn" style="position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;border:none;background:rgba(128,128,128,0.3);color:inherit;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;z-index:2;line-height:1;" onclick="removeFavoriteFromAccount(\'' + p.id + '\', this)" title="' + (t.removeFromFavorites || 'Remove') + '">&times;</button>' +
+            '<button class="favorite-remove-btn" style="position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;border:none;background:rgba(128,128,128,0.3);color:inherit;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;z-index:2;line-height:1;" onclick="removeFavoriteFromAccount(\'' + p.id + '\', this)" title="' + getEcomText('removeFromFavorites', t.removeFromFavorites || 'Remove') + '">&times;</button>' +
             '<a href="' + favoriteProductHref + '" style="text-decoration:none;color:inherit;display:block;">' +
               (imgSrc ? '<img src="' + imgSrc + '" alt="' + (p.name || '').replace(/'/g, '&apos;') + '" style="width:100%;aspect-ratio:1;object-fit:contain;display:block;border-radius:8px 8px 0 0;">' : '<div style="width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#999;font-size:32px;">📦</div>') +
               '<div style="padding:12px;">' +
@@ -6422,8 +6422,10 @@ function stripHtmlToText(html) {
         ordersList.style.display = 'block';
         ordersList.innerHTML = data.data.map(function(order) {
           const statusKey = 'status' + (order.payment_status || order.status || 'pending').charAt(0).toUpperCase() + (order.payment_status || order.status || 'pending').slice(1);
-          const statusText = t[statusKey] || order.payment_status || order.status || 'pending';
-          const orderDate = new Date(order.created_at).toLocaleDateString(isRTL ? 'he-IL' : 'en-US');
+          const statusText = getEcomText(statusKey, t[statusKey] || order.payment_status || order.status || 'pending');
+          var __ecomLang = String(getCurrentEcomLanguage() || '').split('-')[0].toLowerCase();
+          var __dateLocale = __ecomLang === 'he' ? 'he-IL' : (__ecomLang || 'en-US');
+          const orderDate = new Date(order.created_at).toLocaleDateString(__dateLocale);
           
           // Parse items if it's a JSON string
           let orderItems = order.items;
@@ -6442,11 +6444,11 @@ function stripHtmlToText(html) {
             '</div>' +
             '<div class="order-card-body">' +
               '<div class="order-info-row">' +
-                '<span class="order-label">' + (t.orderDate || 'Date') + ':</span>' +
+                '<span class="order-label">' + getEcomText('orderDate', t.orderDate || 'Date') + ':</span>' +
                 '<span class="order-value">' + orderDate + '</span>' +
               '</div>' +
               '<div class="order-info-row">' +
-                '<span class="order-label">' + (t.orderTotal || 'Total') + ':</span>' +
+                '<span class="order-label">' + getEcomText('orderTotal', t.orderTotal || 'Total') + ':</span>' +
                 '<span class="order-value">' + t.currency + orderTotal.toFixed(2) + '</span>' +
               '</div>' +
               (orderItems.length > 0 ? '<div class="order-items-summary">' +
@@ -6469,7 +6471,7 @@ function stripHtmlToText(html) {
         console.error('Failed to load orders:', error);
         ordersLoading.style.display = 'none';
         if (ordersEmpty) {
-          ordersEmpty.querySelector('p').textContent = t.errorLoading || 'Error loading orders';
+          ordersEmpty.querySelector('p').textContent = getEcomText('errorLoading', t.errorLoading || 'Error loading orders');
           ordersEmpty.style.display = 'block';
         }
       }
