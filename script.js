@@ -5904,6 +5904,80 @@ function stripHtmlToText(html) {
     const addressDefaultCheckbox = document.getElementById('address-default');
     
     if (!notLoggedInEl || !loggedInEl) return;
+
+    // Some existing sites keep an older /account.html in websites.content even
+    // after the ecommerce JS is refreshed. Repair those static labels at runtime
+    // so /en/account does not show a Hebrew account body with English nav/footer.
+    function localizeLegacyAccountStaticText() {
+      function setText(selector, key, fallback, suffix) {
+        var el = document.querySelector(selector);
+        if (!el) return;
+        el.textContent = getEcomText(key, fallback) + (suffix || '');
+      }
+      function setPlaceholder(selector, key, fallback) {
+        var el = document.querySelector(selector);
+        if (!el) return;
+        el.setAttribute('placeholder', getEcomText(key, fallback));
+      }
+
+      setText('#account-not-logged-in h1', 'notLoggedIn', t.notLoggedIn || 'Not Logged In');
+      setText('#account-not-logged-in p', 'pleaseLogin', t.pleaseLogin || 'Please login to view your account');
+      setText('#account-not-logged-in a.btn', 'login', t.login || 'Login');
+      setText('.account-header h1', 'myAccount', t.myAccount || 'My Account');
+      setText('#logout-btn', 'logout', t.logout || 'Logout');
+
+      var welcome = document.querySelector('.account-welcome');
+      if (welcome) {
+        var welcomeText = getEcomText('accountWelcome', t.accountWelcome || 'Welcome') + ', ';
+        var first = welcome.firstChild;
+        if (first && first.nodeType === 3) {
+          first.textContent = welcomeText;
+        } else if (!welcome.querySelector('[data-i18n="ecom_accountWelcome"]')) {
+          welcome.insertBefore(document.createTextNode(welcomeText), welcome.firstChild);
+        }
+      }
+
+      setText('.profile-section .section-header h2', 'personalDetails', t.personalDetails || 'Personal Details');
+      setText('#edit-profile-btn', 'editProfile', t.editProfile || 'Edit Profile');
+      setText('#profile-display .profile-field:nth-child(1) .profile-label', 'name', t.name || 'Name', ':');
+      setText('#profile-display .profile-field:nth-child(2) .profile-label', 'phone', t.phone || 'Phone', ':');
+      setText('label[for="edit-name"]', 'name', t.name || 'Name');
+      setText('label[for="edit-phone"]', 'phone', t.phone || 'Phone');
+      setPlaceholder('#edit-name', 'name', t.name || 'Name');
+      setPlaceholder('#edit-phone', 'phone', t.phone || 'Phone');
+      setText('#save-profile-btn', 'saveChanges', t.saveChanges || 'Save Changes');
+      setText('#cancel-profile-btn', 'cancel', t.cancel || 'Cancel');
+
+      setText('.addresses-section .section-header h2', 'addresses', t.addresses || 'Addresses');
+      setText('#add-address-btn', 'addAddress', t.addAddress || 'Add Address');
+      setText('#addresses-empty p', 'noAddresses', t.noAddresses || 'No saved addresses');
+      setText('.favorites-section h2', 'myFavorites', t.myFavorites || 'My Favorites');
+      setText('#favorites-empty p', 'noFavorites', t.noFavorites || 'No favorites yet');
+      setText('#favorites-empty a.btn', 'browseFavorites', t.browseFavorites || 'Discover all our products');
+      setText('.orders-section h2', 'yourOrders', t.yourOrders || 'Your Orders');
+      setText('#orders-loading p', 'loadingOrder', t.loadingOrder || 'Loading order details...');
+      setText('#orders-empty p', 'noOrders', t.noOrders || 'No orders yet');
+      setText('#orders-empty a.btn', 'continueShopping', t.continueShopping || 'Continue Shopping');
+
+      setText('#address-modal-title', 'addAddress', t.addAddress || 'Add Address');
+      setText('label[for="address-label"]', 'addressLabel', t.addressLabel || 'Address Label');
+      setText('#address-label option[value="home"]', 'home', t.home || 'Home');
+      setText('#address-label option[value="work"]', 'work', t.work || 'Work');
+      setText('#address-label option[value="other"]', 'other', t.other || 'Other');
+      setText('label[for="address-street"]', 'street', t.street || 'Street Address');
+      setText('label[for="address-apartment"]', 'apartment', t.apartment || 'Apt, Floor, Unit');
+      setText('label[for="address-city"]', 'city', t.city || 'City');
+      setText('label[for="address-zip"]', 'zip', t.zip || 'ZIP Code');
+      setPlaceholder('#address-street', 'street', t.street || 'Street Address');
+      setPlaceholder('#address-apartment', 'apartment', t.apartment || 'Apt, Floor, Unit');
+      setPlaceholder('#address-city', 'city', t.city || 'City');
+      setPlaceholder('#address-zip', 'zip', t.zip || 'ZIP Code');
+      setText('.form-checkbox label span', 'setAsDefault', t.setAsDefault || 'Set as Default');
+      setText('#save-address-btn', 'saveChanges', t.saveChanges || 'Save Changes');
+      setText('#cancel-address-btn', 'cancel', t.cancel || 'Cancel');
+    }
+
+    localizeLegacyAccountStaticText();
     
     // Use site-specific localStorage keys for session isolation
     const tokenKey = 'zappy_customer_token_' + websiteId;
