@@ -10732,6 +10732,9 @@ async function loadRelatedProducts(currentProduct, t) {
     if (!payload) return;
     var c = payload.course || {};
     var simpleLessonId = payload.simpleLessonId || (c.custom_fields && c.custom_fields.course && c.custom_fields.course.simpleLessonId) || null;
+    var isSimpleCourse = !!simpleLessonId && !(payload.modules || []).some(function(m) {
+      return (m.lessons || []).some(function(l) { return String(l.id) !== String(simpleLessonId); });
+    });
     setText(root, '[data-zappy-course-title]', c.name);
     setText(root, '[data-zappy-course-tagline]', c.short_description || '');
     renderCourseFacts(root, c);
@@ -10765,7 +10768,10 @@ async function loadRelatedProducts(currentProduct, t) {
     }
 
     if (payload.enrollment && payload.enrollment.status === 'active') {
-      applyEnrolledState(root, payload.resumeLessonId);
+      applyEnrolledState(root, payload.resumeLessonId, {
+        simpleLessonId: simpleLessonId,
+        isSimpleCourse: isSimpleCourse
+      });
     } else {
       var token = localStorage.getItem('zappy_customer_token_' + getWebsiteId()) || '';
       if (loginPrompt) loginPrompt.hidden = !!token;
@@ -10802,7 +10808,8 @@ async function loadRelatedProducts(currentProduct, t) {
       });
   }
 
-  function applyEnrolledState(root, resumeLessonId) {
+  function applyEnrolledState(root, resumeLessonId, opts) {
+    opts = opts || {};
     var enrollBtn = root.querySelector('[data-zappy-course-enroll]');
     if (enrollBtn) enrollBtn.hidden = true;
     var badge = root.querySelector('[data-zappy-course-enrolled-badge]');
@@ -10813,6 +10820,38 @@ async function loadRelatedProducts(currentProduct, t) {
     if (resume && resumeLessonId) {
       resume.hidden = false;
       resume.href = pageUrl('/lesson/' + resumeLessonId);
+    }
+    var complete = root.querySelector('[data-zappy-course-complete]');
+    if (complete) {
+      if (opts.isSimpleCourse && opts.simpleLessonId) {
+        complete.hidden = false;
+        complete.disabled = false;
+        complete.onclick = function() {
+          complete.disabled = true;
+          api('/api/courses/student/lessons/' + encodeURIComponent(opts.simpleLessonId) + '/progress', {
+            method: 'POST',
+            body: JSON.stringify({ completed: true })
+          }).then(function(r) {
+            return r && r.json ? r.json().catch(function() { return {}; }) : {};
+          }).then(function(resp) {
+            var d = (resp && resp.data) ? resp.data : resp;
+            var cert = d && d.certificate;
+            complete.textContent = tx('ecom_coursesLessonCompleted', 'Completed');
+            complete.classList.add('completed');
+            if (cert && cert.verification_code) {
+              showCertificateToast(cert.verification_code);
+              return;
+            }
+            showCoursesToast(tx('ecom_coursesLessonCompleted', 'Completed'), {
+              type: 'success'
+            });
+          }).catch(function() {
+            complete.disabled = false;
+          });
+        };
+      } else {
+        complete.hidden = true;
+      }
     }
   }
 
@@ -10838,7 +10877,12 @@ async function loadRelatedProducts(currentProduct, t) {
             .then(function(r) { return r.ok ? r.json() : null; })
             .then(function(res) {
               if (res && res.data && res.data.enrolled) {
-                applyEnrolledState(root, res.data.resumeLessonId || null);
+                applyEnrolledState(root, res.data.resumeLessonId || null, {
+                  simpleLessonId: payload && payload.simpleLessonId,
+                  isSimpleCourse: !!(payload && payload.simpleLessonId) && !((payload.modules || []).some(function(m) {
+                    return (m.lessons || []).length > 0;
+                  }))
+                });
               }
             });
         }
@@ -11114,6 +11158,41 @@ async function loadRelatedProducts(currentProduct, t) {
     }
   }
 
+  function markLessonCompleteInSidebar(root, lessonId, payload) {
+    if (!lessonId) return;
+    if (payload && payload.modules) {
+      payload.modules.forEach(function(m) {
+        (m.lessons || []).forEach(function(l) {
+          if (String(l.id) === String(lessonId)) l.completed = true;
+        });
+      });
+    }
+
+    var nav = root && root.querySelector('[data-zappy-lesson-curriculum]');
+    if (!nav) return;
+    var targetHref = '/lesson/' + lessonId;
+    var anchors = nav.querySelectorAll('a[href]');
+    for (var i = 0; i < anchors.length; i++) {
+      var a = anchors[i];
+      var href = a.getAttribute('href') || '';
+      var pageParam = '';
+      try { pageParam = new URL(a.href, window.location.origin).searchParams.get('page') || ''; } catch (e) {}
+      if (href.indexOf(targetHref) === -1 && pageParam !== targetHref) continue;
+      var li = a.closest('li');
+      if (li) li.classList.add('completed');
+      var icon = a.querySelector('.lesson-status-icon');
+      if (!icon) {
+        icon = document.createElement('span');
+        icon.className = 'lesson-status-icon';
+        a.insertBefore(icon, a.firstChild);
+      }
+      icon.classList.remove('lesson-status-icon--empty');
+      icon.setAttribute('aria-label', tx('ecom_coursesLessonCompleted', 'Completed'));
+      icon.textContent = '✓';
+      break;
+    }
+  }
+
   function renderLessonBody(root, payload) {
     var lesson = payload.lesson || {};
     var type = lessonContentType(lesson);
@@ -11214,11 +11293,16 @@ async function loadRelatedProducts(currentProduct, t) {
         }).then(function(resp) {
           var d = (resp && resp.data) ? resp.data : resp;
           var cert = d && d.certificate;
+          markLessonCompleteInSidebar(root, lesson.id, payload);
+          complete.textContent = tx('ecom_coursesLessonCompleted', 'Completed');
+          complete.classList.add('completed');
           if (cert && cert.verification_code) {
             showCertificateToast(cert.verification_code);
             return;
           }
-          location.reload();
+          showCoursesToast(tx('ecom_coursesLessonCompleted', 'Completed'), {
+            type: 'success'
+          });
         }).catch(function() { location.reload(); });
       });
     }

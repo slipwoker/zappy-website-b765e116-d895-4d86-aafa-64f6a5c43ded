@@ -20926,10 +20926,9 @@ html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
   #mic-access-tool-general-button, .mic-access-tool-general-button,
   #mic-init-access-tool .mic-access-tool-general-button,
   #mic-init-access-tool #mic-access-tool-general-button,
-  ._access-icon { display: flex !important; }
-  #mic-access-tool-box, .mic-access-tool-box,
+  ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
   #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"],
-  ._access-menu { visibility: hidden; opacity: 0; pointer-events: auto !important; }
+  ._access-menu { }
 }
 /* WIDGET-DISPLAY-END */
 /* LTR: keep image on left for solution-reverse sections */
@@ -21247,11 +21246,17 @@ body:has(.courses-page-main) .courses-page-main:has(.course-detail-section) {
   color:var(--accent, var(--accent-color, var(--primary-color, var(--primary)))); font-weight:600; text-decoration:none;
 }
 .course-detail-login-prompt a:hover { text-decoration:underline; }
-.course-detail-enroll {
+.course-detail-enroll,
+.course-detail-complete {
   padding:.75rem 1.5rem;
   background:var(--accent, var(--accent-color, var(--primary-color, var(--primary))));
   color:var(--text-light, var(--text-on-primary, var(--text-color, var(--text))));
   border:0; border-radius:.5rem; cursor:pointer;
+}
+.course-detail-complete.completed {
+  background:#ecfdf5;
+  color:#047857;
+  border:1px solid #a7f3d0;
 }
 .course-detail-body { margin-top:2rem; }
 .course-detail-curriculum h2 {
