@@ -1262,6 +1262,7 @@ html[dir="rtl"] body {
 </head>
 <body>
 
+<script>window.ZAPPY_PRODUCTS_LISTING_PATH = "/courses";</script>
 
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
@@ -1299,17 +1300,20 @@ html[dir="rtl"] body {
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
-      <a href="/courses" data-i18n="home_nav_103">
+      <a href="/courses">
         קורסים
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
-        <li><a href="/courses" data-i18n="home_nav_104">כל הקורסים</a></li>
+        <li><a href="/courses" data-i18n="ecom_products">כל הקורסים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
     </li>
+  
+
+    
   <li><a href="/" data-i18n="home_nav_105">בית</a></li><li><a href="/training-method" data-i18n="home_nav_106">שיטת האימון</a></li><li><a href="/about" data-i18n="home_nav_107">אודות</a></li><li><a href="/contact" data-i18n="home_nav_108">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
     <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש קורסים..." autocomplete="off">
     <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
@@ -7376,6 +7380,14 @@ html[dir="rtl"] body {
   }
 })();
 </script>
+
+<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden>
+  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="zappy-qv-content" id="zappy-qv-content"></div>
+</div>
 
     <script src="/script.js"></script>
 
