@@ -50,6 +50,12 @@
 /*.webp
   Content-Type: image/webp
 
+/*.glb
+  Content-Type: model/gltf-binary
+
+/*.gltf
+  Content-Type: model/gltf+json
+
 /*.html
   Content-Type: text/html; charset=utf-8
 

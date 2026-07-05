@@ -11433,7 +11433,7 @@ a, button {
 .view-btn.active { background: var(--accent); color: #fff; opacity: 1; }
 .view-btn:hover:not(.active) { background: rgba(0,0,0,0.05); }
 
-.product-grid:not(.view-list) .product-card .product-tags { display: none !important; }
+/* product tag badges visible on grid (legacy hide removed) */
 /* Sidebar */
 .product-sidebar { width: 240px; flex-shrink: 0; position: sticky; top: calc(var(--total-header-height, 120px) + 20px); max-height: calc(100vh - var(--total-header-height, 120px) - 40px); overflow-y: auto; align-self: flex-start; }
 .product-sidebar .sidebar-section { margin-bottom: 20px; }
@@ -15758,7 +15758,7 @@ a, button {
 .view-btn.active { background: var(--accent); color: #fff; opacity: 1; }
 .view-btn:hover:not(.active) { background: rgba(0,0,0,0.05); }
 
-.product-grid:not(.view-list) .product-card .product-tags { display: none !important; }
+/* product tag badges visible on grid (legacy hide removed) */
 /* Sidebar */
 .product-sidebar { width: 240px; flex-shrink: 0; position: sticky; top: calc(var(--total-header-height, 120px) + 20px); max-height: calc(100vh - var(--total-header-height, 120px) - 40px); overflow-y: auto; align-self: flex-start; }
 .product-sidebar .sidebar-section { margin-bottom: 20px; }
@@ -20175,7 +20175,7 @@ nav .sub-menu.zappy-empty-submenu,
   section[data-hero-type*="fullscreen"] {
     height: auto !important;
     min-height: 100svh !important;
-    padding: 0 0 90px 0 !important;
+    padding: 0 clamp(1rem, 5vw, 1.5rem) 90px !important;
   }
   section[data-hero-type*="fullscreen"] > [class*="-container"]:not([class*="bg"]):not([class*="scrim"]):not([class*="divider"]),
   section[data-hero-type*="fullscreen"] > .container {
@@ -20594,7 +20594,7 @@ nav .sub-menu.zappy-empty-submenu,
   section[data-hero-type*="fullscreen"] {
     height: auto !important;
     min-height: 100svh !important;
-    padding: 0 0 90px 0 !important;
+    padding: 0 clamp(1rem, 5vw, 1.5rem) 90px !important;
   }
   section[data-hero-type*="fullscreen"] > [class*="-container"]:not([class*="bg"]):not([class*="scrim"]):not([class*="divider"]),
   section[data-hero-type*="fullscreen"] > .container {
@@ -20752,8 +20752,22 @@ form.contact-form .contact-input, form.contact-form .contact-textarea { width: 1
 
 /* ZAPPY_SECTION_BG_TYPE_FIX */
 [data-zappy-bg-type="color"] { background-image: none !important; background-color: var(--zappy-bg-color, transparent) !important; }
-[data-zappy-bg-type="image"] { background-image: linear-gradient(var(--zappy-bg-overlay, rgba(0,0,0,0)), var(--zappy-bg-overlay, rgba(0,0,0,0))), var(--zappy-bg-image, none) !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+[data-zappy-bg-type="image"] { background-image: linear-gradient(var(--zappy-bg-overlay, rgba(0,0,0,0)), var(--zappy-bg-overlay, rgba(0,0,0,0))), var(--zappy-bg-image, none) !important; background-size: var(--zappy-bg-size, cover) !important; background-position: var(--zappy-bg-position, center) !important; background-repeat: no-repeat !important; }
 [data-zappy-bg-type="video"] { background-image: none !important; }
+/* Full-bleed hero single-image model: overlay/darkness tint layer sits above the
+   <img data-hero-bg> and below the hero content. Inline styles carry the tint;
+   this rule is the positioning safety-net. */
+.zappy-hero-overlay { position: absolute !important; inset: 0 !important; z-index: 1 !important; pointer-events: none !important; }
+section[data-hero-type^="fullscreen"] > .hero-bg-wrapper,
+section[data-hero-type^="fullscreen"] > [class*="hero-bg"],
+section[class*="hero"][data-zappy-bg-overlay-opacity] > .hero-bg-wrapper {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
 
 /* ZAPPY_IOS_NAVBAR_GAP_FIX */
 /* iOS Safari does not clip overflow-x:hidden on <html>, so a page with any
@@ -20926,9 +20940,10 @@ html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
   #mic-access-tool-general-button, .mic-access-tool-general-button,
   #mic-init-access-tool .mic-access-tool-general-button,
   #mic-init-access-tool #mic-access-tool-general-button,
-  ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+  ._access-icon { display: flex !important; }
+  #mic-access-tool-box, .mic-access-tool-box,
   #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"],
-  ._access-menu { }
+  ._access-menu { visibility: hidden; opacity: 0; pointer-events: auto !important; }
 }
 /* WIDGET-DISPLAY-END */
 /* LTR: keep image on left for solution-reverse sections */
@@ -20937,8 +20952,13 @@ html[dir="ltr"] .solution-item.solution-reverse .solution-content { order: 1 !im
 html[dir="ltr"] .service-detail.service-reverse .service-detail-image { order: -1 !important; }
 html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order: 1 !important; }
 
+/* ENSURE: nav-cta-btn-text-visible */
+.nav-cta-btn { position: relative !important; isolation: isolate !important; }
+.nav-cta-btn::before, .nav-cta-btn:before { z-index: -1 !important; }
+
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX */
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V3 */
+/* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V4 */
 /* The mobile hamburger / phone buttons are absolutely positioned. Keep the
    navbar itself as a non-collapsing containing block so auto-margin centering
    stays aligned even when generated mobile CSS moves every nav child out of flow. */
@@ -20946,6 +20966,29 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
   .navbar,
   nav.navbar {
     min-height: 70px !important;
+  }
+
+  /* E-commerce mobile navbar icon-group alignment.
+     The icon couples (search after the hamburger; login+cart at the end edge)
+     are absolutely positioned with inset-inline offsets — inset-inline-start:52px
+     to clear the 36px hamburger that sits at left:12px on the .navbar, and
+     inset-inline-end:12px to hug the end edge. Those offsets are authored in the
+     NAVBAR's full-width coordinate space (the hamburger uses the same one). But
+     the offsets are resolved against the nearest positioned ancestor, and the
+     generated CSS makes .nav-container position:relative. When .nav-container is
+     ALSO inset by the navbar's horizontal padding (max-width / padding from the
+     LLM-authored navbar), the groups resolve to that inset box instead of the
+     full-width navbar: the search drifts ~20px away from the hamburger and the
+     cart leaves a fat asymmetric gap before the screen edge. Dropping
+     .nav-container out of the containing-block chain on mobile makes both couples
+     resolve to .navbar (always full-bleed) so they line up tightly with the
+     hamburger and sit symmetrically against both edges regardless of any
+     navbar/container padding. Scoped via :has() to navbars that actually carry
+     the e-commerce icon couples so non-ecommerce navs are untouched. */
+  .navbar:has(.nav-ecommerce-icons) .nav-container,
+  nav.navbar:has(.nav-ecommerce-icons) .nav-container,
+  header:has(.nav-ecommerce-icons) .nav-container {
+    position: static !important;
   }
 
   /* Some generated RTL nav CSS sets both left:50% and right:50% on the
@@ -21018,6 +21061,32 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
     min-width: 0 !important;
     overflow: hidden !important;
   }
+}
+
+/* ZAPPY_FULLSCREEN_HERO_SCRIM_OPACITY_CAP — keep fullscreen hero images visible while preserving text contrast */
+section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="scrim"],
+section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"],
+section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > .hero-scrim,
+section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-scrim"],
+section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"] {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.42) 100%), linear-gradient(to right, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.36) 36%, rgba(0,0,0,0.06) 78%) !important;
+  background-color: transparent !important;
+}
+section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="scrim"],
+html[dir="rtl"] section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"],
+html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > .hero-scrim,
+html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-scrim"],
+html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"]{background-image: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.42) 100%), linear-gradient(to left, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.36) 36%, rgba(0,0,0,0.06) 78%) !important;}
+section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > img[data-hero-bg],
+section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-bg"] img[data-hero-bg],
+section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] img[data-hero-bg],
+section[class*="hero"]:not([data-zappy-bg-overlay-opacity]):has(> [class*="scrim"]) > img[data-hero-bg],
+section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] img[data-hero-bg] {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
 /* ZAPPY_PUBLISHED_MOBILE_MEDIA_FIT_FIX */
